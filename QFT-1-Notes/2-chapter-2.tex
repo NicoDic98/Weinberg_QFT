@@ -1,0 +1,547 @@
+\section{Relativistic Quantum Mechanics}\label{sec:chapter2}
+
+\subsection{Quantum Mechanics}\label{susec:2_1}
+
+\subsection{Symmetries}\label{susec:2_2}
+\subsubsection{\enquote{For this to be unitary and linear, $t$ must be Hermitian and linear} \page{51}}\label{sususec:2_2_p51_1}
+Linearity is trivial and hermiticity follow from the following observation:
+\begin{align*} 
+	\innerproduct{U\Psi}{U\Phi}=&\innerproduct{(1+i\varepsilon t) \Psi}{(1+i\varepsilon t) \Phi}\\
+	=&\innerproduct{\Psi}{\Phi}+\varepsilon i\left(\innerproduct{\Psi}{t \Phi}-\innerproduct{t\Psi}{ \Phi}\right)+\order{\varepsilon^2}\\
+	\overset{\eq{2.2.2}}{\Leftrightarrow}&\innerproduct{\Psi}{t \Phi}=\innerproduct{t\Psi}{\Phi}\\
+	\overset{\eq{2.1.5}}{\Leftrightarrow}&t^\dagger=t
+\end{align*}
+
+\subsubsection{\eq{2.2.19} \page{54}}
+$f^a_{bc}$ and $f^a$ have to be real as $\theta^a$ are real.
+
+\subsubsection{\eq{2.2.21} \page{54}}
+From \eq{2.2.20} we have up to $\order{\theta^2,\bar{\theta}^2}$
+\begin{align*} 
+	&1+i\left(\theta^a+\bar{\theta}^a+f^a_{\hphantom{a} bc}\bar{\theta}^b\theta^c\right)t_a+
+	\dfrac{1}{2}\left(\theta^b+\bar{\theta}^b\right)\left(\theta^c+\bar{\theta}^c\right)t_{bc}\\
+	&=\left[1+i\bar{\theta}^a t_a+\dfrac{1}{2}\bar{\theta}^b\bar{\theta}^c t_{bc}\right]\cdot\left[1+i{\theta}^a t_a+\dfrac{1}{2}{\theta}^b{\theta}^c t_{bc}\right]\\
+	&=1+i{\theta}^a t_a+\dfrac{1}{2}{\theta}^b{\theta}^c t_{bc}+i\bar{\theta}^a t_a-\bar{\theta}^b t_b \theta^c t_c+\dfrac{1}{2}\bar{\theta}^b\bar{\theta}^c t_{bc}\\
+	\Leftrightarrow &i f^a_{\hphantom{a} bc}\bar{\theta}^b\theta^c t_a + \dfrac{1}{2}\left(\theta^b \bar{\theta}^c+ \bar{\theta}^b\theta^c\right)t_{bc}=-\bar{\theta}^b  \theta^c t_b t_c\\
+	\Leftrightarrow&\bar{\theta}^b\theta^c\left[t_{bc}+ i f^a_{\hphantom{a} bc} t_a+t_b t_c\right]=0\\
+	\Leftrightarrow& t_{bc}=- i f^a_{\hphantom{a} bc} t_a-t_b t_c
+\end{align*}
+
+\subsubsection{\eq{2.2.22} \page{54}}
+\begin{align*} 
+	- i f^a_{\hphantom{a} bc} t_a-t_b t_c \overset{\eqc{2.2.21}}{=}t_{bc}&=t_{cb} \overset{\eqc{2.2.21}}{=} - i f^a_{\hphantom{a} cb} t_a-t_c t_b\\
+	\Leftrightarrow\commutator{t_b}{t_c}&=i\left(f^a_{\hphantom{a} cb}-f^a_{\hphantom{a} bc}\right)t_a
+\end{align*}
+
+
+\subsection{Quantum Lorentz Transformations}\label{susec:2_3}
+\subsubsection{\enquote{$\Lambda^\mu_{\hphantom{\mu}\nu}$ has an \textbf{inverse}} \page{57}}
+This is true because \[\det(\Lambda)=\pm 1\neq 0\]
+
+\subsubsection{\enquote{$\left(\bar{\Lambda}\Lambda\right)^0_{\hphantom{0}0}\geq \bar{\Lambda}^0_{\hphantom{0}0}\Lambda^0_{\hphantom{0}0}-\sqrt{\left(\Lambda^0_{\hphantom{0}0}\right)^2-1}\sqrt{\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2-1}\geq1$} \page{58}}
+The first inequality is trivial from the preceding considerations. For the second inequality assume the contrary holds, then:
+\begin{align*} 
+	0&\leq\bar{\Lambda}^0_{\hphantom{0}0}\Lambda^0_{\hphantom{0}0}-1<\sqrt{\left(\Lambda^0_{\hphantom{0}0}\right)^2-1}\sqrt{\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2-1}\\
+	\Rightarrow &\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2 \left(\Lambda^0_{\hphantom{0}0}\right)^2 -2 \bar{\Lambda}^0_{\hphantom{0}0}\Lambda^0_{\hphantom{0}0}+1\\
+	&<\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2 \left(\Lambda^0_{\hphantom{0}0}\right)^2-\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2-\left(\Lambda^0_{\hphantom{0}0}\right)^2+1\\
+	\Rightarrow&\left(\Lambda^0_{\hphantom{0}0}+\bar{\Lambda}^0_{\hphantom{0}0}\right)^2=\left(\bar{\Lambda}^0_{\hphantom{0}0}\right)^2-2\bar{\Lambda}^0_{\hphantom{0}0}\Lambda^0_{\hphantom{0}0} +\left(\Lambda^0_{\hphantom{0}0}\right)^2<0
+\end{align*}
+Which is a contradiction as $\Lambda^0_{\hphantom{0}0}+\bar{\Lambda}^0_{\hphantom{0}0}\geq 1+1=2$ and therefore completes the proof.
+
+
+\subsection{The Poincaré Algebra}\label{susec:2_4}
+\subsubsection{\enquote{In order fo $U(1+\omega,\varepsilon)$ to be unitary, the operators $J^{\rho\sigma}$ and $P^\rho$ must be \textbf{Hermitian}} \page{59}}
+Analog to \ref{sususec:2_2_p51_1}.
+
+\subsubsection{\eqs{2.4.8/9} \page{60}}\label{sususec:2_4_p60_1}
+\begin{align*} 
+	&\dfrac{1}{2}\omega_{\rho\sigma} U J^{\rho\sigma} U^{-1}-\varepsilon_\rho U P^\rho U^{-1}\\
+	&\overset{\eqc{2.4.7}}{=}\dfrac{1}{2}\left(\Lambda\omega\Lambda^{-1}\right)_{\mu\nu}J^{\mu\nu}-\left(\Lambda \varepsilon-\Lambda\omega\Lambda^{-1}a\right)_\mu P^\mu\\
+	&=\dfrac{1}{2}\Lambda_\mu^{\hphantom{\mu}\rho}\omega_{\rho \sigma}\left(\Lambda^{-1}\right)^\sigma_{\hphantom{\sigma}\nu}J^{\mu\nu}\\
+	&-\left(\Lambda_\mu^{\hphantom{\mu}\rho} \varepsilon_\rho-\Lambda_\mu^{\hphantom{\mu}\rho}\omega_{\rho \sigma}\left(\Lambda^{-1}\right)^\sigma_{\hphantom{\sigma}\nu}a^\nu\right) P^\mu\\
+	&\overset{\eqc{2.3.10}}{=}\dfrac{1}{2}\Lambda_\mu^{\hphantom{\mu}\rho}\omega_{\rho \sigma}\Lambda^{\hphantom{\nu}\sigma}_{\nu}J^{\mu\nu}\\
+	&-\left(\Lambda_\mu^{\hphantom{\mu}\rho} \varepsilon_\rho-\Lambda_\mu^{\hphantom{\mu}\rho}\omega_{\rho \sigma}\Lambda^{\hphantom{\nu}\sigma}_{\nu}a^\nu\right) P^\mu\\
+	&=\dfrac{1}{2}\omega_{\rho \sigma}\left(\Lambda_\mu^{\hphantom{\mu}\rho}\Lambda^{\hphantom{\nu}\sigma}_{\nu}J^{\mu\nu}+\Lambda_\mu^{\hphantom{\mu}\rho}\Lambda^{\hphantom{\nu}\sigma}_{\nu}a^\nu P^\mu\right)\\
+	&-\varepsilon_\rho \Lambda_\mu^{\hphantom{\mu}\rho}P^\mu
+\end{align*}
+In order to be able to compare coefficients in this, the coefficient of $\omega_{\rho \sigma}$ has to be anti symmatrized. With this \eqs{2.4.8/9} follow immediately.
+
+\subsubsection{\eqs{2.4.10/11} \page{60}}
+Up to $\order{\omega,\varepsilon}$ one can identify \[U^{-1}(1+\omega,\varepsilon)=U(1-\omega,-\varepsilon)\],since \[U(1+\omega,\varepsilon)U(1-\omega,-\varepsilon)=U(1-\omega+\omega,-\varepsilon+\varepsilon)=U(1,0).\]
+With this we have up to $\order{\omega,\varepsilon}$
+\begin{align*} 
+	&i\commutator{\dfrac{1}{2}\omega_{\mu \nu}J^{\mu\nu}-\varepsilon_\mu P^\mu}{J^{\rho\sigma}}\\
+	&=\left(1+\dfrac{1}{2}i\omega_{\mu \nu}J^{\mu\nu}-i\varepsilon_\mu P^\mu\right)J^{\rho\sigma}\\
+	&\cdot\left(1-\dfrac{1}{2}i\omega_{\mu \nu}J^{\mu\nu}+i\varepsilon_\mu P^\mu\right)-J^{\rho\sigma}\\
+	&=U J^{\rho\sigma}U^{-1}-J^{\rho\sigma}\\
+	&\overset{\eqc{2.4.8}}{=}(1+\omega)_\mu^{\hphantom{\mu}\rho}(1+\omega)_\nu^{\hphantom{\nu}\sigma}\\
+	&\cdot\left(J^{\mu \nu}-\varepsilon^\mu P^\nu+\varepsilon^\nu P^\mu\right)-J^{\rho\sigma}\\
+	&=-\varepsilon^\rho P^\sigma+\varepsilon^\sigma P^\rho+\omega_\nu^{\hphantom{\nu}\sigma}J^{\rho \nu}+\omega_\mu^{\hphantom{\mu}\rho}J^{\mu \sigma}
+\end{align*}
+and also
+\begin{align*} 
+	&i\commutator{\dfrac{1}{2}\omega_{\mu \nu}J^{\mu\nu}-\varepsilon_\mu P^\mu}{P^{\rho}}\\
+	&=\left(1+\dfrac{1}{2}i\omega_{\mu \nu}J^{\mu\nu}-i\varepsilon_\mu P^\mu\right)P^{\rho}\\
+	&\cdot\left(1-\dfrac{1}{2}i\omega_{\mu \nu}J^{\mu\nu}+i\varepsilon_\mu P^\mu\right)-P^{\rho}\\
+	&=U P^{\rho}U^{-1}-P^{\rho}\\
+	&\overset{\eqc{2.4.9}}{=}\omega_\mu^{\hphantom{\mu}\rho}P^\mu
+\end{align*}
+\subsubsection{\eqs{2.4.12/13/14} \page{60}}
+The only difficulty lies in the derivation of \eq{2.4.12} because for this one has to anti symmatrize the coefficient of $\omega_{\mu \nu}$ in \eq{2.4.10} in order to be able to compare coefficients, similar to \ref{sususec:2_4_p60_1}. (Similarly if one derives \eq{2.4.13} from \eq{2.4.11})
+
+\subsubsection{\eqs{2.4.18-24} \page{61}}
+First observe \[J^{ij}=\varepsilon_{ijk}J_k\]
+and \[J_i=\dfrac{1}{2}\varepsilon_{lmi}J^{lm}\]
+\begin{align*} 
+	\commutator{J_i}{J_j}&=\dfrac{\varepsilon_{lmi}\varepsilon_{kpj}}{4}\commutator{J^{lm}}{J^{kp}}\\
+	&\overset{\eqc{2.4.12}}{=}-i\dfrac{\varepsilon_{lmi}\varepsilon_{kpj}}{4}\left[\eta^{mk}J^{lp}-\eta^{lk}J^{mp}-\eta^{pl}J^{km}+\eta^{pm}J^{kl}\right]\\
+	&=-\dfrac{i}{2}\left[\varepsilon_{kil}\varepsilon_{kmj}J^{lm}+\varepsilon_{kim}\varepsilon_{kjl}J^{lm}\right]\\
+	&=-\dfrac{i}{2}\left[J^{ji}-J^{ij}\right]\\
+	&=iJ^{ij}=i\varepsilon_{ijk}J_k\\
+	\commutator{J_i}{K_j}&=\commutator{J^{lm}}{J^{0j}}\dfrac{\varepsilon_{lmi}}{2}\\
+	&\overset{\eqc{2.4.12}}{=}-i\dfrac{\varepsilon_{lmi}}{2}\left[\eta^{m0}J^{lj}-\eta^{l0}J^{mj}-\eta^{jl}J^{0m}+\eta^{jm}J^{0l}\right]\\
+	&=-i\dfrac{\varepsilon_{lmi}}{2}\left[\delta_{jm} K_l-\delta_{jl}K_m\right]=i\varepsilon_{ijl}K_l\\
+	\commutator{K_i}{K_j}&=\commutator{J^{0i}}{J^{0j}}\\
+	&\overset{\eqc{2.4.12}}{=}-i\left[\eta^{i0}J^{0j}-\eta^{00}J^{ij}-\eta^{j0}J^{0i}+\eta^{ij}J^{00}\right]\\
+	&=-iJ^{ij}=-i\varepsilon_{ijk}J_k\\
+	\comm{J_i}{P_j}&=\dfrac{\varepsilon_{lmi}}{2}\comm{J^{lm}}{P^{j}}\\
+	&\overset{\eqc{2.4.13}}{=}\dfrac{i\varepsilon_{lmi}}{2}\left[\eta^{jl}P^m-\eta^{jm}P^l\right]\\
+	&=\dfrac{i}{2}\left[\varepsilon_{jmi}P^m-\varepsilon_{mji}P^m\right]=i\varepsilon_{ijm}P_m\\
+	\commutator{K_i}{P_j}&=\commutator{J^{0i}}{P^{j}}\\
+	&\overset{\eqc{2.4.13}}{=}i\left[\eta^{j0}P^i-\eta^{ji}P^0\right]\\
+	&=-i\delta_{ji}P^0=-i\delta_{ij}H\\
+	\comm{J_i}{H}&\overset{\eqc{2.4.13}}{=}\dfrac{i\varepsilon_{lmi}}{2}\left[\eta^{0l}P^m-\eta^{0m}P^l\right]=0\\
+	\comm{P_i}{H}&=\commutator{P^i}{P^0}\overset{\eqc{2.4.14}}{=}0\\
+	\comm{H}{H}&=\commutator{P^0}{P^0}\overset{\eqc{2.4.14}}{=}0	\\
+	\commutator{K_i}{H}&=\commutator{J^{0i}}{P^{0}}\\
+	&\overset{\eqc{2.4.13}}{=}i\left[\eta^{00}P^i-\eta^{0i}P^0\right]=-i P_i
+\end{align*}
+
+\subsubsection{\eq{2.4.27} \page{61}}
+When trying to check this for e.g. the standard representation in 4 dimensions, in terms of infinitesimal rotations, attention with the sign in front of $\sin$ for the different rotation axis.
+
+\subsubsection{\enquote{Inspection of \eqs{2.4.18-24} shows that these commutation relations have a limit for $v\ll1$ of the form \dots} \page{62}}
+Always equate same orders in $v$ for this.
+
+\subsubsection{\enquote{$\exp(-i \tvec{K}\cdot\tvec{v})\exp(-i \tvec{P}\cdot\tvec{a})=\exp(i M\tvec{a}\cdot\tvec{v}/2)\exp(-i \left(\tvec{K}\cdot\tvec{v}+\tvec{P}\cdot\tvec{a}\right))$} \page{62}}
+Use BCH Formula
+\begin{align*} 
+	&\exp(-i K_i v_i)\exp(-i P_j a_j)\\
+	&=\exp(-i(K_i v_i+P_j a_j)+\dfrac{1}{2}(-i)^2\commutator{K_i}{P_j}v_ia_j+0)\\
+	&=\exp(-i(K_i v_i+P_j a_j)+\dfrac{1}{2}iM v_i a_i)
+\end{align*}
+
+\subsection{One-Particle States}\label{susec:2_5}
+\subsubsection{\eq{2.5.2} \page{63}}
+$\Lambda^{-1}$ shows up here since in \eq{2.4.9} $U P U^{-1}$ is given but here $U^{-1} P U$ is being used.
+
+\subsubsection{\enquote{with $\sigma$ within any one block by themselves furnish a representation of the inhomogeneous Lorentz group} \page{63}}
+In this case the Blocks do not mix with other blocks.
+
+\subsubsection{\enquote{and for $p^2\leq0$, also the sign of $p^0$} \page{64}}
+For $p^2\leq 0$ we have
+\begin{align*} 
+	p^2&=-\left(p^0\right)^2+\vec{p}^2\leq0\\
+	\Rightarrow \abs{\vec{p}}&\leq \abs{p^0}
+\end{align*}
+and from \eq{2.3.13} we know
+\[\abs{\Lambda^0_{\hphantom{0}0}}\geq \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}}.\]
+First suppose $p^0\geq0$:
+\begin{align*} 
+	p^{\prime 0}&=\Lambda^0_{\hphantom{0}0} p^0 +\Lambda^0_{\hphantom{0}i}p^i\\
+	&\geq \Lambda^0_{\hphantom{0}0} p^0 - \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}} \abs{\vec{p}}\\
+	&= \abs{\Lambda^0_{\hphantom{0}0}} \abs{p^0} - \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}} \abs{\vec{p}}\\
+	&\geq \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}}\left( \abs{p^0}-\abs{\vec{p}}\right)\geq 0
+\end{align*}
+Now suppose $p^0\leq0$:
+\begin{align*} 
+	p^{\prime 0}&=\Lambda^0_{\hphantom{0}0} p^0 +\Lambda^0_{\hphantom{0}i}p^i\\
+	&\leq \Lambda^0_{\hphantom{0}0} p^0 + \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}} \abs{\vec{p}}\\
+	&= -\abs{\Lambda^0_{\hphantom{0}0}} \abs{p^0} + \abs{\vec{\Lambda^{0}_{\hphantom{0}\cdot}}} \abs{\vec{p}}\\
+	&\leq \abs{\Lambda^0_{\hphantom{0}0}}\left( -\abs{p^0}+\abs{\vec{p}}\right)\leq 0
+\end{align*}
+
+\subsubsection{\eq{2.5.12} \enquote{The delta function appears here because $\Psi_{k,\sigma}$ and $\Psi_{k^\prime,\sigma^\prime}$ are eigenstates of a Hermitian operator with eigenvalues $\tvec{k}$ and $\tvec{k}^\prime$, respectively.} \page{66}}\label{sususec:2_5_p66_1}
+\fbox{\parbox{\linewidth}{{\color{red}Note:} From this point forward in this section 
+		of the book the states considered have standard momentum $k^\mu$! \\
+		(see Text in the Book preceding \eq{2.5.12})
+}}
+Suppose that for given values of $\tvec{k}$ and $\tvec{k}^\prime$ \[\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\neq 0\]
+then from
+\begin{align*} 
+	&k^i\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&=\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{P^i\Psi_{k,\sigma}}\\
+	&=\innerproduct{P^i\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&=k^{\prime i}\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}
+\end{align*}
+follows \[k^i=k^{\prime i}.\]
+On why there is only a 3 dimensional delta function showing up:
+
+
+This is because both states are assumed to have standard momentum $k^\mu$ and therefore their 0-th component is completely fixed from their spatial components:
+\[k^{\prime 0}=\pm \sqrt{\tvec{k}^{\prime 2}-k^2}\]
+Choice between $+$ and $-$ comes from sign of $k^0$, i.e. $+$ for cases (a) and (c) of Table 2.1.
+\subsubsection{\eq{2.5.13} \page{67}}
+\begin{align*} 
+	&\innerproduct{U(W)\Psi_{k^\prime,\sigma^\prime}}{U(W)\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.5.8}}{=}\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\innerproduct{D_{\sigma^{\prime\prime} \sigma^{\prime}}\Psi_{k^\prime,\sigma^{\prime\prime}}}{D_{\sigma^{\prime\prime\prime} \sigma}\Psi_{k,\sigma^{\prime\prime\prime}}}\\
+	&=\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\left(D_{\sigma^{\prime\prime} \sigma^{\prime}}\right)^\star D_{\sigma^{\prime\prime\prime} \sigma} \innerproduct{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma^{\prime\prime\prime}}}\\
+	&\overset{\eqc{2.5.12}}{=}\sum\limits_{\sigma^{\prime\prime}}\left(D_{\sigma^{\prime\prime} \sigma^{\prime}}\right)^\star D_{\sigma^{\prime\prime} \sigma} \delta^{(3)}(\tvec{k}^\prime- \tvec{k})\\
+	&\overset{\eqc{2.2.2}}{=}\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.5.12}}{=} \delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{k}^\prime- \tvec{k})
+\end{align*}
+From this it follows \[D^\dagger(W)=D^{-1}(W)\]
+
+\subsubsection{\enquote{$\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}=$ \dots} \page{67}}
+{\color{red}Note:} What is meant by \enquote{arbitrary momenta} is that these momenta still have the standard momentum $k^\mu$, but now none of the states has exactly $k^\mu$ as its momentum.
+
+First define \[k^\prime \coloneqq L^{-1}(p)p^\prime\]
+with this we get:
+\begin{align*} 
+	&\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}\\
+	&\overset{\eqc{2.5.5}}{=}\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{N(p)U(L(p))\Psi_{k,\sigma}}\\
+	&=N(p)\innerproduct{U(L^{-1}(p))\Psi_{p^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.5.11}}{=}N(p)\dfrac{N^\star\left(p^\prime\right)}{N^\star \left(k^\prime\right)}\\
+	&\cdot\sum\limits_{\sigma^{\prime\prime}}
+	D_{\sigma^{\prime\prime} \sigma^{\prime}}^\star\left(W\left(L^{-1}(p),p^\prime\right)\right)
+	\innerproduct{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.5.12}}{=}N(p)N^\star\left(p^\prime\right) D_{\sigma \sigma^{\prime}}^\star\left(W\left(L^{-1}(p),p^\prime\right)\right) \delta^{(3)}(\tvec{k}^\prime- \tvec{k})
+\end{align*}
+Where in the last step we used 
+\[\dfrac{\delta^{(3)}(\tvec{k}^\prime- \tvec{k})}{N^\star \left(k^\prime\right)}=\dfrac{\delta^{(3)}(\tvec{k}^\prime- \tvec{k})}{N^\star \left(k\right)}\overset{\eqc{2.5.5}}{=}\delta^{(3)}(\tvec{k}^\prime- \tvec{k})\]
+This is valid as from \eq{2.5.5}  we know that $N(p)$ is implicitly dependent on $k^\mu$. 
+This therefor fixes $p^2=k^2$ and the sign of $p^0$ (see end of \ref{sususec:2_5_p66_1}), s.t. \[N(p)=N(\tvec{p}).\]
+
+Further we are allowed to use \eq{2.5.12} in the last step since $k^\prime$ also has  $k$ as its standard momentum:
+\[k^\prime=L^{-1}(p)p^\prime=\underbrace{L^{-1}(p)L(p^\prime)}_{\eqqcolon L(k^\prime)}k\]
+
+\subsubsection{\enquote{$W\left(L^{-1}(p),p\right)=1$} \page{67}}
+First note \[L(k)=1=L^{-1}(k)\]
+with this we get:
+\begin{align*} 
+	W\left(L^{-1}(p),p\right)&\overset{\eqc{2.5.10}}{=}L^{-1}\left(L^{-1}(p)p\right)L^{-1}(p)L(p)\\
+	&=L^{-1}(k)=1
+\end{align*}
+
+\subsubsection{\enquote{So we see that the \textbf{invariant delta function} is \dots} \page{67}}
+Invariant in this case means w.r.t. proper orthochronous Lorentz transformations, which can be interpreted as change of variables under the $\int \dd[4]{p}$ integral.
+
+\subsubsection{\eq{2.5.24} \page{68}}
+
+\begin{align*} 
+	p^0&=L^0_{\hphantom{0}0} k^0 +L^0_{\hphantom{0}i} k^i\\
+	&=\dfrac{\sqrt{\tvec{p}^2+M^2}}{M} M=\sqrt{\tvec{p}^2+M^2}\\
+	p^i&=L^i_{\hphantom{i}0} k^0 + L^i_{\hphantom{i}j} k^j\\
+	&=\dfrac{p_i}{\abs{\tvec{p}}}\sqrt{\dfrac{\tvec{p}^2+M^2}{M^2}-1} M\\
+	&=\dfrac{p_i}{\abs{\tvec{p}}} \sqrt{\dfrac{\tvec{p}^2}{M^2}}M=p_i
+\end{align*}
+
+\subsubsection{\enquote{To see this, note that the boost \eq{2.5.24} may be expressed as $L(p)=R(\hat{\tvec{p}})B(\abs{\tvec{p}})R^{-1}(\hat{\tvec{p}})$} \page{68}}
+First note that the columns and rows of the matrix $B(\abs{\tvec{p}})$ are counted in the order 1,2,3,0.
+
+
+\begin{widetext}
+	Let \[\hat{\tvec{p}}=\left(\begin{array}{c}
+		\sin(\theta)\cos(\phi)\\
+		\sin(\theta)\sin(\phi)\\
+		\cos(\theta)
+	\end{array}\right)\]
+	then we have \begin{align*} R(-\hat{\tvec{p}})&=R_3(-\phi)R_2(\theta)=
+		\left(\begin{array}{ccc}
+			\cos(\phi)\cos(\theta)	& -\sin(\phi) & \cos(\phi)\sin(\theta) \\
+			\sin(\phi)\cos(\theta)	& \cos(\phi) & 	\sin(\phi)\sin(\theta) \\
+			-\sin(\theta)	& 0 & \cos(\theta)
+		\end{array}\right)\end{align*} (see \ref{sususec:2_5_p73_1}) and 
+	\begin{align*} R^{-1}(\hat{\tvec{p}})&=R_2(\theta)R_3(\phi)=
+		\left(\begin{array}{ccc}
+			\cos(\theta) & 0 &  -\sin(\theta)\\
+			0	& 1 &  0\\
+			\sin(\theta)& 0 & \cos(\theta)
+		\end{array}\right)
+		\left(\begin{array}{ccc}
+			\cos(\phi)	& \sin(\phi) & 0 \\
+			-\sin(\phi)	& \cos(\phi) & 0 \\
+			0	& 0 & 1
+		\end{array}\right)\\
+		&=\left(\begin{array}{ccc}
+			\cos(\theta) \cos(\phi)& \cos(\theta)\sin(\phi) &  -\sin(\theta)\\
+			-\sin(\phi)	& \cos(\phi) &  0\\
+			\sin(\theta) \cos(\phi)& \sin(\theta)\sin(\phi) & \cos(\theta)
+		\end{array}\right)=R^\top (\hat{\tvec{p}})
+	\end{align*}
+	From \eq{2.5.24} we know
+	\begin{align*} 
+		L(p)&=\left(\begin{array}{cccc}
+1+(\gamma-1)s_\theta^2c_\phi^2	& (\gamma -1)s_\theta c_\phi s_\theta s_\phi & 	(\gamma -1)s_\theta c_\phi c_\theta & s_\theta c_\phi\sqrt{\gamma^2-1} \\
+(\gamma -1)s_\theta c_\phi s_\theta s_\phi&  1+(\gamma-1)s_\theta^2 s_\phi^2& (\gamma -1)s_\theta s_\phi c_\theta & s_\theta s_\phi\sqrt{\gamma^2-1} \\
+(\gamma -1)s_\theta c_\phi c_\theta& (\gamma -1)s_\theta s_\phi c_\theta & 1+(\gamma-1)c_\theta^2 &c_\theta \sqrt{\gamma^2-1}  \\
+s_\theta c_\phi\sqrt{\gamma^2-1}& s_\theta s_\phi\sqrt{\gamma^2-1} & c_\theta \sqrt{\gamma^2-1} &  \gamma
+		\end{array}\right)
+	\end{align*}
+ where $s$ and $c$ are shorthand for $\sin$ and $\cos$. With this we can now check:
+ \begin{align*} 
+ 	R(\hat{\tvec{p}})B(\abs{\tvec{p}})R^{-1}(\hat{\tvec{p}})&=\left(\begin{array}{cccc}
+ 	c_\phi c_\theta	& -s_\phi & c_\phi s_\theta &  0\\
+ 	s_\phi c_\theta	& c_\phi  & s_\phi s_\theta &  0\\
+ 	-s_\theta	& 0 &   c_\theta& 0 \\
+ 	0	& 0 & 0 & 1
+ 	\end{array}\right)
+ 	\left(\begin{array}{cccc}
+ 		1	& 0 & 0 &  0\\
+ 		0	& 1 & 0 &  0\\
+ 		0	& 0 & \gamma & \sqrt{\gamma^2-1} \\
+ 		0	& 0 & \sqrt{\gamma^2-1} & \gamma
+ 	\end{array}\right)
+	 \left(\begin{array}{cccc}
+	 	c_\phi c_\theta	& s_\phi c_\theta & -s_\theta &  0\\
+	 	-s_\phi	& c_\phi  &0 &  0\\
+	 	c_\phi s_\theta	& s_\phi s_\theta  &   c_\theta& 0 \\
+	 	0	& 0 & 0 & 1
+	 \end{array}\right)\\
+ 	&=
+ 	\left(\begin{array}{cccc}
+ 		c_\phi c_\theta	& -s_\phi & c_\phi s_\theta &  0\\
+ 		s_\phi c_\theta	& c_\phi  & s_\phi s_\theta &  0\\
+ 		-s_\theta	& 0 &   c_\theta& 0 \\
+ 		0	& 0 & 0 & 1
+ 	\end{array}\right)
+ 	\left(\begin{array}{cccc}
+ 		c_\phi c_\theta			& s_\phi c_\theta		  & -s_\theta &  0\\
+ 		-s_\phi					& c_\phi  				  &0 			&  0\\
+ 		\gamma c_\phi s_\theta	& \gamma s_\phi s_\theta  &   \gamma c_\theta& \sqrt{\gamma^2-1} \\
+ 		\sqrt{\gamma^2-1}c_\phi s_\theta & \sqrt{\gamma^2-1}s_\phi s_\theta & \sqrt{\gamma^2-1}c_\theta & \gamma
+ 	\end{array}\right)=L(p)
+ \end{align*}
+\end{widetext}
+
+\subsubsection{\enquote{$W(\mathbf{R},p)=\mathbf{R}$} \page{69}}
+To see this just substitute $R(\theta)$ back into the previous result.
+
+\subsubsection{\eq{2.5.25} \page{70}}
+
+\begin{align*} 
+	-1=\left(Wt\right)^\mu \left(W t\right)_\mu &=\alpha^2+\beta^2+\zeta^2-(1+\zeta)^2\\
+	\Leftrightarrow\alpha^2 + \beta^2&=2\zeta
+\end{align*}
+
+\subsubsection{\eq{2.5.26} \page{70}}
+This is a Lorentz transformation, since
+\begin{align*} 
+	S^\top \left(\begin{array}{cccc}
+		1&  0&  0&  0\\
+		0&  1&  0&  0\\
+		0&  0&  1&  0\\
+		0&  0&  0& -1
+	\end{array}\right) S &=
+	\left(\begin{array}{cccc}
+		1&  0&  \alpha&  \alpha\\
+		0&  1&  \beta&  \beta\\
+		-\alpha&  -\beta&  1-\zeta&  -\zeta\\
+		\alpha&  \beta&  \zeta& 1+ \zeta
+	\end{array}\right)\\
+&\cdot\left(\begin{array}{cccc}
+	1&  0&  -\alpha&  \alpha\\
+	0&  1&  -\beta&  \beta\\
+	\alpha&  \beta&  1-\zeta&  \zeta\\
+	-\alpha&  -\beta&  \zeta& -1- \zeta
+\end{array}\right)\\
+&=\left(\begin{array}{cccc}
+	1&  0&  0&  0\\
+	0&  1&  0&  0\\
+	0&  0&  1&  0\\
+	0&  0&  0& -1
+\end{array}\right)
+\end{align*}
+
+\subsubsection{\eqs{2.5.29/30} \page{70}}
+\eq{2.5.30} is trivial since the rotations around the three axis satisfy this group multiplication and \[S(0,0)=\mathbf{1}.\]
+For \eq{2.5.29} explicit calculation shows it (see \todo) together with \[R(0)=\mathbf{1}.\]
+
+\subsubsection{\eq{2.5.31} \page{70}}
+Explicit calculation shows \eq{2.5.31} (see \todo) and the invariance follows then immediately, since:
+\begin{align*} 
+	W^\prime SW^{\prime-1}=S^\prime \underbrace{R^\prime S R^{\prime-1}}_{=S^{\prime\prime}} S^{\prime-1}=S^{\prime\prime\prime}
+\end{align*}
+
+\subsubsection{\enquote{$W(\theta,\alpha,\beta)=1+\omega$} \page{71}}
+From \eq{2.5.28} we immediately get for infinitesimal $\theta,\alpha,\beta$ :
+\begin{align*} 
+	(W(\theta,\alpha,\beta))^\mu_{\hphantom{\mu}\nu}&=\delta^\mu_\nu+
+	\left(
+	\begin{array}{cccc}
+		0&  \theta&  -\alpha&  \alpha\\
+		-\theta&  0&  -\beta&  \beta\\
+		\alpha&  \beta&  0&  0\\
+		\alpha&  \beta&  0& 0
+	\end{array}
+	\right)^\mu_{\hphantom{\mu}\nu}\\
+	\Rightarrow \omega_{\mu \nu}&=\left(
+	\begin{array}{cccc}
+		0&  \theta&  -\alpha&  \alpha\\
+		-\theta&  0&  -\beta&  \beta\\
+		\alpha&  \beta&  0&  0\\
+		-\alpha&  -\beta&  0& 0
+	\end{array}
+	\right)_{\mu\nu}
+\end{align*}
+
+\subsubsection{\eq{2.5.32} \page{71}}
+\begin{align*} 
+	U(1+\omega)&\overset{\eqc{2.4.3}}{=}1+\dfrac{1}{2}i \omega_{\rho \sigma} J^{\rho\sigma}\\
+	&=1+i\theta J^{12}+i\alpha(-J^{13}+J^{10})+i\beta(-J^{23}+J^{20})\\
+	&=1+i\theta J_3+i\alpha(J_2-K_1)+i\beta(-J_1-K_2)
+\end{align*}
+
+\subsubsection{\eqs{2.5.35/36/37} \page{71}}
+From \eqs{2.4.18/19/20} we get:
+\begin{align*} 
+	\commutator{J_3}{A}&=\commutator{J_3}{J_2-K_1}\\
+	&=\comm{J_3}{J_2}-\comm{J_3}{K_1}\\
+	&=-i J_1-iK_2=iB\\
+	\commutator{J_3}{B}&=-\comm{J_3}{J_1}-\commutator{J_3}{K_2}\\
+	&=-iJ_2-i(-K_1)=-iA\\
+	\commutator{A}{B}&=-\commutator{J_2}{J_1}-\commutator{J_2}{K_2}+\commutator{K_1}{J_1}+\commutator{K_1}{K_2}\\
+	&=iJ_3-i J_3=0
+\end{align*}
+\subsubsection{\enquote{Since $A$ and $B$ are commuting Hermitian operators they can be simultaneously diagonalized by states $\Psi_{k,a,b}$} \page{71}}
+This is valid, including the label $k$, since
+\begin{align*} 
+	\commutator{A}{P_1}\Psi_{k,a,b}&=(\commutator{J_2}{P_1}-\commutator{K_1}{P_1})\Psi_{k,a,b}\\
+	&=(-iP_3+iP^0)\Psi_{k,a,b}=0\\
+	\commutator{A}{P_2}\Psi_{k,a,b}&=(\commutator{J_2}{P_2}-\commutator{K_1}{P_2})\Psi_{k,a,b}\\
+	&=0\\
+	\commutator{A}{P_3}\Psi_{k,a,b}&=(\commutator{J_2}{P_3}-\commutator{K_1}{P_3})\Psi_{k,a,b}\\
+	&=(iP_1)\Psi_{k,a,b}=0\\
+	\commutator{A}{P^0}\Psi_{k,a,b}&=(\commutator{J_2}{P^0}-\commutator{K_1}{P^0})\Psi_{k,a,b}\\
+	&=(-iP_1)\Psi_{k,a,b}=0\\
+	\commutator{B}{P_1}\Psi_{k,a,b}&=(-\commutator{J_1}{P_1}-\commutator{K_2}{P_1})\Psi_{k,a,b}\\
+	&=0\\
+	\commutator{B}{P_2}\Psi_{k,a,b}&=(\commutator{J_1}{P_2}-\commutator{K_2}{P_2})\Psi_{k,a,b}\\
+	&=(iP_3-iP^0)\Psi_{k,a,b}=0\\
+	\commutator{B}{P_3}\Psi_{k,a,b}&=(\commutator{J_1}{P_3}-\commutator{K_2}{P_3})\Psi_{k,a,b}\\
+	&=(-iP_2)\Psi_{k,a,b}=0\\
+	\commutator{B}{P^0}\Psi_{k,a,b}&=(\commutator{J_1}{P^0}-\commutator{K_2}{P^0})\Psi_{k,a,b}\\
+	&=(-iP_2)\Psi_{k,a,b}=0\\
+\end{align*}
+
+
+
+\subsubsection{\enquote{take $R(\hat{\tvec{p}})$ as a rotation by angle $\theta$ around the two-axis followed by a rotation by angle $\phi$ around the three-axis} \page{73}}\label{sususec:2_5_p73_1}
+Let \[\hat{\tvec{p}}=\left(\begin{array}{c}
+	\sin(\theta)\cos(\phi)\\
+	\sin(\theta)\sin(\phi)\\
+	\cos(\theta)
+\end{array}\right)\]
+then
+\begin{align*} 
+	R(\hat{\tvec{p}})&=R_3(-\phi)R_2(-\theta)\\
+	&=
+	\left(\begin{array}{ccc}
+	\cos(\phi)	& -\sin(\phi) & 0 \\
+	\sin(\phi)	& \cos(\phi) & 0 \\
+	0	& 0 & 1
+	\end{array}\right)
+	\left(\begin{array}{ccc}
+	\cos(\theta) & 0 &  \sin(\theta)\\
+	0	& 1 &  0\\
+	-\sin(\theta)& 0 & \cos(\theta)
+	\end{array}\right)\\
+	&=
+	\left(\begin{array}{ccc}
+		\cos(\phi)\cos(\theta)	& -\sin(\phi) & \cos(\phi)\sin(\theta) \\
+		\sin(\phi)\cos(\theta)	& \cos(\phi) & 	\sin(\phi)\sin(\theta) \\
+		-\sin(\theta)	& 0 & \cos(\theta)
+	\end{array}\right),
+\end{align*}
+(With this sign convention everything is consistent, see definition of $R(\theta)$ after \eq{2.5.27} and compare \eq{2.5.47} to \eq{2.4.27})
+with this we have \[\hat{\tvec{p}}=R(\hat{\tvec{p}}) \hat{e}_3. \]
+\subsection{Space Inversion and Time-Reversal}\label{susec:2_6}
+
+\subsection{Projective Representations}\label{susec:2_7}
+
+\subsection{The Symmetry Representation Theorem}\label{susec:2_A}
+
+\subsubsection{\enquote{But $\innerproduct{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}
+This follows immediately from \eq{2.1.1}.
+
+\subsubsection{\enquote{From \eq{2.A.1} we have $\abs{c_{kk}}=\abs{c_{k1}}=\frac{1}{\sqrt{2}}$ and for $l\neq k$ and $l\neq 1$: $c_{kl}=0$} \page{91}}
+
+\begin{align*}
+	\abs{c_{kl^\prime}}^2&\overset{\eqc{2.A.3}}{=}\abs{\sum\limits_{l}c_{kl}^\star \innerproduct{\Psi_l^\prime}{\Psi_{l^\prime}^\prime}}^2=\abs{\innerproduct{\Upsilon_k^\prime}{\Psi_{l^\prime}^\prime}}^2\\
+	&\overset{\eqc{2.A.1}}{=}\abs{\innerproduct{\Upsilon_k}{\Psi_{l^\prime}}}^2=\begin{cases}
+		\frac{1}{2} &\text{for } l^\prime=1,k\\
+		0&\text{for } l^\prime\neq1,k\end{cases}
+\end{align*}
+
+\subsubsection{\eq{2.A.10} \page{92}}
+\begin{align*} 
+	\abs{C_k}^2+\abs{C_1}^2+2\Re(C_k C_1^\star)&=\abs{C_k+C_1}^2\\
+	\overset{\eqc{2.A.9}}{=}\abs{C_k^\prime+C_1^\prime}^2=\abs{C_k^\prime}^2+\abs{C_1^\prime}^2&+2\Re(C_k^\prime C_1^{\prime\star})\\
+	\overset{\eq{2.A.8}}{\Rightarrow} \Re(C_k C_1^\star)&=\Re(C_k^\prime C_1^{\prime\star})\\
+	\overset{\eq{2.A.8}}{\Rightarrow} \Re\left(\dfrac{C_k}{C_1}\right)&=\Re\left(\dfrac{C_k^\prime}{C_1^\prime}\right)
+\end{align*}
+
+\subsubsection{\eq{2.A.11} \page{92}}
+\begin{align*} 
+	\left\lbrace\Re\left(\dfrac{C_k}{C_1}\right)\right\rbrace^2+\left\lbrace\Im\left(\dfrac{C_k}{C_1}\right)\right\rbrace^2&=\abs{\dfrac{C_k}{C_1}}^2\\
+	\overset{\eq{2.A.8}}{=}\abs{\dfrac{C_k^\prime}{C_1^\prime}}^2=\left\lbrace\Re\left(\dfrac{C_k^\prime}{C_1^\prime}\right)\right\rbrace^2&+\left\lbrace\Im\left(\dfrac{C_k^\prime}{C_1^\prime}\right)\right\rbrace^2\\
+	\overset{\eq{2.A.10}}{\Rightarrow} \Im\left(\dfrac{C_k}{C_1}\right)&=\pm\Im\left(\dfrac{C_k^\prime}{C_1^\prime}\right)
+\end{align*}
+
+\subsubsection{\enquote{This is only possible if $\Re\left(\frac{C_k}{C_1}\frac{C_l^\star}{C_1^\star}\right)=\Re\left(\frac{C_k}{C_1}\frac{C_l}{C_1}\right)$ or, in other words, if $\Im\left(\frac{C_k}{C_1}\right)\Im\left(\frac{C_l}{C_1}\right)=0$} \page{93}}
+
+Define 
+\begin{align*} 
+	a\coloneqq \dfrac{C_k}{C_1}\\
+	b\coloneqq \dfrac{C_l}{C_1}
+\end{align*}
+With this we have
+\begin{align} 
+	\abs{1+a+b^\star}^2&=\abs{1+a+b}^2\\
+	\Leftrightarrow 1 + a^\star+b+a&+\abs{a}^2+a b+b^\star+b^\star a^\star+\abs{b}^2\\
+	=1 + a^\star+b^\star+a&+\abs{a}^2+a b^\star+b+b a^\star+\abs{b}^2\\
+	\Leftrightarrow a b+b^\star a^\star&=a b^\star+b a^\star \label{eq_2_A_1}
+\end{align}
+And further rewriting yields
+\begin{align*} 
+	\Re\left(\dfrac{C_k}{C_1}\dfrac{C_l}{C_1}\right)&=\Re(a b)\overset{\ref{eq_2_A_1}}{=}\Re(a b^\star)=\Re\left(\dfrac{C_k}{C_1}\dfrac{C_l^\star}{C_1^\star}\right)\\
+	\Im\left(\dfrac{C_k}{C_1}\right)\Im\left(\dfrac{C_l}{C_1}\right)&=\Im(a)\Im(b)\\
+	&=-\dfrac{1}{4}(ab - a b^\star-a^\star b + a^\star b^\star)\overset{\ref{eq_2_A_1}}{=}0
+\end{align*}
+
+\subsubsection{\enquote{Then the invariance of transition probabilities requires that $\abs{\sum\limits_{k}B_k^\star A_k}^2=\abs{\sum\limits_{k}B_k A_k}^2$} \page{93}}\label{sususec:2_A_p93_1}
+\begin{align*} 
+	\abs{\sum\limits_{k}B_k^\star A_k}^2\overset{\eq{2.A.2}}{=}&\abs{\sum\limits_{k l}B_k^\star A_l \innerproduct{\Psi_k}{\Psi_l}}^2\\
+	=&\abs{\innerproduct{\sum\limits_{k}B_k \Psi_k}{\sum\limits_{l}A_l \Psi_l}}^2\\
+	\overset{\eq{2.A.1}}{=}&\abs{\innerproduct{U\left(\sum\limits_{k}B_k \Psi_k\right)}{U\left(\sum\limits_{l}A_l \Psi_l\right)}}^2\\
+	=&\abs{\innerproduct{\sum\limits_{k}B_k^\star U\Psi_k}{\sum\limits_{l}A_l U\Psi_l}}^2\\
+	=&\abs{\sum\limits_{k l}B_k A_l \innerproduct{U\Psi_k}{U\Psi_l}}^2\\
+	\overset{\eq{2.A.3}}{=}&\abs{\sum\limits_{k}B_k A_k}^2
+\end{align*}
+
+\subsubsection{\eq{2.A.16}\page{94}}
+\begin{align*} 
+	&\sum\limits_{k l}\Im(B_k^\star B_l) \Im(A_k^\star A_l)\\
+	&=\Im\left(\sum\limits_{k l}\Im(B_k^\star B_l) A_k^\star A_l\right)\\
+	&=\dfrac{1}{2 i}\left[\sum\limits_{k l}\Im(B_k^\star B_l) A_k^\star A_l- \complexc\right]\\
+	&=\dfrac{1}{2 i}\left[\sum\limits_{k l}\dfrac{1}{2i}(B_k^\star B_l-B_k B_l^\star) A_k^\star A_l- \complexc\right]\\
+	&=\dfrac{1}{2 i}\left[\dfrac{1}{2i}\left(\sum\limits_{k l}B_k^\star B_l A_k^\star A_l- \sum\limits_{k l}B_k B_l^\star A_k^\star A_l\right)- \complexc\right]\\
+	&=\dfrac{1}{2 i}\left[\dfrac{1}{2i}\left(\abs{\sum\limits_{k}B_k A_k}^2-\abs{\sum\limits_{k}B_k^\star A_k}^2\right)- \complexc\right]\\
+	&=\dfrac{1}{2 i}\left[\dfrac{1}{i}\left(\abs{\sum\limits_{k}B_k A_k}^2-\abs{\sum\limits_{k}B_k^\star A_k}^2\right)\right]\\
+	&\overset{\ref{sususec:2_A_p93_1}}{=}0
+\end{align*}
+
+\subsubsection{\enquote{However, for any pair of such state-vectors, with neither $A_k$ nor $B_k$ \textbf{all of the same phase}} \page{94}}
+
+If they were all of the same phase then \[\forall k,l: \Im{A_k^\star A_l}=0\]
+or \[\forall k,l: \Im{B_k^\star B_l}=0\]
+See Footnote j, for why this is relevant.
+
+\subsubsection{\enquote{We have thus shown that for a given symmetry transformation $T$ either all state-vectors satisfy \eq{2.A.14} or else they all satisfy \eq{2.A.15}} \page{94}}
+Preceding this a contradiction was derived from the assumption that \eq{2.A.14} applies for a state-vector \[\sum\limits_{k}A_k\Psi_k\] while \eq{2.A.15} applies for a state vector \[\sum\limits_{k}B_k\Psi_k.\]
+Such that the statement is obvious.
+
+
+\subsection{Group Operators and Homotopy Classes}\label{susec:2_B}
+
+\subsection{Inversions and Degenerate Multiplets}\label{susec:2_C}

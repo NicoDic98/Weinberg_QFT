@@ -1,0 +1,119 @@
+% !TeX spellcheck = en_US
+
+% TeX'ing this file requires that you have all prerequisites
+% for REVTeX 4.1 installed
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex templateForReport.tex
+%  2)  bibtex templateForReport
+%  3)  latex templateForReport.tex
+%  4)  latex templateForReport.tex
+%
+\documentclass[%
+reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose,
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+amsmath,amssymb,
+aps,
+pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+floatfix,
+]{revtex4-2}
+
+%\usepackage{fontspec}
+%\usepackage{unicode-math}
+\usepackage[english]{babel}
+
+%\usepackage{polyglossia}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{subcaption}% For subfigures
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{booktabs}% for nicer tables
+\usepackage[separate-uncertainty]{siunitx}[=v2]
+\usepackage{enumitem}% for letters in enumerations
+\usepackage{csquotes}
+
+
+\usepackage{tikz}% For nice drawings
+\usepackage{pgf}% data visualization
+\usetikzlibrary{angles,quotes,calc,intersections,through,backgrounds, babel, positioning}
+
+\usepackage{hologo}% for the TeX logo
+\usepackage{natbib}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{physics}% easys power notation and add more functions
+\usepackage[utf8]{inputenc}
+
+\usepackage{mathtools}
+
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage{pgfcache}
+%\setpgfpreamble{\usepackage[separate-uncertainty]{siunitx}}
+
+\usepackage{defs}
+
+%\DeclareSIUnit \div {div}
+%\setdefaultlanguage{german}
+\sisetup{locale = DE}
+\setlist{itemsep=3pt,parsep=0pt}
+
+\begin{document}
+	\title{Notes for \enquote{The Quantum Theory of Fields 1, Foundations} - Weinberg}
+	
+	\author{Nico Dichter}
+	\email{nicodichter@nocoffeetech.de}
+	
+	\affiliation{Friedrich-Wilhelm-Universität Bonn}
+	
+	% It is always \today, today, but any date may be explicitly specified
+	\date{\today}
+	
+	\begin{abstract}
+		abc
+	\end{abstract}
+	
+	\maketitle
+	
+	\section{Introduction}\label{sec:introduction}
+	abc
+	
+	
+	\input{2-chapter-2.tex}
+	%\cleardoublepage
+	%\newpage
+	%\input{4-daten.tex}
+	
+	\begin{acknowledgments}
+		Typesetting done with \emph{REV\TeX\ 4.2}.
+	\end{acknowledgments}
+	
+	
+	%\newpage
+	
+	%\listoffigures
+	%\listoftables
+	
+	% Add the bibliography file
+	\bibliography{bibliography}
+	%\clearpage
+	
+	%\appendix
+	
+	%\input{7-anhang.tex}
+\end{document}

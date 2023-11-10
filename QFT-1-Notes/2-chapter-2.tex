@@ -118,7 +118,7 @@ and \[J_i=\dfrac{1}{2}\varepsilon_{lmi}J^{lm}\]
 \end{align*}
 
 \subsubsection{\eq{2.4.27} \page{61}}
-When trying to check this for e.g. the standard representation in 4 dimensions, in terms of infinitesimal rotations, attention with the sign in front of $\sin$ for the different rotation axis.
+When trying to check this for e.g. the standard representation in 4 dimensions, in terms of infinitesimal rotations, attention with the sign in front of $\sin$ for the different rotation axis (see remark at the end of\ref{sususec:2_5_p73_1}).
 
 \subsubsection{\enquote{Inspection of \eqs{2.4.18-24} shows that these commutation relations have a limit for $v\ll1$ of the form \dots} \page{62}}
 Always equate same orders in $v$ for this.
@@ -424,7 +424,41 @@ This is valid, including the label $k$, since
 	&=(-iP_2)\Psi_{k,a,b}=0\\
 \end{align*}
 
+\subsubsection{\enquote{$\sigma$ gives the component of angular momentum in the direction of motion, or \emph{helicity}} \page{72}}
+The derivation of \eq{2.5.26} starts among other conditions from the explicit form of $k$. Which results in \[\eqs{2.5.27/28}\rightarrow\eq{2.5.32}\rightarrow{2.5.39},\]
+s.t. this is really connected to the direction of motion.
 
+\subsubsection{\enquote{$U(W)\Psi_{k,\sigma}=\exp(i\theta\sigma)\Psi_{k,\sigma}$} \page{72}}
+Use \eqs{2.5.38/39}.
+
+\subsubsection{\eq{2.5.44} \page{73}}
+With $B(u)$ from \eq{2.5.45} we get:
+\begin{align*} 
+	B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right) k&=
+	\left(\begin{array}{cccc}
+		1&  0&  0&  0\\
+		0&  1&  0&  0\\
+		0&  0&  \frac{\left(\frac{\abs{\tvec{p}}}{\kappa}\right)^2+1}{2\dfrac{\abs{\tvec{p}}}{\kappa}}&  \frac{\left(\frac{\abs{\tvec{p}}}{\kappa}\right)^2-1}{2\dfrac{\abs{\tvec{p}}}{\kappa}}\\
+		0&  0&  \frac{\left(\frac{\abs{\tvec{p}}}{\kappa}\right)^2-1}{2\dfrac{\abs{\tvec{p}}}{\kappa}}& \frac{\left(\frac{\abs{\tvec{p}}}{\kappa}\right)^2+1}{2\dfrac{\abs{\tvec{p}}}{\kappa}}
+	\end{array}\right)
+	\left(
+	\begin{array}{c}
+		0\\
+		0\\
+		\kappa\\
+		\kappa
+	\end{array}
+	\right)\\
+	&=\abs{\tvec{p}}
+	\left(
+	\begin{array}{c}
+		0\\
+		0\\
+		1\\
+		1
+	\end{array}
+	\right)
+\end{align*}
 
 \subsubsection{\enquote{take $R(\hat{\tvec{p}})$ as a rotation by angle $\theta$ around the two-axis followed by a rotation by angle $\phi$ around the three-axis} \page{73}}\label{sususec:2_5_p73_1}
 Let \[\hat{\tvec{p}}=\left(\begin{array}{c}
@@ -455,7 +489,135 @@ then
 \end{align*}
 (With this sign convention everything is consistent, see definition of $R(\theta)$ after \eq{2.5.27} and compare \eq{2.5.47} to \eq{2.4.27})
 with this we have \[\hat{\tvec{p}}=R(\hat{\tvec{p}}) \hat{e}_3. \]
+
+
 \subsection{Space Inversion and Time-Reversal}\label{susec:2_6}
+
+\subsubsection{\eqs{2.6.7-12} \page{76}}
+\begin{align*} 
+	\parity J_i \parity^{-1}&=\dfrac{1}{2}\varepsilon_{ijk} \parity J^{jk} \parity^{-1}\\
+	&=\dfrac{1}{2}\varepsilon_{ijk}\left(-\delta^j_l\right)\left(-\delta^k_m\right)J^{lm} \\
+	&=\dfrac{1}{2}\varepsilon_{ijk}J^{jk}=J_i\\
+	\parity K_i \parity^{-1}&=\parity J^{0i} \parity^{-1}\\
+	&=\delta^0_\mu \left(-\delta^j_\nu\right)J^{\mu\nu}\\
+	&=-J^{0i}=-K_i\\
+	\parity P_i \parity^{-1}&=\left(-\delta^i_\nu\right)P^\mu=-P_i\\
+	\timereversal J_i \timereversal^{-1}&=\dfrac{1}{2}\varepsilon_{ijk} \timereversal J^{jk} \timereversal^{-1}\\
+	&=-\dfrac{1}{2}\varepsilon_{ijk}\delta^j_l\delta^k_mJ^{lm} \\
+	&=-\dfrac{1}{2}\varepsilon_{ijk}J^{jk}=-J_i\\
+	\timereversal K_i \timereversal^{-1}&=\timereversal J^{0i} \timereversal^{-1}\\
+	&=-\left(-\delta^0_\mu\right) \delta^j_\nu J^{\mu\nu}\\
+	&=J^{0i}=K_i\\
+	\timereversal P_i \timereversal^{-1}&=-\delta^i_\nu P^\mu=-P_i
+\end{align*}
+
+\subsubsection{\enquote{$\paritymatrix L(p)\paritymatrix^{-1}=L(\paritymatrix p)$} \page{77}}
+From \eq{2.5.24} we immediately see:
+\begin{align*} 
+	\left(\paritymatrix L(p)\paritymatrix^{-1}\right)^i_{\hphantom{i}k}&=\left(L(p)\right)^i_{\hphantom{i}k}
+	=\left(L(\paritymatrix p)\right)^i_{\hphantom{i}k}\\
+	\left(\paritymatrix L(p)\paritymatrix^{-1}\right)^i_{\hphantom{i}0}&=-\left(L(p)\right)^i_{\hphantom{i}0}
+	=\left(L(\paritymatrix p)\right)^i_{\hphantom{i}0}\\
+	\left(\paritymatrix L(p)\paritymatrix^{-1}\right)^0_{\hphantom{0}0}&=\left(L(p)\right)^0_{\hphantom{0}0}
+	=\left(L(\paritymatrix p)\right)^0_{\hphantom{0}0}
+\end{align*}
+
+\subsubsection{\enquote{Using \eq{2.6.14} again on the left, we see that the square-root factors cancel,\dots} \page{77}}
+\begin{align*} 
+	&\left(-J_1\pm i J_2\right)\zeta_\sigma \Psi_{k,-\sigma}=-\left(J_1\mp i J_2\right)\zeta_\sigma \Psi_{k,-\sigma}\\
+	&\overset{\eqc{2.6.14}}{=}-\sqrt{(j\pm (-\sigma))(j\mp(-\sigma)+1)}\zeta_\sigma \Psi_{k,-\sigma\mp 1}\\
+	&=-\sqrt{(j\mp\sigma)(j\pm\sigma+1)}\zeta_\sigma \Psi_{k,-\sigma\mp 1}
+\end{align*}
+
+\subsubsection{\enquote{The time-reversal phase $\zeta$ has no physical significance.} \page{78}}
+This redefinition only works because \timereversal is \emph{anti-linear}.
+
+\subsubsection{\enquote{$\timereversalmatrix L(p)\timereversalmatrix^{-1}=L(\paritymatrix p)$} \page{78}}
+From \eq{2.5.24} we immediately see:
+\begin{align*} 
+	\left(\timereversalmatrix L(p)\timereversalmatrix^{-1}\right)^i_{\hphantom{i}k}&=\left(L(p)\right)^i_{\hphantom{i}k}
+	=\left(L(\paritymatrix p)\right)^i_{\hphantom{i}k}\\
+	\left(\timereversalmatrix L(p)\timereversalmatrix^{-1}\right)^i_{\hphantom{i}0}&=-\left(L(p)\right)^i_{\hphantom{i}0}
+	=\left(L(\paritymatrix p)\right)^i_{\hphantom{i}0}\\
+	\left(\timereversalmatrix L(p)\timereversalmatrix^{-1}\right)^0_{\hphantom{0}0}&=\left(L(p)\right)^0_{\hphantom{0}0}
+	=\left(L(\paritymatrix p)\right)^0_{\hphantom{0}0}
+\end{align*}
+
+\subsubsection{\enquote{\parity yields a state with four-momentum \dots} \page{78}}\label{sususec:2_6_p78_1}
+What is meant by this is:
+\begin{align*} 
+	P^i \parity \Psi_{k,\sigma}&\overset{\eqc{2.6.9}}{=} \parity \left(-P^i\right)\Psi_{k,\sigma}=\left(-\delta^i_3\kappa\right)\parity\Psi_{k,\sigma}\\
+	H \parity \Psi_{k,\sigma}&\overset{\eqc{2.6.13}}{=} \parity H \Psi_{k,\sigma} =\kappa \parity\Psi_{k,\sigma}\\
+	J_3 \parity \Psi_{k,\sigma}&\overset{\eqc{2.6.7}}{=} \parity J_3 \Psi_{k,\sigma} = \sigma \parity \Psi_{k,\sigma}
+\end{align*}
+
+\subsubsection{\eq{2.6.20} \page{79}}
+We have \[R_2 = \left(
+\begin{array}{cccc}
+	-1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & -1 & 0 \\
+	0 & 0 & 0 & 1
+\end{array}
+\right)=R_2^{-1}\]
+from which we get
+\begin{align*} 
+	U^{-1}(R_2)J_3U(R_2)&=U^{-1}(R_2)J^{12}U(R_2)\\
+	&\overset{\eqc{2.4.8}}{=}\left(R_2^{-1}\right)^1_{\hphantom{1}\mu}\left(R_2^{-1}\right)^2_{\hphantom{2}\nu} J^{\mu\nu}\\
+	&=- J^{12}=-J_3\\
+	U^{-1}(R_2)P^\nu U(R_2)&\overset{\eqc{2.4.9}}{=}\left(R_2^{-1}\right)^\nu_{\hphantom{\nu}\mu}P^\mu
+\end{align*}
+such that
+\begin{align*} 
+	J_3 U(R_2^{-1}) \parity \Psi_{k,\sigma}&= -U(R_2^{-1})J_3 \parity \Psi_{k,\sigma}\\
+	&\overset{\ref{sususec:2_6_p78_1}}{=}-\sigma U(R_2^{-1})\parity \Psi_{k,\sigma}\\
+	P^i U(R_2^{-1}) \parity \Psi_{k,\sigma}&\overset{\ref{sususec:2_6_p78_1}}{=}U(R_2^{-1}) \left(-\left(-\delta^i_3\kappa\right)\right) \parity \Psi_{k,\sigma}\\
+	&=k^iU(R_2^{-1}) \parity \Psi_{k,\sigma}\\
+	H U(R_2^{-1}) \parity \Psi_{k,\sigma}&\overset{\ref{sususec:2_6_p78_1}}{=} \kappa U(R_2^{-1}) \parity \Psi_{k,\sigma}\\
+	&=k^0U(R_2^{-1}) \parity \Psi_{k,\sigma}.
+\end{align*}
+Further we get
+\[R_2^{-1}\paritymatrix=\left(
+\begin{array}{cccc}
+	-1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+\end{array}
+\right).\]
+
+\subsubsection{\enquote{\paritymatrix commutes with the rotation $R\left(\hat{\tvec{p}}\right)$} \page{79}}
+This is true because $R\left(\hat{\tvec{p}}\right)$ only acts on space components non trivially, which all just get a \enquote{-} sign from \paritymatrix.
+
+\subsubsection{\enquote{$\parity\Psi_{p,\sigma}=\sqrt{\dfrac{\kappa}{p^0}}\eta_\sigma U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,-\sigma}$} \page{79}}\label{sususec:2_6_p79_1}
+\begin{align*} 
+	\parity\Psi_{p,\sigma}&\overset{\eqc{2.5.5}}{=}N(p)\parity U(L(p))\Psi_{k,\sigma}\\
+	&\overset{\eqc{2.5.44}}{=}\sqrt{\dfrac{\kappa}{p^0}}\parity U\left(R\left(\hat{\tvec{p}}\right)B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left(\paritymatrix R\left(\hat{\tvec{p}}\right)B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)\paritymatrix B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2 R_2^{-1}\paritymatrix B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)R_2^{-1}\paritymatrix\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)U\left(R_2^{-1}\right)\parity\Psi_{k,\sigma}\\
+	&\overset{\eqc{2.6.20}}{=}\sqrt{\dfrac{\kappa}{p^0}}\eta_\sigma U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,-\sigma}\\
+\end{align*}
+
+\subsubsection{\enquote{But a rotation of $\pm180^\circ$ around the three-axis reverses the sign of $J_2$,\dots} \page{79}}
+Analogously to \ref{sususec:2_6_p78_1} ($2\leftrightarrow3$).
+
+\subsubsection{\eq{2.6.22} \page{79}}
+First note that \[B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\] and rotations around the three-axis commute (see \eq{2.5.45}).
+\begin{align*} 
+	\parity\Psi_{p,\sigma}&\overset{\ref{sususec:2_6_p79_1}}{=}\sqrt{\dfrac{\kappa}{p^0}}\eta_\sigma U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,-\sigma}\\
+	&\overset{\eq{2.6.21}}{=}\sqrt{\dfrac{\kappa}{p^0}}\eta_\sigma U\left( R\left(-\hat{\tvec{p}}\right)\right)\\
+	&\cdot\exp(\pm i \pi J_3)U\left(  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,-\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}\eta_\sigma U\left( R\left(-\hat{\tvec{p}}\right)\right)\\
+	&\cdot U\left(  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\exp(\pm i \pi J_3)\Psi_{k,-\sigma}\\
+	&=\eta_\sigma \exp(\pm i \pi (-\sigma)) \sqrt{\dfrac{\kappa}{p^0}}U\left(L(\paritymatrix p)\right)\Psi_{k,-\sigma}\\
+	&=\eta_\sigma \exp(\mp i \pi \sigma) \Psi_{\paritymatrix p,-\sigma}
+\end{align*}
+
+
+
 
 \subsection{Projective Representations}\label{susec:2_7}
 

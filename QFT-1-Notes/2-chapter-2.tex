@@ -551,7 +551,7 @@ What is meant by this is:
 	J_3 \parity \Psi_{k,\sigma}&\overset{\eqc{2.6.7}}{=} \parity J_3 \Psi_{k,\sigma} = \sigma \parity \Psi_{k,\sigma}
 \end{align*}
 
-\subsubsection{\eq{2.6.20} \page{79}}
+\subsubsection{\eq{2.6.20} \page{79}}\label{sususec:2_6_p79_3}
 We have \[R_2 = \left(
 \begin{array}{cccc}
 	-1 & 0 & 0 & 0 \\
@@ -560,7 +560,7 @@ We have \[R_2 = \left(
 	0 & 0 & 0 & 1
 \end{array}
 \right)=R_2^{-1}\]
-from which we get
+from which we get (Is $U(R_2^{-1})=U^{-1}(R_2)$ ? \todo)
 \begin{align*} 
 	U^{-1}(R_2)J_3U(R_2)&=U^{-1}(R_2)J^{12}U(R_2)\\
 	&\overset{\eqc{2.4.8}}{=}\left(R_2^{-1}\right)^1_{\hphantom{1}\mu}\left(R_2^{-1}\right)^2_{\hphantom{2}\nu} J^{\mu\nu}\\
@@ -616,7 +616,55 @@ First note that \[B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\] and rotations a
 	&=\eta_\sigma \exp(\mp i \pi \sigma) \Psi_{\paritymatrix p,-\sigma}
 \end{align*}
 
+\subsubsection{\enquote{This peculiar change of sign in the operation of parity for mass-less particles of half-integer spin is due to the convention adopted in \eq{2.5.47} for the rotation used to define mass-less particles states of arbitrary momentum.} \page{79}}
+This is based on the fact that the choice of $R\left(\hat{\tvec{p}}\right)$, which transforms the three axis into the unit vector $\hat{\tvec{p}}$, is \emph{not} unique. As mentioned in the text right after \eq{2.5.47}, one could always add an initial rotation around the three axis. This is also why the factor of \[\exp(\pm i \pi J_3)\] shows up in \eq{2.6.21}, despite $R\left(\hat{\tvec{p}}\right)R_2$ and $R\left(-\hat{\tvec{p}}\right)$ both transforming the three axis into the unit vector $-\hat{\tvec{p}}$.
 
+\subsubsection{\enquote{\timereversal yields a state which has values \dots} \page{79}}\label{sususec:2_6_p79_2}
+What is meant by this is:
+\begin{align*} 
+	P^i \timereversal \Psi_{k,\sigma}&\overset{\eqc{2.6.12}}{=} \timereversal \left(-P^i\right)\Psi_{k,\sigma}=\left(-\delta^i_3\kappa\right)\timereversal\Psi_{k,\sigma}\\
+	H \timereversal \Psi_{k,\sigma}&\overset{\eqc{2.6.13}}{=} \timereversal H \Psi_{k,\sigma} =\kappa \timereversal\Psi_{k,\sigma}\\
+	J_3 \timereversal \Psi_{k,\sigma}&\overset{\eqc{2.6.10}}{=} \timereversal \left(-J_3\right) \Psi_{k,\sigma} = -\sigma \timereversal \Psi_{k,\sigma}
+\end{align*}
+
+\subsubsection{\eq{2.6.23} \page{80}}
+This is completely analog to \eq{2.6.20} when using \ref{sususec:2_6_p79_2} (see \ref{sususec:2_6_p79_3}).
+Further we get
+\[R_2^{-1}\timereversal=\left(
+\begin{array}{cccc}
+	-1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & -1 & 0 \\
+	0 & 0 & 0 & -1
+\end{array}
+\right).\]
+
+\subsubsection{\eq{2.6.24} \page{80}}\label{sususec:2_6_p80_1}
+\begin{align*} 
+	\timereversal\Psi_{p,\sigma}&\overset{\eqc{2.5.5}}{=}N(p)\timereversal U(L(p))\Psi_{k,\sigma}\\
+	&\overset{\eqc{2.5.44}}{=}\sqrt{\dfrac{\kappa}{p^0}}\timereversal U\left(R\left(\hat{\tvec{p}}\right)B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left(\timereversalmatrix R\left(\hat{\tvec{p}}\right)B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)\timereversalmatrix B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2 R_2^{-1}\timereversalmatrix B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)R_2^{-1}\timereversalmatrix\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)U\left(R_2^{-1}\right)\timereversal\Psi_{k,\sigma}\\
+	&\overset{\eqc{2.6.23}}{=}\sqrt{\dfrac{\kappa}{p^0}}\zeta_\sigma U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+\end{align*}
+
+\subsubsection{\eq{2.6.25} \page{80}}
+First note that \[B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\] and rotations around the three-axis commute (see \eq{2.5.45}).
+\begin{align*} 
+	\timereversal\Psi_{p,\sigma}&\overset{\ref{sususec:2_6_p80_1}}{=}\sqrt{\dfrac{\kappa}{p^0}}\zeta_\sigma U\left( R\left(\hat{\tvec{p}}\right)R_2  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&\overset{\eq{2.6.21}}{=}\sqrt{\dfrac{\kappa}{p^0}}\zeta_\sigma U\left( R\left(-\hat{\tvec{p}}\right)\right)\\
+	&\cdot\exp(\pm i \pi J_3)U\left(  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\Psi_{k,\sigma}\\
+	&=\sqrt{\dfrac{\kappa}{p^0}}\zeta_\sigma U\left( R\left(-\hat{\tvec{p}}\right)\right)\\
+	&\cdot U\left(  B\left(\dfrac{\abs{\tvec{p}}}{\kappa}\right)\right)\exp(\pm i \pi J_3)\Psi_{k,\sigma}\\
+	&=\zeta_\sigma \exp(\pm i \pi \sigma) \sqrt{\dfrac{\kappa}{p^0}}U\left(L(\paritymatrix p)\right)\Psi_{k,\sigma}\\
+	&=\zeta_\sigma \exp(\pm i \pi \sigma) \Psi_{\paritymatrix p,\sigma}
+\end{align*}
+
+\subsubsection{\enquote{\dots the total angular momentum $j$ of any state of this system would have to be a half-integer,\dots} \page{81}}
+This is true as all spins and helicities except for one half integer spin/helicity would couple to a an integer angular momentum. And this would then couple with the remaining half integer spin/helicity to a half-integer total angular momentum $j$.
 
 
 \subsection{Projective Representations}\label{susec:2_7}

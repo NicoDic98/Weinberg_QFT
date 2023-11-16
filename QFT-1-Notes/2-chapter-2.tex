@@ -354,8 +354,8 @@ This is a Lorentz transformation, since
 \end{align*}
 
 \subsubsection{\eqs{2.5.29/30} \page{70}}
-\eq{2.5.30} is trivial since the rotations around the three axis satisfy this group multiplication and \[S(0,0)=\mathbf{1}.\]
-For \eq{2.5.29} explicit calculation shows it (see \todo) together with \[R(0)=\mathbf{1}.\]
+\eq{2.5.30} is trivial since the rotations around the three axis satisfy this group multiplication and \[S(0,0)=\identity.\]
+For \eq{2.5.29} explicit calculation shows it (see \todo) together with \[R(0)=\identity.\]
 
 \subsubsection{\eq{2.5.31} \page{70}}
 Explicit calculation shows \eq{2.5.31} (see \todo) and the invariance follows then immediately, since:
@@ -669,6 +669,30 @@ This is true as all spins and helicities except for one half integer spin/helici
 
 \subsection{Projective Representations}\label{susec:2_7}
 
+\subsubsection{\eq{2.7.6} \page{83}}
+From \eq{2.2.20} together with the modification of \eq{2.7.1} we have up to $\order{\theta^2,\bar{\theta}^2}$
+\begin{align*} 
+	&\left(1+i f_{ab}\bar{\theta}^a\theta^b\right)\\
+	&\cdot\left[1+i\left(\theta^a+\bar{\theta}^a+f^a_{\hphantom{a} bc}\bar{\theta}^b\theta^c\right)t_a+
+	\dfrac{1}{2}\left(\theta^b+\bar{\theta}^b\right)\left(\theta^c+\bar{\theta}^c\right)t_{bc}\right]\\
+	&=\left[1+i\bar{\theta}^a t_a+\dfrac{1}{2}\bar{\theta}^b\bar{\theta}^c t_{bc}\right]\cdot\left[1+i{\theta}^a t_a+\dfrac{1}{2}{\theta}^b{\theta}^c t_{bc}\right]\\
+	&=1+i{\theta}^a t_a+\dfrac{1}{2}{\theta}^b{\theta}^c t_{bc}+i\bar{\theta}^a t_a-\bar{\theta}^b t_b \theta^c t_c+\dfrac{1}{2}\bar{\theta}^b\bar{\theta}^c t_{bc}\\
+	\Leftrightarrow &i f^a_{\hphantom{a} bc}\bar{\theta}^b\theta^c t_a + \dfrac{1}{2}\left(\theta^b \bar{\theta}^c+ \bar{\theta}^b\theta^c\right)t_{bc} +i f_{ab}\bar{\theta}^a\theta^b=-\bar{\theta}^b  \theta^c t_b t_c\\
+	\Leftrightarrow&\bar{\theta}^b\theta^c\left[t_{bc}+ i f^a_{\hphantom{a} bc} t_a+t_b t_c+i f_{bc}\right]=0\\
+	\Leftrightarrow& t_{bc}=- i f^a_{\hphantom{a} bc} t_a-t_b t_c-i f_{bc}
+\end{align*}
+Note that here the order of multiplication is adapted from \eq{2.2.18} and not from \eq{2.7.1}, which does not matter for the result since $\theta$ and $\bar{\theta}$ are dropped in the end. With this we now get the analog of \eq{2.2.22}:
+\begin{align*} 
+	&- i f^a_{\hphantom{a} bc} t_a-t_b t_c -i f_{bc}\\
+	=t_{bc}&=t_{cb} = - i f^a_{\hphantom{a} cb} t_a-t_c t_b-i f_{cb}\\
+	\Leftrightarrow\commutator{t_b}{t_c}&=i\left(f^a_{\hphantom{a} cb}-f^a_{\hphantom{a} bc}\right)t_a+i\left(f_{cb}-f_{bc}\right)\identity
+\end{align*}
+
+\subsubsection{\eq{2.7.12} \page{83}}
+\begin{align*} 
+	\commutator{\tilde{t}_b}{\tilde{t}_c}&=\commutator{t_b}{t_c}=iC^a_{\hphantom{a}bc} t_a+iC^a_{\hphantom{a}bc}\phi_a \identity=iC^a_{\hphantom{a}bc}\tilde{t}_a
+\end{align*}
+
 \subsection{The Symmetry Representation Theorem}\label{susec:2_A}
 
 \subsubsection{\enquote{But $\innerproduct{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}
@@ -753,5 +777,145 @@ Such that the statement is obvious.
 
 
 \subsection{Group Operators and Homotopy Classes}\label{susec:2_B}
+\subsubsection{\eq{2.B.7} \page{97}}
+Taylor evolving \eq{2.B.6} in $\theta^c_3$ up to $\order{\theta_3^2}$ yields:
+\begin{align*} 
+	&f^a(\theta_2,\theta_1)+\left[h^{-1}\right]^a_{\hphantom{a}c}\left(f(\theta_2,\theta_1)\right)\theta_3^c\\
+	&=f^a(0,f(\theta_2,\theta_1))+\left[\partialderivative{f^a(\bar{\theta},f(\theta_2,\theta_1))}{\bar{\theta}^c}\right]_{\bar{\theta}=0}\theta_3^c\\
+	&=f^a(\theta_3,f(\theta_2,\theta_1))\\
+	&\overset{\eqc{2.B.6}}{=}f^a(f(\theta_3,\theta_2),\theta_1)\\
+	&=f^a\left(f(0,\theta_2)+\left[\partialderivative{f^a(\bar{\theta},\theta_2)}{\bar{\theta}^c}\right]_{\bar{\theta}=0}\theta_3^c,\theta_1\right)\\
+	&=f^a(\theta_2,\theta_1)+\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_2}\left[\partialderivative{f^b(\bar{\theta},\theta_2)}{\bar{\theta}^c}\right]_{\bar{\theta}=0}\theta_3^c\\
+	&=f^a(\theta_2,\theta_1)+\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_2}\left[h^{-1}\right]^b_{\hphantom{b}c}\left(\theta_2\right)\theta_3^c
+\end{align*}
+Equating coefficients of $\theta^c_3$, we get:
+\begin{align*} 
+	\left[h^{-1}\right]^a_{\hphantom{a}c}\left(f(\theta_2,\theta_1)\right)&=\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_2}\left[h^{-1}\right]^b_{\hphantom{b}c}\left(\theta_2\right)\\
+	\Leftrightarrow h^c_{\hphantom{c}b}\left(\theta_2\right)&=\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_2}h^c_{\hphantom{c}a}\left(f(\theta_2,\theta_1)\right)
+\end{align*}
+
+\subsubsection{\enquote{Along the second segment the differential equation \eq{2.B.2} for $U_\mathcal{P}(s)$ is thus the same as the differential equation for $U_{\theta_2}(2s-1)$.} \page{97}}
+
+In the second segment $\left(\dfrac{1}{2}\leq s \leq 1\right)$ the differential equation for $U_\mathcal{P}(s)$ reads:
+\begin{align*} 
+	&\derivative{U_\mathcal{P}(s)}{s}\\
+	&=i t_c U_\mathcal{P}(s) h^c_{\hphantom{c}a}\left(\Theta_\mathcal{P}(s)\right)\derivative{\Theta_\mathcal{P}^c(s)}{s}\\
+	&=i t_c U_\mathcal{P}(s) h^c_{\hphantom{c}a}\left(f\left(\Theta_{\theta_2}(2s-1),\theta_1\right)\right)\derivative{f^c\left(\Theta_{\theta_2}(2s-1),\theta_1\right)}{s}\\
+	&=i t_c U_\mathcal{P}(s) h^c_{\hphantom{c}a}\left(f\left(\Theta_{\theta_2}(2s-1),\theta_1\right)\right)\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=\Theta_{\theta_2}(2s-1)}\\
+	&\cdot\derivative{\Theta_{\theta_2}^b(2s-1)}{s}\\
+	&\overset{\eqc{2.B.7}}{=}i t_c U_\mathcal{P}(s)  h^c_{\hphantom{c}b}\left(\Theta_{\theta_2}(2s-1)\right)\derivative{\Theta_{\theta_2}^b(2s-1)}{s}
+\end{align*}
+Which is just the differential equation for $U_{\theta_2}(2s-1)$:
+\begin{align*} 
+	&\derivative{U_{\theta_2}(2s-1)}{s}=\left[\derivative{U_{\theta_2}(t)}{t}\right]_{t=2s-1}2\\
+	&=i t_c U_{\theta_2}(2s-1)  h^c_{\hphantom{c}b}\left(\Theta_{\theta_2}(2s-1)\right)\left[\derivative{\Theta_{\theta_2}^b(t)}{t}\right]_{t=2s-1}2\\
+	&=i t_c U_{\theta_2}(2s-1)  h^c_{\hphantom{c}b}\left(\Theta_{\theta_2}(2s-1)\right)\derivative{\Theta_{\theta_2}^b(2s-1)}{s}
+\end{align*}
+
+\subsubsection{\eq{2.B.9} \page{98}}
+First note
+\begin{align} 
+	\derivative{U^{-1}}{s}&=\left(\derivative{U}{s}\right)^\dagger\overset{\eqc{2.B.2}}{=}-i\left(t_a U\right)^\dagger h^a_{\hphantom{a}b}\derivative{\Theta^b}{s}\\
+	&=-iU^{-1} t_a h^a_{\hphantom{a}b}\derivative{\Theta^b}{s},\label{eq_2_B_1}
+\end{align}
+and 
+\begin{align} 
+	&\derivative{}{s}\left(U^{-1} t_a U h^a_{\hphantom{a}b}\right)\\
+	&=\derivative{U^{-1}}{s}t_e U h^e_{\hphantom{e}b}+U^{-1} t_e \derivative{U}{s}h^e_{\hphantom{e}b}+U^{-1} t_a U\derivative{h^a_{\hphantom{a}b}}{s}\\
+	&\overset{\eqc{2.B.2}}{=}-iU^{-1} t_d h^d_{\hphantom{d}c}\derivative{\Theta^c}{s}t_e U h^e_{\hphantom{e}b}\\
+	&+U^{-1} t_e it_d U h^d_{\hphantom{d}c}\derivative{\Theta^c}{s}h^e_{\hphantom{e}b}\\
+	&+U^{-1} t_a U h^a_{\hphantom{a}b,c} \derivative{\Theta^c}{s}\\
+	&=i\derivative{\Theta^c}{s}h^d_{\hphantom{d}c}h^e_{\hphantom{e}b}U^{-1}\comm{t_e}{t_d}U+U^{-1} t_a U\derivative{\Theta^c}{s}h^a_{\hphantom{a}b,c}\\
+	&\overset{\eqc{2.2.22}}{=}U^{-1} t_a U\derivative{\Theta^c}{s}\left(ih^d_{\hphantom{d}c}h^e_{\hphantom{e}b}iC^a_{\hphantom{a}ed}+h^a_{\hphantom{a}b,c}\right).\label{eq_2_B_2}
+\end{align}
+By using \eq{2.2.22} we are making use of condition (a) of the Theorem.
+With this we get:
+\begin{align*} 
+	&\derivative{U^{-1}\delta U}{s}\\
+	&=\derivative{U^{-1}}{s}\delta U + U^{-1}\derivative{\delta U}{s}\\
+	&\overset{\ref{eq_2_B_1}}{=}-iU^{-1} t_a h^a_{\hphantom{a}b}\derivative{\Theta^b}{s} \delta U + U^{-1}\derivative{\delta U}{s}\\
+	&=i U^{-1} t_a U h^a_{\hphantom{a}c,b}\left(\delta\Theta^b\right)\derivative{\Theta^c}{s}\\
+	&+i U^{-1} t_a U h^a_{\hphantom{a}b}\derivative{\delta\Theta^b}{s}  \\
+	&=i U^{-1} t_a U \left(\delta\Theta^b\right)\derivative{\Theta^c}{s}h^a_{\hphantom{a}c,b}\\
+	&+\derivative{}{s}\left(iU^{-1} t_a U h^a_{\hphantom{a}b}\delta\Theta^b\right)-i\left(\delta\Theta^b\right)\derivative{}{s}\left(U^{-1} t_a U h^a_{\hphantom{a}b}\right)\\
+	&\overset{\ref{eq_2_B_2}}{=}i U^{-1} t_a U \left(\delta\Theta^b\right)\derivative{\Theta^c}{s}\left(h^a_{\hphantom{a}c,b}-\left(-h^d_{\hphantom{d}c}h^e_{\hphantom{e}b}C^a_{\hphantom{a}ed}+h^a_{\hphantom{a}b,c}\right)\right)\\
+	&+\derivative{}{s}\left(iU^{-1} t_a U h^a_{\hphantom{a}b}\delta\Theta^b\right)\\
+	&=i U^{-1} t_a U \left(\delta\Theta^b\right)\derivative{\Theta^c}{s}\left(h^a_{\hphantom{a}c,b}+h^d_{\hphantom{d}c}h^e_{\hphantom{e}b}C^a_{\hphantom{a}ed}-h^a_{\hphantom{a}b,c}\right)\\
+	&+\derivative{}{s}\left(iU^{-1} t_a U h^a_{\hphantom{a}b}\delta\Theta^b\right)
+\end{align*}
+Where we inserted the expression for $\derivative{\delta U}{s}$ in the third step.
+
+\subsubsection{\eq{2.B.10} \page{98}}
+Taylor evolving \eq{2.B.6} in $\theta_3, \theta_2$ up to $\order{\theta_3^3, \theta_2^3}$ yields:
+\begin{align*} 
+	&f^a(0,\theta_1)+\left[h^{-1}\right]^a_{\hphantom{a}b}(\theta_1)\left(\theta_3^b+\theta_2^b+f^b_{\hphantom{b}ec} \theta_3^e\theta_2^c\right)\\
+	&=f^a(0,\theta_1)+\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=0}\left(\theta_3^b+\theta_2^b+f^b_{\hphantom{b}ec} \theta_3^e\theta_2^c\right)\\
+	&=f^a\left(\theta_3+\theta_2+f^\cdot_{\hphantom{b}ec} \theta_3^e\theta_2^c,\theta_1\right)\\
+	&\overset{\eqc{2.2.19}}{=}f^a(f(\theta_3,\theta_2),\theta_1)\\
+	&\overset{\eqc{2.B.6}}{=}f^a(\theta_3,f(\theta_2,\theta_1))\\
+	&=f^a\left(\theta_3, f(0,\theta_1)+\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^e}\right]_{\bar{\theta}=0}\theta_2^e\right)\\
+	&=f^a\left(\theta_3, \theta_1+\left[h^{-1}\right]^\cdot_{\hphantom{a}e}(\theta_1)\theta_2^e\right)\\
+	&=f^a(0,\theta_1)+\left[\partialderivative{f^a(\bar{\theta},\theta_1)}{\bar{\theta}^b}\right]_{\bar{\theta}=0}\theta_3^b\\
+	&+\left[\partialderivative{f^a(0,\bar{\theta})}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_1}\left[h^{-1}\right]^b_{\hphantom{b}e}(\theta_1)\theta_2^e\\
+	&+\dfrac{1}{2}\left[\partialderivative{}{\tilde{\theta}^c}\left[\partialderivative{f^a(\bar{\theta},\tilde{\theta})}{\bar{\theta}^b}\right]_{\bar{\theta}=0}\right]_{\tilde{\theta}=\theta_1}
+	\theta_3^b	\left[h^{-1}\right]^c_{\hphantom{c}e}(\theta_1)\theta_2^e\\
+	&+\dfrac{1}{2}\left[\partialderivative{}{\bar{\theta}^b}\left[\partialderivative{f^a(\bar{\theta},\tilde{\theta})}{\tilde{\theta}^c}\right]_{\tilde{\theta}=\theta_1}\right]_{\bar{\theta}=0}
+	\theta_3^b	\left[h^{-1}\right]^c_{\hphantom{c}e}(\theta_1)\theta_2^e\\
+	&=f^a(0,\theta_1)+\left[h^{-1}\right]^a_{\hphantom{a}b}(\theta_1)\theta_3^b+\left[h^{-1}\right]^a_{\hphantom{a}e}(\theta_1)\theta_2^e\\
+	&+ \partialderivative{}{\theta_1^c}\left(\left[h^{-1}\right]^a_{\hphantom{a}b}(\theta_1)\right)\theta_3^b	\left[h^{-1}\right]^c_{\hphantom{c}e}(\theta_1)\theta_2^e\\
+\end{align*}
+No $\theta_3^2, \theta_2^2$ terms show up and \[\left[\partialderivative{f^a(0,\bar{\theta})}{\bar{\theta}^b}\right]_{\bar{\theta}=\theta_1}=\delta_b^a,\] see \eq{2.2.19}.
+Equating coefficients of $\theta^b_3 \theta_2^c$, we get:
+\begin{align*} 
+	&\left[h^{-1}\right]^a_{\hphantom{a}e}(\theta_1)f^e_{\hphantom{e}bc}\\
+	&=\partialderivative{}{\theta_1^d}\left(\left[h^{-1}\right]^a_{\hphantom{a}b}(\theta_1)\right)\left[h^{-1}\right]^d_{\hphantom{d}c}(\theta_1)\\
+	\Leftrightarrow f^e_{\hphantom{e}bc}&=h^e_{\hphantom{e}a}(\theta_1)\partialderivative{}{\theta_1^d}\left(\left[h^{-1}\right]^a_{\hphantom{a}b}(\theta_1)\right)\left[h^{-1}\right]^d_{\hphantom{d}c}(\theta_1)\\
+	&=\left(0-h^e_{\hphantom{e}a,d}\left[h^{-1}\right]^a_{\hphantom{a}b}\right)\left[h^{-1}\right]^d_{\hphantom{d}c}\\
+	\Leftrightarrow h^e_{\hphantom{e}a,d}&=-f^e_{\hphantom{e}bc} h^b_{\hphantom{b}a}h^c_{\hphantom{c}d}
+\end{align*}
+
+\subsubsection{\eq{2.B.11} \page{98}}
+\begin{align*} 
+	h^a_{\hphantom{a}c,b}-h^a_{\hphantom{a}b,c}
+	&\overset{\eqc{2.B.10}}{=}-f^a_{\hphantom{a}de} h^d_{\hphantom{d}c}h^e_{\hphantom{e}b}+f^a_{\hphantom{a}de} h^d_{\hphantom{d}b}h^e_{\hphantom{e}c}\\
+	&= h^d_{\hphantom{d}c}h^e_{\hphantom{e}b}\left(-f^a_{\hphantom{a}de}+f^a_{\hphantom{a}ed}\right)\\
+	&\overset{\eqc{2.2.23}}{=} h^d_{\hphantom{d}c}h^e_{\hphantom{e}b} \left(-C^a_{\hphantom{a}ed}\right)
+\end{align*}
+
+\subsubsection{\enquote{It follows that $U_\theta(1)$ is stationary under any infinitesimal variation of the path that leaves the endpoints $\Theta(0)=0$ and $\Theta(1)=\theta$ (and $U_\theta(0)=\identity$) fixed.} \page{98}}
+We have 
+\[U^{-1} \delta U -i U^{-1} t_a U h^a_{\hphantom{a}b}\delta \Theta^b = C = \text{const}\]
+For $s=0$ this gives
+\[0=\delta U(0) = i t_a U(0) h^a_{\hphantom{a}b}(0)  \underbrace{\delta\Theta^b (0)}_{=0} + U(0) C=\identity C\]
+such that $C=0$.
+For $s=1$ we then get \[\delta U(1) = i t_a U(1) h^a_{\hphantom{a}b}(1) \underbrace{\delta\Theta^b (1)}_{=0} + U(1) \underbrace{C}_{=0}=0.\]
+
+\subsubsection{\enquote{$0=\partialderivative{}{\theta^b}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}+i\phi_b(\theta) U[\theta]^{-1} \tilde{U}[\theta]$ where $\phi_b(\theta)=h^a_{\hphantom{a}b}\left[\partialderivative{\phi(\theta^\prime,\theta)}{\theta^{\prime a}}\right]_{\theta^\prime=0}$} \page{99}}\label{sususec:2_B_p99_1}
+By taking the derivative of the previous equation w.r.t. $\theta^{\prime a}$, we obtain:
+\begin{align*} 
+	0&=U[\theta]^{-1} (-t_a+t_a)\tilde{U}[\theta]\\
+	&=\left[\partialderivative{}{\theta^{\prime a}}U[\theta]^{-1}U[\theta^\prime]^{-1}\tilde{U}[\theta^\prime]\tilde{U}[\theta]\right]_{\theta^\prime=0}\\
+	&=\left[\partialderivative{}{\theta^{\prime a}}U[f(\theta^\prime,\theta)]^{-1}\tilde{U}[f(\theta^\prime,\theta)]\exp(i\phi(\theta^\prime,\theta))\right]_{\theta^\prime=0}\\
+	&=\left[\partialderivative{}{\bar{\theta}^b}U[\bar{\theta}]^{-1} \tilde{U}[\bar{\theta}]\right]_{\bar{\theta}=f(0,\theta)=\theta} \left[\partialderivative{f^b(\theta^\prime,\theta)}{\theta^{\prime a}}\right]_{\theta^\prime=0}\exp(i\phi(0,\theta))\\
+	&+U[\theta]^{-1}\tilde{U}[\theta]i \left[\partialderivative{\phi(\theta^\prime,\theta)}{\theta^{\prime a}}\right]_{\theta^\prime=0}\exp(i\phi(0,\theta))\\
+	&=\partialderivative{}{\theta^b}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}\left[h^{-1}\right]^b_{\hphantom{b}a}(\theta)\\
+	&+U[\theta]^{-1}\tilde{U}[\theta]i \left[\partialderivative{\phi(\theta^\prime,\theta)}{\theta^{\prime a}}\right]_{\theta^\prime=0}
+\end{align*}
+Multiplying by $h^a_{\hphantom{a}b}(\theta)$ yields finally
+\[0=\partialderivative{}{\theta^b}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}+i\phi_b(\theta) U[\theta]^{-1} \tilde{U}[\theta].\]
+
+\subsubsection{\enquote{$0=\partialderivative{\phi_b(\theta)}{\theta^c}-\partialderivative{\phi_c(\theta)}{\theta^b}$} \page{99}}
+Differentiating the result of \ref{sususec:2_B_p99_1} w.r.t $\theta ^c$ yields
+\begin{align*} 
+	0&=\partialderivative{^2}{\theta^c\partial\theta^b}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}+i\partialderivative{\phi_b(\theta)}{\theta^c} U[\theta]^{-1} \tilde{U}[\theta]\\
+	&+i\phi_b(\theta)\partialderivative{}{\theta^c}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}\\
+	&\overset{\ref{sususec:2_B_p99_1}}{=}\partialderivative{^2}{\theta^c\partial\theta^b}\left\{U[\theta]^{-1}\tilde{U}[\theta]\right\}+i\partialderivative{\phi_b(\theta)}{\theta^c} U[\theta]^{-1} \tilde{U}[\theta]\\
+	&+\phi_b(\theta)\phi_c(\theta) U[\theta]^{-1} \tilde{U}[\theta].
+\end{align*}
+Antisymmetrizing then gives 
+\[0=\partialderivative{\phi_b(\theta)}{\theta^c}-\partialderivative{\phi_c(\theta)}{\theta^b}.\]
+
+
+
 
 \subsection{Inversions and Degenerate Multiplets}\label{susec:2_C}

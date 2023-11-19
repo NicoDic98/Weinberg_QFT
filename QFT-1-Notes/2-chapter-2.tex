@@ -693,6 +693,87 @@ Note that here the order of multiplication is adapted from \eq{2.2.18} and not f
 	\commutator{\tilde{t}_b}{\tilde{t}_c}&=\commutator{t_b}{t_c}=iC^a_{\hphantom{a}bc} t_a+iC^a_{\hphantom{a}bc}\phi_a \identity=iC^a_{\hphantom{a}bc}\tilde{t}_a
 \end{align*}
 
+\subsubsection{\eqs{2.7.23/24/25} \page{85}}
+Inserting \eqs{2.7.14-16} into \eq{2.7.20} we get:
+\begin{align*}
+	0&\overset{\eqc{2.7.20}}{=}\commutator{J^{\mu\nu}}{C^{\rho,\mu}}\\
+	&+\commutator{P^\sigma}{\eta^{\nu\rho}P^\mu-\eta^{\mu\rho}P^\nu+C^{\rho,\mu\nu}}\\
+	&+\commutator{P^\rho}{\eta^{\sigma\mu}P^\nu-\eta^{\sigma\nu}P^\mu+C^{\mu\nu,\sigma}}\\
+	&=\eta^{\nu\rho}\commutator{P^\sigma}{P^\mu} - \eta^{\mu\rho} \commutator{P^\sigma}{P^\nu}\\
+	&+\eta^{\sigma\mu}\commutator{P^\rho}{P^\nu}-\eta^{\sigma\nu}\commutator{P^\rho}{P^\mu}\\
+	\overset{\eqc{2.7.16}}{\Rightarrow} 0&=\eta^{\nu\rho}C^{\mu,\sigma} - \eta^{\mu\rho} C^{\nu,\sigma}\\
+	&+\eta^{\sigma\mu}C^{\nu,\rho}-\eta^{\sigma\nu}C^{\mu,\rho}
+\end{align*}
+
+Inserting \eqs{2.7.13-15} into \eq{2.7.21} we get:
+\begin{align*}
+	0&\overset{\eqc{2.7.21}}{=}\commutator{J^{\lambda\eta}}{\eta^{\nu\rho}P^\mu-\eta^{\mu\rho}P^\nu+C^{\rho,\mu\nu}}\\
+	&+\commutator{P^\rho}{-\eta^{\nu \lambda}J^{\mu \eta}+\eta^{\mu\lambda}J^{\nu\eta}+\eta^{\eta \mu}J^{\lambda\nu}-\eta^{\eta \nu}J^{\lambda \mu}-C^{\lambda\eta,\mu\nu}}\\
+	&+\commutator{J^{\mu\nu}}{\eta^{\rho\lambda}P^\eta-\eta^{\rho\eta}P^\lambda+C^{\lambda\eta,\rho}}\\
+	&=\eta^{\nu\rho}\commutator{J^{\lambda\eta}}{P^\mu}-\eta^{\mu\rho}\commutator{J^{\lambda\eta}}{P^\nu}\\
+	&-\eta^{\nu \lambda}\commutator{P^\rho}{J^{\mu \eta}}+\eta^{\mu\lambda}\commutator{P^\rho}{J^{\nu\eta}}\\
+	&+\eta^{\eta \mu}\commutator{P^\rho}{J^{\lambda\nu}}-\eta^{\eta \nu}\commutator{P^\rho}{J^{\lambda \mu}}\\
+	&+\eta^{\rho\lambda}\commutator{J^{\mu\nu}}{P^\eta}-\eta^{\rho\eta}\commutator{J^{\mu\nu}}{P^\lambda}
+\end{align*}
+Using \eqs{2.7.14/15} we finally get:
+\todo
+
+
+Rest analog \todo
+
+
+\subsubsection{\eq{2.7.26} \page{85}}
+\begin{align*}
+	0&=4C^{\mu,\sigma} - \delta^\mu_\nu C^{\nu,\sigma}\\
+	&-\delta^\sigma_\rho C^{\mu,\rho}+\eta^{\sigma\mu}C^{\nu,\rho}\eta_{\nu \rho}\\
+	&=2 C^{\mu,\sigma}+0=2 C^{\mu,\sigma}
+\end{align*}
+
+\subsubsection{\eqs{2.7.27/28} \page{85}}
+\begin{align*}
+	0&=4 C^{\mu,\lambda \eta}-\delta^\mu_\nu C^{\nu,\lambda \eta}-\eta^{\mu \eta}C^{\rho,\lambda \nu}\eta_{\nu\rho}\\
+	&+\eta^{\lambda\mu} C^{\rho,\eta \nu}\eta_{\nu\rho}+\delta^\lambda_\rho C^{\rho,\mu \eta}-\delta^\eta_\rho C^{\rho,\mu \lambda}\\
+	&+\delta^\lambda_\nu C^{\eta,\mu\nu}-\delta^\eta_\nu C^{\lambda, \mu \nu}\\
+	&=3C^{\mu,\lambda \eta} -\eta^{\mu \eta}C^{\rho,\lambda \nu}\eta_{\nu\rho}
+	+\eta^{\lambda\mu} C^{\rho,\eta \nu}\eta_{\nu\rho}\\
+	&=3\left(C^{\mu,\lambda \eta}-\eta^{\mu \eta}C^\lambda+\eta^{\lambda\mu}C^\eta\right)
+\end{align*}
+
+\subsubsection{\eqs{2.7.29/30} \page{85}}
+First note \[C^{\rho\nu,\lambda\eta}\eta_{\nu \rho}=0\]
+from the antisymmetry of $J^{\rho\sigma}$ in \eq{2.7.13}.
+\begin{align*}
+	0&=4C^{\mu\sigma,\lambda\eta}-\delta^\mu_\nu C^{\nu\sigma,\lambda\eta}-\eta^{\sigma\mu}C^{\rho\nu,\lambda\eta}\eta_{\nu \rho}+\delta^\sigma_\rho C^{\rho\mu,\lambda\eta}\\
+	&+\eta^{\eta\mu}C^{\lambda\nu,\rho\sigma}\eta_{\nu \rho}-\eta^{\lambda \mu}C^{\eta \nu,\rho \sigma}\eta_{\nu \rho}-\delta^\lambda_\rho C^{\mu\eta,\rho\sigma}+\delta^\eta_\rho C^{\mu\lambda,\rho\sigma}\\
+	&+\eta^{\sigma \lambda}C^{\rho\eta,\mu\nu}\eta_{\nu \rho}-\delta^\lambda_\nu C^{\sigma\eta,\mu\nu}-\delta^\eta_\nu C^{\lambda\sigma,\mu\nu}+\eta^{\eta \sigma} C^{\lambda\rho, \mu\nu }\eta_{\nu \rho}\\
+	&=2C^{\mu\sigma,\lambda\eta}-2\eta^{\eta\mu}C^{\lambda\sigma}+2\eta^{\lambda \mu}C^{\eta \sigma}\\
+	&-2\eta^{\sigma \lambda}C^{\eta\mu}+2\eta^{\eta \sigma} C^{\lambda \mu }\\
+	&=2\left(C^{\mu\sigma,\lambda\eta}-\eta^{\eta\mu}C^{\lambda\sigma}+\eta^{\lambda \mu}C^{\eta \sigma}
+	-\eta^{\sigma \lambda}C^{\eta\mu}+\eta^{\eta \sigma} C^{\lambda \mu }\right)
+\end{align*}
+
+\subsubsection{\eqs{2.7.33/34/35} \page{86}}
+\begin{align*}
+	&i\commutator{\tilde{J}^{\mu\nu}}{\tilde{J}^{\rho\sigma}}=i\commutator{J^{\mu\nu}}{J^{\rho\sigma}}\\
+	&=\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\sigma\mu}J^{\rho\nu}+\eta^{\sigma\nu}J^{\rho\mu}+C^{\rho\sigma,\mu\nu}\\
+	&\overset{\eqc{2.7.29}}{=}\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\sigma\mu}J^{\rho\nu}+\eta^{\sigma\nu}J^{\rho\mu}\\
+	&+\eta^{\nu\rho}C^{\mu\sigma}-\eta^{\mu\rho}C^{\nu\sigma}+\eta^{\sigma\mu}C^{\nu\rho}-\eta^{\nu\sigma}C^{\mu\rho}\\
+	&=\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\sigma\mu}J^{\rho\nu}+\eta^{\sigma\nu}J^{\rho\mu}\\
+	&+\eta^{\nu\rho}C^{\mu\sigma}-\eta^{\mu\rho}C^{\nu\sigma}-\eta^{\sigma\mu}C^{\rho\nu}+\eta^{\sigma\nu}C^{\rho\mu}\\
+	&=\eta^{\nu\rho}\tilde{J}^{\mu\sigma}-\eta^{\mu\rho}\tilde{J}^{\nu\sigma}-\eta^{\sigma\mu}\tilde{J}^{\rho\nu}+\eta^{\sigma\nu}\tilde{J}^{\rho\mu}
+\end{align*}
+
+\begin{align*}
+	&i\commutator{\tilde{J}^{\mu\nu}}{\tilde{P}^\rho}=i\commutator{J^{\mu\nu}}{P^\rho}\\
+	&=\eta^{\nu\rho}P^\mu-\eta^{\mu\rho}P^\nu + C^{\rho,\mu\nu}\\
+	&\overset{\eqc{2.7.27}}{=}\eta^{\nu\rho}P^\mu-\eta^{\mu\rho}P^\nu+\eta^{\rho\nu}C^\mu
+	-\eta^{\rho\mu}C^\nu\\
+	&=\eta^{\nu\rho}\tilde{P}^\mu-\eta^{\mu\rho}\tilde{P}^\nu
+\end{align*}
+\begin{align*}
+	i\commutator{\tilde{P}^\mu}{\tilde{P}^\rho}=\commutator{P^\mu}{P^\rho}=0
+\end{align*}
+
 \subsection{The Symmetry Representation Theorem}\label{susec:2_A}
 
 \subsubsection{\enquote{But $\innerproduct{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}

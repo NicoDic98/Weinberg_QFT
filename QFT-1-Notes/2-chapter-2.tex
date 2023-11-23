@@ -774,6 +774,92 @@ from the antisymmetry of $J^{\rho\sigma}$ in \eq{2.7.13}.
 	i\commutator{\tilde{P}^\mu}{\tilde{P}^\rho}=\commutator{P^\mu}{P^\rho}=0
 \end{align*}
 
+\subsubsection{\eq{2.7.42} \page{87}}
+This does not set the overall phase completely because 
+\[1=\det(\exp(i\theta)\lambda)=\exp(i2\theta)\det(\lambda)=\exp(i2\theta)\]
+\dots so for $\theta=\pi$, $\exp(i\theta)\lambda=-\lambda$ satisfies the condition if $\lambda$ satisfies it. 
+
+\subsubsection{\enquote{The group elements depend on $4-1=3$ complex parameters,\dots} \page{87}}
+This can easily been seen by calculating the determinant of a general $2\times2$ complex matrix:
+\begin{align*}
+	\det(\begin{array}{cc}
+		a&  b\\
+		c& d
+	\end{array})&=ad-bc=1\\
+\overset{d\neq0}{\Rightarrow} a&=\dfrac{1+bc}{d}\\
+\overset{d=0}{\Rightarrow} b&=-\dfrac{1}{c}
+\end{align*}
+
+\subsubsection{\enquote{\dots produces a Lorentz transformation $\Lambda(\lambda(\theta))$ which is just a rotation by an angle $\theta$ around the three-axis,\dots} \page{87}}
+\begin{widetext}
+	\begin{align*}
+		&\lambda(\theta) v \lambda^\dagger (\theta)\\
+		&=\left(\begin{array}{cc}
+			\exp(i\dfrac{\theta}{2})& 0 \\
+			0& \exp(-i\dfrac{\theta}{2})
+		\end{array}\right)
+		\left(\begin{array}{cc}
+			V^0+V^3&V^1-iV^2  \\
+			V^1+iV^2&V^0-V^3 
+		\end{array}\right)
+		\left(\begin{array}{cc}
+			\exp(-i\dfrac{\theta}{2})& 0 \\
+			0& \exp(i\dfrac{\theta}{2})
+		\end{array}\right)\\
+	&=\left(\begin{array}{cc}
+		\exp(i\dfrac{\theta}{2})& 0 \\
+		0& \exp(-i\dfrac{\theta}{2})
+	\end{array}\right)
+	\left(\begin{array}{cc}
+		\exp(-i\dfrac{\theta}{2})(V^0+V^3)&\exp(i\dfrac{\theta}{2})(V^1-iV^2)  \\
+		\exp(-i\dfrac{\theta}{2})(V^1+iV^2)&\exp(i\dfrac{\theta}{2})(V^0-V^3) 
+	\end{array}\right)\\
+	&=\left(\begin{array}{cc}
+		V^0+V^3&\exp(i{\theta})(V^1-iV^2)  \\
+		\exp(-i{\theta})(V^1+iV^2)&V^0-V^3
+	\end{array}\right)
+	\end{align*}
+	From this we can read of:
+	\begin{align*}
+		V^{\prime 0} &= V^0\\
+		V^{\prime 1} &= \Re{\exp(i{\theta})(V^1-iV^2)}=\Re{(\cos(\theta)+i\sin(\theta))(V^1-iV^2)}\\
+		&=\cos(\theta)V^1+\sin(\theta)V^2\\
+		V^{\prime 2} &= \Im{\exp(-i{\theta})(V^1+iV^2)}=\Im{(\cos(\theta)-i\sin(\theta))(V^1+iV^2)}\\
+		&=-\sin(\theta)V^1+\cos(\theta)V^2
+	\end{align*}
+\end{widetext}
+
+\subsubsection{\enquote{\dots $\det(\exp(h))=\exp(\tr(h))$ is real and positive} \page{88}}
+This is true because eigenvalues of an hermitian matrix are real, s.t.:
+
+\[\exp(tr(h))=\exp(\sum\limits_{i}e_i)>0\]
+
+\subsubsection{\enquote{\dots with $d,e,f,g$ subject to the single non-linear constraint $d^2+e^2+f^2+g^2=1$,\dots} \page{88}}
+\[u^\dagger u=1\] and \[\det(u)=1\] yield the same constraint.
+
+\subsubsection{\enquote{because $\exp(h)$ is always positive} \page{89}}
+The eigenvalues of $\exp(h)$ are positive, since
+\[\exp(h)=\exp(u \diagm{e_i} u^\dagger)=u \diagm{\exp(e_i)} u^\dagger\]
+and $e_i \in \mathbb{R}$.
+
+\subsubsection{\enquote{$\left[U(\Lambda)U(\bar{\Lambda})U^{-1}(\Lambda\bar{\Lambda})\right]^2=\identity$} \page{89}}
+This follows from the discussion in Appendix B, more precisely see \ref{sususec:2_B_p98_1}, because a contraction of the double loop to a point is possible.
+
+\subsubsection{\enquote{These two cases correspond to the two irreducible representations of the first homotopy group $Z_2$} \page{89}}
+These are the trivial representation \[1\rightarrow1\qquad-1\rightarrow1\] and the faithful representation \[1\rightarrow1\qquad-1\rightarrow-1.\]
+
+\subsubsection{\enquote{We must not mix states of integer and half-integer spin.} \page{89}}
+Because they are different representations of $Z_2$ or because some of their loops are contractable to a point compare Superselection rule in Section $2.2$.
+\todo
+
+\subsubsection{\enquote{\dots , so the factor $\exp(4\pi i \sigma)$ must be \textbf{unity}, and hence $\sigma$ must be an integer or half-integer.} \page{90}}
+This can be seen from the transformation behavior of massless one particle states \eq{2.5.42} and 
+\begin{align*}
+	\identity \Psi_{p,\sigma} &=\left[U(R(2\pi))\right]^2 \Psi_{p,\sigma}\\
+	&=\left(\exp(i\sigma 2\pi)\right)^2\Psi_{p,\sigma}\\
+	&=\exp(i\sigma 4\pi)\Psi_{p,\sigma}
+\end{align*}\todo
+
 \subsection{The Symmetry Representation Theorem}\label{susec:2_A}
 
 \subsubsection{\enquote{But $\innerproduct{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}
@@ -1002,3 +1088,178 @@ This can be seen from the statement of \ref{sususec:2_B_p98_1} by setting $\thet
 
 
 \subsection{Inversions and Degenerate Multiplets}\label{susec:2_C}
+
+\subsubsection{\enquote{\dots the corresponding proportionality factor for $\timereversal^2$ can only be $\pm1$,\dots} \page{100}}
+Suppose 
+\[\timereversal^2=\varphi \identity\] 
+then we have
+\[\timereversal^3=\timereversal^2 \timereversal=\varphi \timereversal\]
+but also
+\[\timereversal^3=\timereversal \timereversal^2 =\timereversal\varphi=\varphi^\star \timereversal\]
+such that
+\[\varphi^\star=\varphi=\pm1.\]
+
+\subsubsection{\enquote{\dots because \timereversal is anti unitary, \timereversalmatrix must be unitary} \page{101}}
+Using basic orthonormality properties we see
+
+\begin{align*}
+	&\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})\delta_{ni}\\
+	&\overset{\eqc{2.5.19}}{=}\innerproduct{\Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\Psi_{\tvec{p},\sigma,i}}^\star\\
+	&=\innerproduct{\timereversal \Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\timereversal\Psi_{\tvec{p},\sigma,i}}\\
+	&\overset{\eqc{2.C.1}}{=}\innerproduct{(-1)^{j^\prime-\sigma^\prime}\sum\limits_{m}\timereversalmatrix_{mn}\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{(-1)^{j-\sigma}\sum\limits_{l}\timereversalmatrix_{li}\Psi_{-\tvec{p},-\sigma,l}}\\
+	&=(-1)^{j^\prime+j-\sigma^\prime-\sigma}\sum\limits_{m,l}\timereversalmatrix_{mn}^\star\timereversalmatrix_{li}\innerproduct{\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{\Psi_{-\tvec{p},-\sigma,l}}\\
+	&\overset{\eqc{2.5.19}}{=}(-1)^{2(j-\sigma)}\sum\limits_{m}\timereversalmatrix_{mn}^\star\timereversalmatrix_{mi}\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})\\
+	&=\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})
+	\sum\limits_{m}\left(\timereversalmatrix^\dagger\right)_{nm}\timereversalmatrix_{mi}
+\end{align*}
+such that
+\[\delta_{ni}=\sum\limits_{m}\left(\timereversalmatrix^\dagger\right)_{nm}\timereversalmatrix_{mi}.\]
+
+\subsubsection{\eq{2.C.2} \page{101}}
+\begin{align*}
+	&\timereversal \Psi_{\tvec{p},\sigma,n}^\prime\\
+	&=\sum\limits_{m}\timereversal\mathcal{U}_{mn}\Psi_{\tvec{p},\sigma,m}\\
+	&=\sum\limits_{m}\mathcal{U}_{mn}^\star\timereversal\Psi_{\tvec{p},\sigma,m}\\
+	&\overset{\eqc{2.C.1}}{=}\sum\limits_{m,k}\mathcal{U}_{mn}^\star(-1)^{j-\sigma}\timereversalmatrix_{km}\Psi_{-\tvec{p},-\sigma,k}\\
+	&=\sum\limits_{m,k,l}\mathcal{U}_{mn}^\star(-1)^{j-\sigma}\timereversalmatrix_{km}\left(\mathcal{U}^{-1}\right)_{lk}\Psi_{-\tvec{p},-\sigma,l}^\prime\\
+	&=(-1)^{j-\sigma}\sum\limits_{l}\left(\mathcal{U}^{-1}\timereversalmatrix \mathcal{U}^\star\right)_{ln}\Psi_{-\tvec{p},-\sigma,l}^\prime
+\end{align*}
+
+\subsubsection{\enquote{\dots \textbf{unitary} matrix $\timereversalmatrix \timereversalmatrix^\star$.} \page{101}}
+\begin{align*}
+	\left(\timereversalmatrix \timereversalmatrix^\star\right)^\dagger \timereversalmatrix \timereversalmatrix^\star&=\left(\timereversalmatrix^\dagger\right)^\star \timereversalmatrix^\dagger \timereversalmatrix \timereversalmatrix^\star\\
+	&=\left(\timereversalmatrix^\dagger\right)^\star\timereversalmatrix^\star\\
+	&=\left(\timereversalmatrix^\dagger\timereversalmatrix\right)^\star\\
+	&=\identity^\star=\identity
+\end{align*}
+
+\subsubsection{\eq{2.C.4} \page{101}}
+We have \[\timereversalmatrix\timereversalmatrix^\star=D\]
+multiplying by $\timereversalmatrix^\top=\left(\timereversalmatrix^\dagger\right)^\star$ from the right we get
+\[\timereversalmatrix=\timereversalmatrix\left(\timereversalmatrix\timereversalmatrix^\dagger\right)^\star=\timereversalmatrix\timereversalmatrix^\star\timereversalmatrix^\top=D\timereversalmatrix^\top.\]
+
+\subsubsection{\enquote{\dots the diagonal element $\timereversalmatrix_{nn}$ vanishes unless $\exp(i\phi_n)=1$.Furthermore, if $\exp(i\phi_n)=1$ but $\exp(i\phi_m)\neq1$, then \eq{2.C4} tells us that $\timereversalmatrix_{nm}=\timereversalmatrix_{mn}=0$.} \page{101}}
+
+From \eq{2.C.4} we have
+\[\timereversalmatrix_{nm}=\exp(i\phi_n)\timereversalmatrix_{mn}.\]
+From this we get
+\begin{align*}
+	\timereversalmatrix_{nn}&=\exp(i\phi_n)\timereversalmatrix_{nn}\\
+	\Rightarrow 0&=\left(1-\exp(i\phi_n)\right)\timereversalmatrix_{nn}
+\end{align*}
+such that for $\exp(i\phi_n)\neq1$ we have \[\timereversalmatrix_{nn}=0.\]
+Furthermore, if $\exp(i\phi_n)=1$ but $\exp(i\phi_m)\neq1$, then we have
+\begin{align*}
+	\timereversalmatrix_{mn}&=\exp(i\phi_m)\timereversalmatrix_{nm}\\
+	&=\exp(i\phi_m)\exp(i\phi_n)\timereversalmatrix_{mn}\\
+	&=\underbrace{\exp(i\phi_m)}_{\neq1}\timereversalmatrix_{mn}\\
+	\Rightarrow \timereversalmatrix_{mn}&=\timereversalmatrix_{nm}=0
+\end{align*}
+
+\subsubsection{\enquote{\dots $\mathcal{A}$ is symmetric as well as unitary, \dots} \page{101}}
+
+Unitarity follows directly from the unitarity of \timereversalmatrix and symmetry can be seen from \[\timereversalmatrix_{nm}=\exp(i\phi_n)\timereversalmatrix_{mn}\] because $\mathcal{A}$ only contains rows and columns for which $\exp(i\phi_n)=1$.
+
+
+\subsubsection{\enquote{Because $\mathcal{A}$ is symmetric, it can be expressed as the exponential of a symmetric anti-Hermitian matrix, so it can be diagonalized by a transformation \eq{2.C.2} acting on $\mathcal{A}$, with the corresponding submatrix of $\mathcal{U}$ real and hence orthogonal.} \page{101}}
+
+We know that $\mathcal{A}$ is unitary and symmetric, i.e.
+\[\mathcal{A}^\dagger=\mathcal{A}^{-1}\qquad \mathcal{A}^\top=\mathcal{A}.\]
+Suppose $\mathcal{A}$ can be written as \[\mathcal{A}=\exp(a)\] where $a$ is a symmetric anti-Hermitian matrix, i.e.
+\[a^\dagger=-a\qquad a^\top=a.\]
+We can easily check that this satisfies all properties imposed on $\mathcal{A}$:
+\begin{align*}
+	\mathcal{A}^\dagger \mathcal{A}&=\exp(a^\dagger)\exp(a)\\
+	&=\exp(-a)\exp(a)\\
+	&=\exp(-a+a)=\identity\\
+	\mathcal{A}^\top&=\exp(a^\top)=\exp(a)=\mathcal{A}
+\end{align*}
+Any symmetric anti-Hermitian matrix $a$ can be written in terms of a symmetric Hermitian matrix $h$ as \[a=ih,\]
+such that \[\mathcal{A}=\exp(a)=\exp(i h).\]
+Observe that $h$ is real, since
+\[h^\star=\left(h^\top\right)^\dagger=h^\dagger=h.\]
+Since $h$ is real and by definition symmetric, it can be diagonalized by an orthogonal matrix:
+\[h=O^{-1}D O\]
+Inserting this into the expression for $\mathcal{A}$ we see that $O$ also diagonalizes  $\mathcal{A}$:
+\begin{align*}
+	\mathcal{A}&=\exp(i h)=\exp(i O^{-1}D O)\\
+	&=\exp( O^{-1}iD O)=O^{-1}\exp(iD)O
+\end{align*}
+Since $O$ is orthogonal and in particular real it can be set as a submatrix of $\mathcal{U}$ in the transformation \eq{2.C.2}.
+
+
+\subsubsection{\eq{2.C.7} \page{102}}
+For components of \timereversalmatrix in the same block $\mathcal{B}_i$ we have
+\[\exp(i\phi_m)=\exp(-i\phi_n).\]
+Such that pulling a factor of $\exp(-i\dfrac{\phi_n}{2})$ out of $\timereversalmatrix_{mn}$ we can write
+\begin{align*}
+	\timereversalmatrix_{mn}&=\exp(-i\dfrac{\phi_n}{2})z\\
+	\Rightarrow \timereversalmatrix_{nm}&=\exp(i\phi_n)\exp(-i\dfrac{\phi_n}{2})z\\
+	&=\exp(i\dfrac{\phi_n}{2})z
+\end{align*}
+with $z$ some complex number specific to the combination of indices $m,n$.
+
+
+\subsubsection{\enquote{\dots $\mathcal{C}_i\mathcal{C}_i^\dagger=\mathcal{C}_i^\dagger \mathcal{C}_i=\identity$, and hence $\mathcal{C}_i$ is square and unitary} \page{102}}
+
+The Unitarity of \timereversalmatrix implies the Unitarity of $\mathcal{B}$ which in turn implies the Unitarity of each $\mathcal{B}_i$. This imposes the following condition:
+\begin{widetext}
+	\begin{align*}
+		\mathcal{B}_i^\dagger \mathcal{B}_i&=
+		\left(\begin{array}{cc}
+			0	&  \exp(i\dfrac{\phi_n}{2})\mathcal{C}_i^\star\\
+			\exp(-i\dfrac{\phi_n}{2})\mathcal{C}_i^\dagger	& 0
+		\end{array}\right)
+		\left(\begin{array}{cc}
+			0	&  \exp(i\dfrac{\phi_n}{2})\mathcal{C}_i\\
+			\exp(-i\dfrac{\phi_n}{2})\mathcal{C}_i^\top	& 0
+		\end{array}\right)\\
+	&=\left(\begin{array}{cc}
+		\mathcal{C}_i^\star \mathcal{C}_i^\top	&  0\\
+		0	& \mathcal{C}_i^\dagger \mathcal{C}_i
+	\end{array}\right)
+=\left(\begin{array}{cc}
+\left(	\mathcal{C}_i \mathcal{C}_i^\dagger \right)^\top	&  0\\
+ 	0	& \mathcal{C}_i^\dagger \mathcal{C}_i
+\end{array}\right)
+\overset{!}{=}\identity\\
+\Rightarrow \mathcal{C}_i^\dagger \mathcal{C}_i&=\identity=\identity^\top=\mathcal{C}_i\mathcal{C}_i^\dagger
+	\end{align*}
+\end{widetext}
+
+
+\subsubsection{\enquote{\dots $\exp(\pm i \dfrac{\phi}{2}) c^\star_\pm=\abs{\lambda}^2 c_\pm^\star \exp(\mp i \dfrac{\phi}{2})$, which is impossible unless either $c_+=c_-=0$ or $\exp(i\phi)$ is unity,\dots} \page{103}}
+
+We have
+\begin{align*}
+ 	\exp(i\dfrac{\phi}{2})c_+^\star = \lambda c_- &\Rightarrow c_+=\lambda^\star c_-^\star \exp(i\dfrac{\phi}{2})\\
+ 	\exp(-i\dfrac{\phi}{2})c_-^\star = \lambda c_+ &\Rightarrow c_-=\lambda^\star c_+^\star \exp(-i\dfrac{\phi}{2})
+\end{align*}
+such that
+\begin{align*}
+	\exp(\pm i \dfrac{\phi}{2}) c^\star_\pm&=\lambda c_\mp\\
+	&=\abs{\lambda}^2 c^\star_\pm \exp(\mp i \dfrac{\phi}{2})
+\end{align*}
+which is equivalent to 
+\[\exp(\pm i {\phi}) c^\star_\pm=\abs{\lambda}^2 c^\star_\pm.\]
+This is only possible if either $c_+=c_-=0$ or $\exp(i\phi)$ is unity.
+
+\subsubsection{\eq{2.C.16} \page{104}}
+From \eq{2.C.8} we have
+\begin{align*}
+	\Psi_{\tvec{p},\sigma,\pm}&=\timereversal^{-1} \timereversal \Psi_{\tvec{p},\sigma,\pm}\\
+	=\exp(\mp i \dfrac{\phi}{2})&(-1)^{j-\sigma} \timereversal^{-1}\Psi_{-\tvec{p},-\sigma,\mp}\\
+	\Rightarrow\timereversal^{-1}\Psi_{-\tvec{p},-\sigma,\mp}&=\exp(\pm i \dfrac{\phi}{2})(-1)^{-j+\sigma}\Psi_{\tvec{p},\sigma,\pm}\\
+	\Rightarrow\timereversal^{-1}\Psi_{\tvec{p},\sigma,\pm}&=\exp(\mp i \dfrac{\phi}{2})(-1)^{-j-\sigma}\Psi_{-\tvec{p},-\sigma,\mp}
+\end{align*}
+with this we get:
+\begin{align*}
+	\chargeconjugate \parity \Psi_{\tvec{p},\sigma,\pm} &=  \left(\chargeconjugate \parity \timereversal\right) \timereversal^{-1}\Psi_{\tvec{p},\sigma,\pm}\\
+	&=\left(\chargeconjugate \parity \timereversal\right)\exp(\mp i \dfrac{\phi}{2})(-1)^{-j-\sigma}\Psi_{-\tvec{p},-\sigma,\mp}\\
+	&=\exp(\pm i \dfrac{\phi}{2})(-1)^{-j-\sigma}\left(\chargeconjugate \parity \timereversal\right)\Psi_{-\tvec{p},-\sigma,\mp}\\
+	&=\exp(\pm i \dfrac{\phi}{2})(-1)^{-j-\sigma}(-1)^{j+\sigma}\Psi_{-\tvec{p},\sigma,\mp^C}\\
+	&=\exp(\pm i \dfrac{\phi}{2})\Psi_{-\tvec{p},\sigma,\mp^C}
+\end{align*}
+
+\subsection{Problems}\label{susec:2_problems}
+\subsubsection{Problem}

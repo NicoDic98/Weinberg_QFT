@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  23 NOV 2023 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.15)  26 NOV 2023 15:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3822,34 +3822,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 1.66702pt
 (hyperref)                removed on input line 1247.
 
-[18]) (0-main.bbl
+[18] [19] [20] [21]) (0-main.bbl
 
-LaTeX Warning: Reference `LastBibItem' on page 19 undefined on input line 9.
+LaTeX Warning: Reference `LastBibItem' on page 22 undefined on input line 9.
 
 
 Package natbib Warning: Empty `thebibliography' environment on input line 53.
 
-) [19] (0-main.aux)
+) [22] (0-main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `0-main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `0-main.out':
-(rerunfilecheck)             Before: 94962511AED5456C9F25144A9D14C836;39398
-(rerunfilecheck)             After:  5FE4658ADEEBADA85BE686412CB00D28;39385.
+Package rerunfilecheck Info: File `0-main.out' has not changed.
+(rerunfilecheck)             Checksum: 5FE4658ADEEBADA85BE686412CB00D28;39385.
  ) 
 Here is how much of TeX's memory you used:
- 30643 strings out of 477992
- 590042 string characters out of 2827466
- 922832 words of memory out of 12000000
- 48763 multiletter control sequences out of 15000+600000
+ 30647 strings out of 477992
+ 590099 string characters out of 2827466
+ 942863 words of memory out of 12000000
+ 48764 multiletter control sequences out of 15000+600000
  482321 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,20n,98p,1457b,976s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,20n,98p,1457b,987s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Techn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/Techn/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/Techn/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -3883,9 +3877,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
 /Techn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><
 C:/Users/Techn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on 0-main.pdf (19 pages, 551262 bytes).
+Output written on 0-main.pdf (22 pages, 570975 bytes).
 PDF statistics:
- 791 PDF objects out of 1000 (max. 8388607)
- 152 named destinations out of 1000 (max. 500000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
  965 words of extra memory for PDF output out of 10000 (max. 10000000)
 

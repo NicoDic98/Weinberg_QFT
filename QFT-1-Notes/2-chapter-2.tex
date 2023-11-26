@@ -487,7 +487,7 @@ then
 		-\sin(\theta)	& 0 & \cos(\theta)
 	\end{array}\right),
 \end{align*}
-(With this sign convention everything is consistent, see definition of $R(\theta)$ after \eq{2.5.27} and compare \eq{2.5.47} to \eq{2.4.27})
+(With this sign convention everything is consistent, see definition of $R(\theta)$ after \eq{2.5.27} and compare \eq{2.5.47} to \eq{2.4.27} \label{sign_convention_of_rotation_matrix})
 with this we have \[\hat{\tvec{p}}=R(\hat{\tvec{p}}) \hat{e}_3. \]
 
 
@@ -1263,3 +1263,248 @@ with this we get:
 
 \subsection{Problems}\label{susec:2_problems}
 \subsubsection{Problem}
+Observer $\mathcal{O}$ sees a W-Boson with:
+\begin{align*}
+	j&=1\\
+	\text{mass} &=m\\
+	\tvec{p}&=k\hat{e}_y\\
+	j_z&=\sigma
+\end{align*}
+Observer $\mathcal{O}^\prime$ moves relative to $\mathcal{O}$ with \[\tvec{v}=w\hat{e}_z.\]
+We work in case a) of Table 2.1, s.t.:
+\begin{align*}
+	p^0&>0\\
+	-m^2&=p^2\\
+	&=-\left(p^0\right)^2+\tvec{p}^2\\
+	&=-\left(p^0\right)^2+k^2\\
+	\Rightarrow p^0&=\sqrt{m^2+k^2}\\
+	\Rightarrow p&=
+	\left(\begin{array}{c}
+		0\\
+		k\\
+		0\\
+		\sqrt{m^2+k^2}
+	\end{array}\right)
+\end{align*}
+\begin{widetext}
+	The Lorentz transformation from $\mathcal{O}$ to $\mathcal{O}^\prime$ is given by
+	\begin{align*}
+		\Lambda(\tvec{v})&=
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1+(\gamma_w-1)\frac{w^2}{\tvec{v}^2} & -\gamma_w w \\
+			0 & 0 & -\gamma_w w & \gamma_w
+		\end{array}\right)=
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & \gamma_w & -\gamma_w w \\
+			0 & 0 & -\gamma_w w & \gamma_w
+		\end{array}\right)\qquad\gamma_w=\dfrac{1}{\sqrt{1-w^2}}.
+	\end{align*}
+	From this we get
+	\begin{align*}
+		\Lambda p &= 
+		\left(\begin{array}{c}
+			0\\
+			k\\
+			-\gamma_w w \sqrt{m^2+k^2}\\
+			\gamma_w\sqrt{m^2+k^2}
+		\end{array}\right).
+	\end{align*}
+	In order to be able to apply \eq{2.5.23} we first need to calculate $W(\Lambda,p)$ and for this we need $L(p)$ and $L(\Lambda p)$:
+	\begin{align*}
+		\gamma_k&=\dfrac{\sqrt{\tvec{p}^2+m^2}}{m}=\sqrt{1+\dfrac{k^2}{m^2}}\\
+		\sqrt{\gamma_k^2-1}&=\sqrt{1+\dfrac{k^2}{m^2}-1}=\dfrac{k}{m}\\
+		\hat{\tvec{p}}&=\hat{e}_y\\
+		L(p)&\overset{\eqc{2.5.24}}{=}
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & 1+(\gamma_k-1) & 0 & \sqrt{\gamma_k^2-1} \\
+			0 & 0 & 1 & 0 \\
+			0 & \sqrt{\gamma_k^2-1} & 0 & \gamma_k
+		\end{array}\right)=
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & \gamma_k & 0 & \sqrt{\gamma_k^2-1} \\
+			0 & 0 & 1 & 0 \\
+			0 & \sqrt{\gamma_k^2-1} & 0 & \gamma_k
+		\end{array}\right)\\
+		\gamma_{wk}&=\dfrac{\sqrt{\tvec{\Lambda p}^2+m^2}}{m}=\sqrt{1+\dfrac{k^2+\gamma_w^2 w^2 (m^2+k^2)}{m^2}}\\
+		&=\sqrt{1+\dfrac{k^2}{m^2}+\gamma_w^2 w^2 \left(1+\dfrac{k^2}{m^2}\right)}
+		=\sqrt{\left(1+\gamma_w^2 w^2\right) \left(1+\dfrac{k^2}{m^2}\right)}\\
+		&=\sqrt{\gamma_w^2\left(1-w^2+ w^2\right)}\gamma_k=\gamma_w \gamma_k\\
+		\sqrt{\gamma_{wk}^2-1}&=\sqrt{\gamma_w^2\gamma_k^2-1}\\
+		\abs{\tvec{\Lambda p}}&=\sqrt{\gamma_w^2\gamma_k^2m^2-m^2}=m\sqrt{\gamma_w^2\gamma_k^2-1}\\
+		\widehat{\tvec{\Lambda p}}&=\dfrac{1}{m\sqrt{\gamma_w^2\gamma_k^2-1}}
+		\left(\begin{array}{c}
+			0\\
+			k\\
+			-\gamma_w w \sqrt{m^2+k^2}\\
+			0
+		\end{array}\right)=\dfrac{1}{\sqrt{\gamma_w^2\gamma_k^2-1}}
+		\left(\begin{array}{c}
+			0\\
+			\sqrt{\gamma_k^2-1}\\
+			-\gamma_w w \gamma_k\\
+			0
+		\end{array}\right)\\
+		L(\Lambda p)&\overset{\eqc{2.5.24}}{=}
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  1+(\gamma_w \gamma_k-1)\frac{\gamma_k^2-1}{\gamma_w^2\gamma_k^2-1}&  (\gamma_w \gamma_k-1)\frac{-w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w^2\gamma_k^2-1}&  \frac{\sqrt{\gamma_k^2-1}}{\sqrt{\gamma_w^2\gamma_k^2-1}}\sqrt{\gamma_w^2\gamma_k^2-1}\\
+			0&  (\gamma_w \gamma_k-1)\frac{-w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w^2\gamma_k^2-1}&  1+(\gamma_w \gamma_k-1)\frac{w^2\gamma_w^2\gamma_k^2}{\gamma_w^2\gamma_k^2-1}& \frac{-\gamma_w w \gamma_k}{\sqrt{\gamma_w^2\gamma_k^2-1}}\sqrt{\gamma_w^2\gamma_k^2-1} \\
+			0&  \frac{\sqrt{\gamma_k^2-1}}{\sqrt{\gamma_w^2\gamma_k^2-1}}\sqrt{\gamma_w^2\gamma_k^2-1}& \frac{-\gamma_w w \gamma_k}{\sqrt{\gamma_w^2\gamma_k^2-1}}\sqrt{\gamma_w^2\gamma_k^2-1}  &\gamma_w \gamma_k 
+		\end{array}\right)\\
+		&=
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  1+\frac{\gamma_k^2-1}{\gamma_w \gamma_k+1}&  -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  \sqrt{\gamma_k^2-1}\\
+			0& -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  1+\frac{w^2\gamma_w^2\gamma_k^2}{\gamma_w \gamma_k+1}& -\gamma_w w \gamma_k \\
+			0&  \sqrt{\gamma_k^2-1}& -\gamma_w w \gamma_k  &\gamma_w \gamma_k 
+		\end{array}\right)
+	\end{align*}
+	Using \eq{2.3.10} we get:
+	\begin{align*}
+		\left(L^{-1}\right)^0_{\hphantom{0}0}&=(-1)(-1)L^0_{\hphantom{0}0}=L^0_{\hphantom{0}0}\\
+		\left(L^{-1}\right)^i_{\hphantom{i}k}&=(+1)(+1)L^k_{\hphantom{k}i}=L^k_{\hphantom{k}i}=L^i_{\hphantom{i}k}\\
+		\left(L^{-1}\right)^i_{\hphantom{i}0}&=(-1)(+1)L^0_{\hphantom{0}i}=-L^0_{\hphantom{0}i}=\left(L^{-1}\right)^0_{\hphantom{0}i}\\
+		\Rightarrow L^{-1}(\Lambda p)&=
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  1+\frac{\gamma_k^2-1}{\gamma_w \gamma_k+1}&  -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  -\sqrt{\gamma_k^2-1}\\
+			0&   -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  1+\frac{w^2\gamma_w^2\gamma_k^2}{\gamma_w \gamma_k+1}& \gamma_w w \gamma_k \\
+			0&  -\sqrt{\gamma_k^2-1}& \gamma_w w \gamma_k  &\gamma_w \gamma_k 
+		\end{array}\right)
+	\end{align*}
+	Putting everything together we obtain:
+	\begin{align*}
+		W(\Lambda,p)&\overset{\eqc{2.5.10}}{=}L^{-1}(\Lambda p)\Lambda L(p)
+		=L^{-1}(\Lambda p)
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & \gamma_w & -\gamma_w w \\
+			0 & 0 & -\gamma_w w & \gamma_w
+		\end{array}\right)
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 & \gamma_k & 0 & \sqrt{\gamma_k^2-1} \\
+			0 & 0 & 1 & 0 \\
+			0 & \sqrt{\gamma_k^2-1} & 0 & \gamma_k
+		\end{array}\right)\\
+		&=
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  1+\frac{\gamma_k^2-1}{\gamma_w \gamma_k+1}&  -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  -\sqrt{\gamma_k^2-1}\\
+			0&   -\frac{w\gamma_w\gamma_k\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&  1+\frac{w^2\gamma_w^2\gamma_k^2}{\gamma_w \gamma_k+1}& \gamma_w w \gamma_k \\
+			0&  -\sqrt{\gamma_k^2-1}& \gamma_w w \gamma_k  &\gamma_w \gamma_k 
+		\end{array}\right)
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  \gamma_k&  0&  \sqrt{\gamma_k^2-1}\\
+			0&  -w \gamma_w \sqrt{\gamma_k^2-1}&  \gamma_w&  -w \gamma_w \gamma_k\\
+			0&  \gamma_w \sqrt{\gamma_k^2-1}&  -w \gamma_w& \gamma_w\gamma_k
+		\end{array}\right)\\
+		&=
+		\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  \gamma_k+\frac{\gamma_k^2-1}{\gamma_w \gamma_k+1}\left(\gamma_k+w^2\gamma_w^2\gamma_k-\gamma_w(\gamma_w \gamma_k+1)\right)&  w\gamma_w\sqrt{\gamma_k^2-1}\left(-\frac{\gamma_w\gamma_k}{\gamma_w \gamma_k+1}+1\right)&  0\\
+			0&  \frac{-w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w\gamma_k+1}(\gamma_k^2+\gamma_w \gamma_k+1+w^2\gamma_w^2\gamma_k^2-\gamma_w\gamma_k(1+\gamma_w\gamma_k))&  \frac{\gamma_w(\gamma_w\gamma_k+1) +w^2\gamma_w^2\gamma_k^2 \gamma_w-w^2\gamma_w^2 \gamma_k(1+\gamma_w\gamma_k)}{\gamma_w \gamma_k+1}&  0\\
+			0&  0&  0& 1
+		\end{array}\right)\\
+		&=\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  \gamma_k+\frac{\gamma_k^2-1}{\gamma_w \gamma_k+1}\left(-\gamma_w\right)&w\gamma_w\sqrt{\gamma_k^2-1} \left(\frac{1}{\gamma_w \gamma_k+1}\right) &  0\\
+			0&  \frac{-w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w\gamma_k+1}(\gamma_k^2+1-\gamma_k^2)& \frac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1}&  0\\
+			0&  0&  0& 1
+		\end{array}\right)\\
+		&=\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  \frac{1}{\gamma_w \gamma_k+1}\left(\gamma_w\gamma_k^2+\gamma_k-\gamma_w\gamma_k^2+\gamma_w\right)& \frac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1} &  0\\
+			0&  \frac{-w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w\gamma_k+1}& \frac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1} &  0\\
+			0&  0&  0& 1
+		\end{array}\right)\\
+		&=\left(\begin{array}{cccc}
+			1&  0&  0&  0\\
+			0&  \frac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1}& \frac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1} &  0\\
+			0&  \frac{-w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w\gamma_k+1}& \frac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1} &  0\\
+			0&  0&  0& 1
+		\end{array}\right)
+	\end{align*} 
+	This explicit calculation can also be checked (see \todo ):
+	\begin{align*}
+		\dfrac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&=\dfrac{w \gamma_w \frac{k}{m}(\gamma_w\gamma_k-1)}{\gamma_w^2\gamma_k^2-1}
+		=\dfrac{w \gamma_w \frac{k}{m}(\frac{\gamma_k}{\gamma_w}-\frac{1}{\gamma_w^2})}{\gamma_k^2-\frac{1}{\gamma_w^2}}
+		=\dfrac{w  \frac{k}{m}(\gamma_k-\frac{1}{\gamma_w})}{1+\frac{k^2}{m^2}-1+w^2}
+		=\dfrac{w k m (\gamma_{k}-\frac{1}{\gamma_w})}{k^2+m^2w^2}\\
+		&=\dfrac{w k(\sqrt{k^2+m^2}-m \sqrt{1-w^2})}{k^2+m^2w^2}\\
+		\dfrac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1}&=
+		\dfrac{(\gamma_w+\gamma_k)(\gamma_w \gamma_k-1)}{\gamma_w^2 \gamma_k^2-1}
+		=\dfrac{\gamma_k-\frac{1}{\gamma_w}+\frac{\gamma_k^2}{\gamma_w}-\frac{\gamma_k}{\gamma_w^2}}{ \gamma_k^2-\frac{1}{\gamma_w^2}}
+		=\dfrac{\gamma_k(1-(1-w^2))+\sqrt{1-w^2}(1+\frac{k^2}{m^2}-1)}{ 1+\frac{k^2}{m^2}-1+w^2}\\
+		&=\dfrac{w^2 m \sqrt{m^2+k^2} +k^2 \sqrt{1-w^2}}{k^2+m^2w^2}
+	\end{align*}
+	In order to apply \eq{2.5.23}, we need to identify $W(\Lambda,p)$ with a rotation, in this case a simple rotation around the  x-axis (For the sign convention see the discussion in \ref{sign_convention_of_rotation_matrix}):
+	\begin{align*}
+		W(\Lambda,p)&\overset{!}{=}
+		\left(\begin{array}{cccc}
+			1 & 0 & 0 & 0 \\
+			0 &  \cos(\theta)&  \sin(\theta)& 0 \\
+			0 & -\sin(\theta) &  \cos(\theta)& 0 \\
+			0 & 0 & 0 & 1
+		\end{array}\right)\\
+		\Rightarrow\cos(\theta)&=\dfrac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1}\\
+		\Rightarrow\sin(\theta)&=\dfrac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}
+	\end{align*}
+	With this we see that Observer $\mathcal{O}^\prime$ observes the state
+	\begin{align*}
+		U(\Lambda)\Psi_{\tvec{p},\sigma}&\overset{\eqc{2.5.23}}{=}\sqrt{\dfrac{(\Lambda p)^0}{p^0}}\sum\limits_{\sigma^\prime=-1}^{1}D^{(1)}_{\sigma^\prime \sigma}(W(\Lambda,p))\Psi_{\tvec{\Lambda p},\sigma^\prime}\\
+		&=\gamma_w\sum\limits_{\sigma^\prime=-1}^{1}D^{(1)}_{\sigma^\prime \sigma}(W(\Lambda,p))\Psi_{\tvec{\Lambda p},\sigma^\prime}
+	\end{align*}
+	where
+	\begin{align*}
+		D^{(1)}(W(\Lambda,p))&\overset{\eqc{2.5.20}}{=}\exp(i\theta J_1^{(1)})\\
+		J_1^{(1)}&\overset{\eqc{2.5.21}}{=}\dfrac{1}{2}\left(J_++J_-\right)=
+		\dfrac{1}{2}\left(
+		\left(\begin{array}{ccc}
+			0&  \sqrt{2}& 0 \\
+			0&  0& \sqrt{2}\\
+			0&  0& 0
+		\end{array}\right)+
+		\left(\begin{array}{ccc}
+		0&  0& 0 \\
+		\sqrt{2}&  0& 0 \\
+		0&  \sqrt{2}& 0
+		\end{array}\right)
+		\right)=\dfrac{1}{\sqrt{2}}
+		\left(\begin{array}{ccc}
+			0&  1& 0 \\
+			1&  0& 1 \\
+			0&  1& 0
+		\end{array}\right)\\
+		\Rightarrow \left(J_1^{(1)}\right)^2&=\dfrac{1}{2}
+		\left(\begin{array}{ccc}
+			1&  0& 1 \\
+			0&  2& 0 \\
+			1&  0& 1
+		\end{array}\right)\qquad
+		\left(J_1^{(1)}\right)^3=\dfrac{1}{2\sqrt{2}}
+		\left(\begin{array}{ccc}
+			0&  2& 0 \\
+			2&  0& 2 \\
+			0&  2& 0
+		\end{array}\right)=J_1^{(1)}
+		\qquad
+		\left(J_1^{(1)}\right)^4=\left(J_1^{(1)}\right)^2
+		\qquad\dots\\
+		D^{(1)}(W(\Lambda,p))&=\sum\limits_{n=0}^{\infty}\dfrac{1}{n!}(i\theta)^n \left(J_1^{(1)}\right)^n
+		=\sum\limits_{n=0}^{\infty}\dfrac{1}{(2n+1)!}(i\theta)^{2n+1}\left(J_1^{(1)}\right)^{2n+1} + \identity +\sum\limits_{n=1}^{\infty}\dfrac{1}{(2n)!}(i\theta)^{2n}\left(J_1^{(1)}\right)^{2n}\\
+		&=J_1^{(1)} i \sum\limits_{n=0}^{\infty}\dfrac{(-1)^{n}}{(2n+1)!}\theta^{2n+1} + \identity +\left(J_1^{(1)}\right)^{2}\sum\limits_{n=1}^{\infty}\dfrac{(-1)^{n}}{(2n)!}(\theta)^{2n}\\
+		&=J_1^{(1)} i \sin(\theta) +\identity+ \left(J_1^{(1)}\right)^{2}(\cos(\theta) -1)
+		=i \sin(\theta) J_1^{(1)} +\cos(\theta) \left(J_1^{(1)}\right)^2 + \identity - \left(J_1^{(1)}\right)^2\\
+		&=i \dfrac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1} J_1^{(1)} +\dfrac{\gamma_k+\gamma_w}{\gamma_w \gamma_k+1} \left(J_1^{(1)}\right)^2 + \identity - \left(J_1^{(1)}\right)^2
+	\end{align*}
+\end{widetext}
+

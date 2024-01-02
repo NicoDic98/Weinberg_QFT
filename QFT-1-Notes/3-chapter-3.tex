@@ -1,0 +1,270 @@
+\section{Scattering Theory}\label{sec:chapter3}
+
+\subsection{"In" and "Out" States}\label{susec:3_1}
+
+
+\subsubsection{\eq{3.1.1} \page{107}}
+For the translation part of the Poincaré transformation \eq{2.5.1} and \eq{2.4.26} were used. And for the Lorentz transformation part \eq{2.5.23} and \eq{2.5.42} were used for the massive and massless case respectively.
+
+
+\subsubsection{\enquote{$U(\Lambda,a)=\exp(iH\tau)$} \page{109}}
+This follow immediately from \eq{2.4.26} with \[\Lambda=\identity\qquad a =(0,0,0,\tau).\]
+
+
+\subsubsection{\enquote{\dots state long before or long after the collision (\dots) is found by applying a time-translation operator $\exp(-iH\tau) $ with $\tau\rightarrow-\infty$ or $\tau\rightarrow+\infty$, respectively.} \page{109}}
+
+This is clear from the following consideration:
+
+$t^\prime=0$ is at $t=\tau\rightarrow \mp \infty$.
+
+\subsubsection{\eq{3.1.16} \page{111}}
+
+Start of from the ansatz
+\[\Psi_\alpha^\pm=\Phi_\alpha+\tilde{\Psi}_\alpha^\pm,\]
+inserting we get:
+\begin{align*}
+	V\Psi_\alpha^\pm&=(E_\alpha - H_0)\Psi_\alpha^\pm\\
+	&=(E_\alpha-H_0)\Phi_\alpha+(E_\alpha-H_0)\tilde{\Psi}_\alpha^\pm\\
+	&=(E_\alpha-H_0)\tilde{\Psi}_\alpha^\pm\\
+	\Rightarrow \tilde{\Psi}_\alpha^\pm&=(E_\alpha-H_0\pm i \varepsilon)^{-1} V\Psi_\alpha^\pm\\
+	\Rightarrow \Psi_\alpha^\pm&=\Phi_\alpha+(E_\alpha-H_0\pm i \varepsilon)^{-1} V\Psi_\alpha^\pm
+\end{align*}
+
+\subsubsection{\eq{3.1.21} \page{112}}
+\label{sususec:3_1_p112_1}
+\begin{align*}
+	\Psi^\pm_g(t)&\overset{\eqc{3.1.19}}{=}\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha)\Psi_\alpha^\pm\\
+	&\overset{\eqc{3.1.17}}{=}\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \Phi_\alpha\\
+	&+\int \dd{\alpha} \int \dd{\beta}\exp(-iE_\alpha t) g(\alpha)\dfrac{T_{\beta\alpha}^\pm \Phi_\beta}{E_\alpha-E_\beta\pm i \varepsilon}\\
+	&=\Phi_g(t)\\
+	&+\int \dd{\beta}\left(\int \dd{\alpha} \dfrac{\exp(-iE_\alpha t) g(\alpha)T_{\beta\alpha}^\pm }{E_\alpha-E_\beta\pm i \varepsilon}\right)\Phi_\beta\\
+	&=\Phi_g(t)+\int \dd{\beta} \mathcal{T}^\pm_\beta \Phi_\beta
+\end{align*}
+
+
+\subsubsection{\enquote{For $t\rightarrow-\infty$, we can close the contour of integration for the energy variable $E_\alpha$ in the upper half-plane\dots} \page{112}}
+
+From \eq{3.1.4} we know
+
+\[\int \dd{\alpha} \dots = \sum\limits_{n_1 \sigma_1 n_2 \sigma_2}\int\dd[3]{p_1}\dd[3]{p_2} \dots\]
+and in addition the considerations between \eq{2.5.14} and \eq{2.5.15} yield:
+
+\[\int \dd[3]{\tvec{p}} \dfrac{f(\tvec{p},\sqrt{\tvec{p}^2+M^2})}{2\sqrt{\tvec{p}^2+M^2}}=\int \dd[4]{p} \delta(p^2+M^2) \theta(p^0) f(p)\]
+Such that we can identify the $E_\alpha$ integration by the $p_1^0$ integration, which now covers the complete real axis and can be solved with procedure described, i.e. applying the residue theorem.
+
+If we don't do this then the
+\[E_\alpha \overset{\eqc{3.1.7}}{=}p_0^1+p_0^2+\dots=\sqrt{M_1^2+\tvec{p_1}^2}+\sqrt{M_2^2+\tvec{p_2}^2}\dots\]
+integration would only cover the positive reals and in such a case residue integration gets a lot more complicated.
+
+
+\subsubsection{\enquote{Specifically, $-t$ must be much greater than both the time-uncertainty in the wave-packet $g(\alpha)$ and the duration of the collision, which respectively govern the location of the singularities of $g(\alpha)$ and $T_{\beta\alpha}^\pm$ in the complex $E_\alpha$ plane.} \page{112}}
+
+\todo
+
+\subsubsection{\eqs{3.1.22/23/24} \page{113}}
+\begin{align*}
+	\dfrac{\mathcal{P}_\varepsilon}{E}\mp i \pi \delta_\varepsilon(E)&=
+	\dfrac{E}{E^2+\varepsilon^2} \mp \dfrac{i \pi \varepsilon}{\pi (E^2+\varepsilon^2)}\\
+	&=\dfrac{1}{E^2+\varepsilon^2}(E\mp i \varepsilon)\\
+	&=\dfrac{1}{(E+i\varepsilon)(E-i\varepsilon)}(E\mp i \varepsilon)\\
+	&=\dfrac{1}{E\pm i \varepsilon}
+\end{align*}
+
+\subsubsection{\enquote{The function \eq{3.1.24}\dots gives unity when integrated over all $E$, \dots} \page{113}}
+
+\begin{align*}
+	\int\limits_{-\infty}^{\infty} \dd{E} \delta_\varepsilon (E)&=
+	\int\limits_{-\infty}^{\infty} \dd{E} \dfrac{\varepsilon}{\pi(E^2+\varepsilon^2)}\\
+	&=\dfrac{\varepsilon}{\pi}\int\limits_{-\infty}^{\infty} \dd{E}\dfrac{1}{E^2+\varepsilon^2}\\
+	&\overset{WA}{=}\dfrac{\varepsilon}{\pi} \pi \sqrt{\dfrac{1}{\varepsilon^2}}=1
+\end{align*}
+
+\subsection{The S-Matrix}\label{susec:3_2}
+
+\subsubsection{\enquote{$\int\dd{\beta}S_{\beta\gamma}^\star S_{\beta\alpha}=\dots=\innerproduct{\Psi_\gamma^+}{\Psi_\alpha^+}$} \page{114}}
+
+Note, that according to the previous discussion we can apply \eq{3.1.5} in the following sense to $\Psi_\gamma^+$:
+\[\Psi_\gamma^+=\int\dd{\beta}\Psi_\beta^-\innerproduct{\Psi_\beta^-}{\Psi_\gamma^+}\]
+\begin{align*}
+	\innerproduct{\Psi_\gamma^+}{\Psi_\alpha^+}&=
+	\int\dd{\beta}\innerproduct{\Psi_\beta^-}{\Psi_\gamma^+}^\star \innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	&=\int\dd{\beta} S_{\beta\gamma}^\star S_{\beta\alpha}
+\end{align*}
+
+In the same way we have:
+\[\Psi_\gamma^-=\int\dd{\beta}\Psi_\beta^+\innerproduct{\Psi_\beta^+}{\Psi_\gamma^-}\]
+
+\begin{align*}
+	\innerproduct{\Psi_\gamma^-}{\Psi_\alpha^-}&=
+	\int\dd{\beta}\innerproduct{\Psi_\beta^+}{\Psi_\gamma^-}^\star \innerproduct{\Psi_\beta^+}{\Psi_\alpha^-}\\
+	&=\int\dd{\beta}\innerproduct{\Psi_\gamma^-}{\Psi_\beta^+} \innerproduct{\Psi_\alpha^-}{\Psi_\beta^+}^\star\\
+	&=\int\dd{\beta} S_{\gamma\beta} S_{\alpha\beta}^\star
+\end{align*}
+
+
+\subsubsection{\eq{3.2.5} \page{114}}
+\begin{align*}
+	S_{\beta\alpha}&\overset{\eqc{3.2.1}}{=}\innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	&\overset{\eqc{3.1.13}}{=}\innerproduct{\Omega(+\infty)\Phi_\beta}{\Omega(-\infty)\Phi_\alpha}\\
+	&=\innerproduct{\Phi_\beta}{\Omega(+\infty)^\dagger\Omega(-\infty)\Phi_\alpha}\\
+	&\overset{\eqc{3.2.4}}{=}\innerproduct{\Phi_\beta}{S\Phi_\alpha}
+\end{align*}
+
+
+\subsubsection{\enquote{\dots for $t\rightarrow+\infty$, $\Psi^+_g(t)\rightarrow\dots$} \page{115}}
+
+From \ref{sususec:3_1_p112_1} we know:
+\begin{align*}
+	\Psi^\pm_g(t)&=\Phi_g(t)+\int \dd{\beta} \mathcal{T}^\pm_\beta \Phi_\beta\\
+	&=\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \Phi_\alpha
+	+\int \dd{\beta} \mathcal{T}^\pm_\beta \Phi_\beta\\
+	&=\int \dd{\beta} \Phi_\beta \left(\exp(-iE_\beta t) g(\beta)+\mathcal{T}^\pm_\beta\right)
+\end{align*}
+in the limit $t\rightarrow+\infty$ we thus have
+\begin{align*}
+	\Psi^+_g(t)&\rightarrow \int \dd{\beta} \Phi_\beta (\exp(-iE_\beta t) g(\beta)\\
+	&-2 \pi i \exp(-iE_\beta t)\int\dd{\alpha} \delta (E_\alpha-E_\beta) g(\alpha)T_{\beta\alpha}^+)\\
+	&=\int \dd{\beta} \Phi_\beta\exp(-iE_\beta t) ( g(\beta)\\
+	&-2 \pi i \int\dd{\alpha} \delta (E_\alpha-E_\beta) g(\alpha)T_{\beta\alpha}^+)
+\end{align*}
+
+
+\subsubsection{\enquote{$\Psi_g^+(t)=\dots$} \page{115}}
+From \eq{3.1.19} we get:
+\begin{align*}
+	\Psi^+_g(t)&=\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \Psi_\alpha^+\\
+	&\overset{\eqc{3.1.5}}{=}\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \int\dd{\beta} \Psi_\beta^- \innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	&=\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \int\dd{\beta} \Psi_\beta^- \underbrace{S_{\beta\alpha}}_{\propto \delta(E_\alpha-E_\beta)}\\
+	&=\int \dd{\beta} \exp(-iE_\beta t)\Psi_\beta^-  \underbrace{\int\dd{\alpha} g(\alpha) S_{\beta\alpha}}_{\eqqcolon D(\beta)}\\
+	&=\int \dd{\beta} \exp(-iE_\beta t)\Psi_\beta^-  D(\beta)
+\end{align*}
+For the asymptotic behavior for $t\rightarrow + \infty$ $, D(\beta)$ gets interpreted as the $g(\alpha)$ in \eq{3.1.12}, s.t.:
+\begin{align*}
+		\Psi^+_g(t)&\rightarrow \int \dd{\beta} \exp(-iE_\beta t)\Phi_\beta  D(\beta)\\
+		&= \int \dd{\beta} \exp(-iE_\beta t)\Phi_\beta \int\dd{\alpha} g(\alpha) S_{\beta\alpha}
+\end{align*}
+
+
+\subsubsection{\eq{3.2.7} \page{115}}
+This follows from the previous result because it held for arbitrary $g$.
+
+
+\subsubsection{\eq{3.2.8} \page{115}}
+\begin{align*}
+	T_{\beta\alpha}^+&\overset{\eqc{3.1.18}}{=} \innerproduct{\Phi_\beta}{V\Psi_\alpha^+}\\
+	&\overset{\eqc{3.1.16/17}}{\approx}\innerproduct{\Phi_\beta}{V\Phi_\alpha}
+\end{align*}
+Where the last approximation is for small $V$.
+
+
+\subsubsection{\enquote{\dots proof of the \emph{orthonormality} of these states and the \emph{unitarity} of the $S$-matrix, as well as \eq{3.2.7}, without having to deal with limits as $t\rightarrow \mp\infty$} \page{115}}
+
+The orthonormality was previously shown in \eq{3.1.15} by making use of results in the limit $\tau\rightarrow \mp\infty$.
+
+The unitarity of the $S$-matrix was previously shown in \eqs{3.2.2/3}.
+
+\eq{3.2.7} was derived from results in the limit $\tau\rightarrow\infty$.
+
+
+\subsubsection{\enquote{$\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}+\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}$} \page{116}}
+\begin{align*}
+	&\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}+\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
+	&=\innerproduct{\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
+	&=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{(E_\beta-H_0\pm i \varepsilon)^{-1}V\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
+	&=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
+\end{align*}
+
+
+\subsubsection{\eq{3.2.9} \page{116}}
+From the previous result we get:
+\begin{widetext}
+	\begin{align*}
+		&\left(T_{\alpha\beta}^\pm\right)^\star-T_{\beta\alpha}^\pm\\
+		&=\innerproduct{\Phi_\alpha}{V\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
+		=\innerproduct{V\Phi_\alpha}{\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
+		=\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}-\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}\\
+		&=\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
+		-\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
+		&=\innerproduct{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]V\Psi_\alpha^\pm}\\
+		&=\int\dd{\gamma}\innerproduct{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]\Phi_\gamma}
+		\innerproduct{\Phi_\gamma}{V\Psi_\alpha^\pm}\\
+		&=\int\dd{\gamma}\innerproduct{\Psi_\beta^\pm}{V\Phi_\gamma}\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]
+		T_{\gamma\alpha}^\pm\\
+		&=\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]
+		T_{\gamma\alpha}^\pm
+	\end{align*}
+
+
+	\subsubsection{\enquote{To prove the orthonormality of the "in" and "out" states, divide \eq{3.2.9} by $E_\alpha-E_\beta\pm 2i\varepsilon$. This gives \dots} \page{116}}
+	
+	\label{sususec:3_2_p116_1}
+	
+	\begin{align*}
+		&\left(\dfrac{T_{\alpha\beta}^\pm}{E_\beta-E_\alpha\pm 2i\varepsilon}\right)^\star
+		+\dfrac{T_{\beta\alpha}^\pm}{E_\alpha-E_\beta\pm 2i\varepsilon}\\
+		&=\dfrac{\left(T_{\alpha\beta}^\pm\right)^\star}{E_\beta-E_\alpha\mp 2i\varepsilon}+\dfrac{T_{\beta\alpha}^\pm}{E_\alpha-E_\beta\pm 2i\varepsilon}\\
+		&=-\dfrac{1}{E_\alpha-E_\beta\pm 2i\varepsilon}\left\{\left(T_{\alpha\beta}^\pm\right)^\star-T_{\beta\alpha}^\pm\right\}\\
+		&\overset{\eqc{3.2.9}}{=}-\dfrac{1}{E_\alpha-E_\beta\pm 2i\varepsilon}\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]\\
+		&=-\dfrac{1}{E_\alpha-E_\beta\pm 2i\varepsilon}\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm\left[\dfrac{E_\alpha-E_\gamma\pm i \varepsilon-(E_\beta-E_\gamma\mp i \varepsilon)}{(E_\beta-E_\gamma\mp i \varepsilon)(E_\alpha-E_\gamma\pm i \varepsilon)}\right]\\
+		&=-\dfrac{1}{E_\alpha-E_\beta\pm 2i\varepsilon}\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm\left[\dfrac{E_\alpha\pm 2i \varepsilon-E_\beta}{(E_\beta-E_\gamma\mp i \varepsilon)(E_\alpha-E_\gamma\pm i \varepsilon)}\right]\\
+		&=-\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm \dfrac{1}{(E_\beta-E_\gamma\mp i \varepsilon)(E_\alpha-E_\gamma\pm i \varepsilon)}\\
+		&=-\int\dd{\gamma} \left(\dfrac{T_{\gamma\beta}^\pm}{E_\beta-E_\gamma\pm i \varepsilon}\right)^\star \dfrac{T_{\gamma\alpha}^\pm}{E_\alpha-E_\gamma\pm i \varepsilon}
+	\end{align*}
+	
+	
+\end{widetext}
+
+\subsubsection{\enquote{We see the that $\delta(\beta-\alpha)+T_{\beta\alpha}^\pm/(E_\alpha-E_\beta\pm i \varepsilon)$ is \emph{unitary}. With \eq{3.1.17}, this is just the statement that the $\Psi_\alpha^\pm$ form two \emph{orthonormal} sets of state vectors.} \page{116}}
+First define \[A_{\beta\alpha}^\pm=\delta(\beta-\alpha)+\dfrac{T_{\beta\alpha}^\pm}{E_\alpha-E_\beta\pm i \varepsilon}.\]
+With this we get
+\begin{align*}
+	&\int\dd{\gamma} \left(A_{\gamma\beta}^\pm\right)^\star A_{\gamma\alpha}^\pm\\
+	&=\int\dd{\gamma}\left(\delta(\gamma-\beta)+\dfrac{T_{\gamma\beta}^\pm}{E_\beta-E_\gamma\pm i \varepsilon}\right)^\star\\
+	&\cdot\left(\delta(\gamma-\alpha)+\dfrac{T_{\gamma\alpha}^\pm}{E_\alpha-E_\gamma\pm i \varepsilon}\right)\\
+	&\overset{\ref{sususec:3_2_p116_1}}{=}\int\dd{\gamma}\delta(\gamma-\beta)\delta(\gamma-\alpha)\\
+	&=\delta(\beta-\alpha)
+\end{align*}
+and
+\begin{align*}
+	&\int\dd{\gamma} A_{\beta\gamma}^\pm \left(A_{\alpha\gamma}^\pm\right)^\star\\
+	&=\int\dd{\gamma}\left(\delta(\beta-\gamma)+\dfrac{T_{\beta\gamma}^\pm}{E_\gamma-E_\beta\pm i \varepsilon}\right)\\
+	&\cdot\left(\delta(\alpha-\gamma)+\dfrac{T_{\alpha\gamma}^\pm}{E_\gamma-E_\alpha\pm i \varepsilon}\right)^\star\\
+	&\overset{\ref{asdasd}}{=}\int\dd{\gamma}\delta(\beta-\gamma)\delta(\alpha-\gamma)\\
+	&=\delta(\beta-\alpha).
+\end{align*}
+Where in the second to last step we used \todo
+
+
+Such that \eq{3.1.17} can be written as
+\[\Psi_\alpha^\pm=\int\dd{\beta}A_{\beta\alpha}^\pm\Phi_\beta.\]
+Which finally yields the orthonormality of the states:
+\begin{align*}
+	\innerproduct{\Psi_\gamma^\pm}{\Psi_\alpha^\pm}&=\int\dd{\delta}\int\dd{\beta} \left(A_{\delta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\underbrace{\innerproduct{\Phi_\delta}{\Phi_\beta}}_{=\delta(\delta-\beta)}\\
+	&=\int\dd{\beta} \left(A_{\beta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\\
+	&=\delta(\gamma-\alpha)
+\end{align*}
+
+\subsubsection{\enquote{The unitarity of the S-matrix can be proved in a similar fashion by multiplying \eq{3.2.9} with $\delta\left(E_\beta-E_\alpha\right)$ \dots} \page{116}}
+\todo
+
+\subsection{Symmetries of the S-Matrix}\label{susec:3_3}
+
+
+
+\subsection{Rates and Cross-Sections}\label{susec:3_4}
+
+
+
+\subsection{Perturbation Theory}\label{susec:3_5}
+
+
+
+\subsection{Implications of Unitarity}\label{susec:3_6}
+
+
+
+\subsection{Partial-Wave Expansions}\label{susec:3_7}
+
+
+
+\subsection{Resonances}\label{susec:3_8}

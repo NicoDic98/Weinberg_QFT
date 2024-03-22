@@ -6,9 +6,9 @@
 \subsubsection{\enquote{For this to be unitary and linear, $t$ must be Hermitian and linear} \page{51}}\label{sususec:2_2_p51_1}
 Linearity is trivial and hermiticity follow from the following observation:
 \begin{align*} 
-	\innerproduct{U\Psi}{U\Phi}=&\innerproduct{(1+i\varepsilon t) \Psi}{(1+i\varepsilon t) \Phi}\\
-	=&\innerproduct{\Psi}{\Phi}+\varepsilon i\left(\innerproduct{\Psi}{t \Phi}-\innerproduct{t\Psi}{ \Phi}\right)+\order{\varepsilon^2}\\
-	\overset{\eq{2.2.2}}{\Leftrightarrow}&\innerproduct{\Psi}{t \Phi}=\innerproduct{t\Psi}{\Phi}\\
+	\braket{U\Psi}{U\Phi}=&\braket{(1+i\varepsilon t) \Psi}{(1+i\varepsilon t) \Phi}\\
+	=&\braket{\Psi}{\Phi}+\varepsilon i\left(\braket{\Psi}{t \Phi}-\braket{t\Psi}{ \Phi}\right)+\order{\varepsilon^2}\\
+	\overset{\eq{2.2.2}}{\Leftrightarrow}&\braket{\Psi}{t \Phi}=\braket{t\Psi}{\Phi}\\
 	\overset{\eq{2.1.5}}{\Leftrightarrow}&t^\dagger=t
 \end{align*}
 
@@ -166,13 +166,13 @@ Now suppose $p^0\leq0$:
 		of the book the states considered have standard momentum $k^\mu$! \\
 		(see Text in the Book preceding \eq{2.5.12})
 }}
-Suppose that for given values of $\tvec{k}$ and $\tvec{k}^\prime$ \[\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\neq 0\]
+Suppose that for given values of $\tvec{k}$ and $\tvec{k}^\prime$ \[\braket{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\neq 0\]
 then from
 \begin{align*} 
-	&k^i\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
-	&=\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{P^i\Psi_{k,\sigma}}\\
-	&=\innerproduct{P^i\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
-	&=k^{\prime i}\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}
+	&k^i\braket{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&=\braket{\Psi_{k^\prime,\sigma^\prime}}{P^i\Psi_{k,\sigma}}\\
+	&=\braket{P^i\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&=k^{\prime i}\braket{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}
 \end{align*}
 follows \[k^i=k^{\prime i}.\]
 On why there is only a 3 dimensional delta function showing up:
@@ -183,28 +183,28 @@ This is because both states are assumed to have standard momentum $k^\mu$ and th
 Choice between $+$ and $-$ comes from sign of $k^0$, i.e. $+$ for cases (a) and (c) of Table 2.1.
 \subsubsection{\eq{2.5.13} \page{67}}
 \begin{align*} 
-	&\innerproduct{U(W)\Psi_{k^\prime,\sigma^\prime}}{U(W)\Psi_{k,\sigma}}\\
-	&\overset{\eqc{2.5.8}}{=}\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\innerproduct{D_{\sigma^{\prime\prime} \sigma^{\prime}}\Psi_{k^\prime,\sigma^{\prime\prime}}}{D_{\sigma^{\prime\prime\prime} \sigma}\Psi_{k,\sigma^{\prime\prime\prime}}}\\
-	&=\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\left(D_{\sigma^{\prime\prime} \sigma^{\prime}}\right)^\star D_{\sigma^{\prime\prime\prime} \sigma} \innerproduct{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma^{\prime\prime\prime}}}\\
+	&\braket{U(W)\Psi_{k^\prime,\sigma^\prime}}{U(W)\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.5.8}}{=}\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\braket{D_{\sigma^{\prime\prime} \sigma^{\prime}}\Psi_{k^\prime,\sigma^{\prime\prime}}}{D_{\sigma^{\prime\prime\prime} \sigma}\Psi_{k,\sigma^{\prime\prime\prime}}}\\
+	&=\sum\limits_{\sigma^{\prime\prime}\sigma^{\prime\prime\prime}}\left(D_{\sigma^{\prime\prime} \sigma^{\prime}}\right)^\star D_{\sigma^{\prime\prime\prime} \sigma} \braket{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma^{\prime\prime\prime}}}\\
 	&\overset{\eqc{2.5.12}}{=}\sum\limits_{\sigma^{\prime\prime}}\left(D_{\sigma^{\prime\prime} \sigma^{\prime}}\right)^\star D_{\sigma^{\prime\prime} \sigma} \delta^{(3)}(\tvec{k}^\prime- \tvec{k})\\
-	&\overset{\eqc{2.2.2}}{=}\innerproduct{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&\overset{\eqc{2.2.2}}{=}\braket{\Psi_{k^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
 	&\overset{\eqc{2.5.12}}{=} \delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{k}^\prime- \tvec{k})
 \end{align*}
 From this it follows \[D^\dagger(W)=D^{-1}(W)\]
 
-\subsubsection{\enquote{$\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}=$ \dots} \page{67}}
+\subsubsection{\enquote{$\braket{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}=$ \dots} \page{67}}
 {\color{red}Note:} What is meant by \enquote{arbitrary momenta} is that these momenta still have the standard momentum $k^\mu$, but now none of the states has exactly $k^\mu$ as its momentum.
 
 First define \[k^\prime \coloneqq L^{-1}(p)p^\prime\]
 with this we get:
 \begin{align*} 
-	&\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}\\
-	&\overset{\eqc{2.5.5}}{=}\innerproduct{\Psi_{p^\prime,\sigma^\prime}}{N(p)U(L(p))\Psi_{k,\sigma}}\\
-	&=N(p)\innerproduct{U(L^{-1}(p))\Psi_{p^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
+	&\braket{\Psi_{p^\prime,\sigma^\prime}}{\Psi_{p,\sigma}}\\
+	&\overset{\eqc{2.5.5}}{=}\braket{\Psi_{p^\prime,\sigma^\prime}}{N(p)U(L(p))\Psi_{k,\sigma}}\\
+	&=N(p)\braket{U(L^{-1}(p))\Psi_{p^\prime,\sigma^\prime}}{\Psi_{k,\sigma}}\\
 	&\overset{\eqc{2.5.11}}{=}N(p)\dfrac{N^\star\left(p^\prime\right)}{N^\star \left(k^\prime\right)}\\
 	&\cdot\sum\limits_{\sigma^{\prime\prime}}
 	D_{\sigma^{\prime\prime} \sigma^{\prime}}^\star\left(W\left(L^{-1}(p),p^\prime\right)\right)
-	\innerproduct{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma}}\\
+	\braket{\Psi_{k^\prime,\sigma^{\prime\prime}}}{\Psi_{k,\sigma}}\\
 	&\overset{\eqc{2.5.12}}{=}N(p)N^\star\left(p^\prime\right) D_{\sigma \sigma^{\prime}}^\star\left(W\left(L^{-1}(p),p^\prime\right)\right) \delta^{(3)}(\tvec{k}^\prime- \tvec{k})
 \end{align*}
 Where in the last step we used 
@@ -355,10 +355,14 @@ This is a Lorentz transformation, since
 
 \subsubsection{\eqs{2.5.29/30} \page{70}}
 \eq{2.5.30} is trivial since the rotations around the three axis satisfy this group multiplication and \[S(0,0)=\identity.\]
-For \eq{2.5.29} explicit calculation shows it (see \todo) together with \[R(0)=\identity.\]
+For \eq{2.5.29} explicit calculation shows it (see 
+\todo %Link to corresponding Jupyter notebook
+) together with \[R(0)=\identity.\]
 
 \subsubsection{\eq{2.5.31} \page{70}}
-Explicit calculation shows \eq{2.5.31} (see \todo) and the invariance follows then immediately, since:
+Explicit calculation shows \eq{2.5.31} (see 
+\todo %Link to corresponding Jupyter notebook
+) and the invariance follows then immediately, since:
 \begin{align*} 
 	W^\prime SW^{\prime-1}=S^\prime \underbrace{R^\prime S R^{\prime-1}}_{=S^{\prime\prime}} S^{\prime-1}=S^{\prime\prime\prime}
 \end{align*}
@@ -858,18 +862,18 @@ This can be seen from the transformation behavior of massless one particle state
 	\identity \Psi_{p,\sigma} &=\left[U(R(2\pi))\right]^2 \Psi_{p,\sigma}\\
 	&=\left(\exp(i\sigma 2\pi)\right)^2\Psi_{p,\sigma}\\
 	&=\exp(i\sigma 4\pi)\Psi_{p,\sigma}
-\end{align*}\todo
+\end{align*}\todo %not a 100 percent clear argument
 
 \subsection{The Symmetry Representation Theorem}\label{susec:2_A}
 
-\subsubsection{\enquote{But $\innerproduct{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}
+\subsubsection{\enquote{But $\braket{\Psi_k^\prime}{\Psi_k^\prime}$ is automatically \textbf{real and positive}} \page{91}}
 This follows immediately from \eq{2.1.1}.
 
 \subsubsection{\enquote{From \eq{2.A.1} we have $\abs{c_{kk}}=\abs{c_{k1}}=\frac{1}{\sqrt{2}}$ and for $l\neq k$ and $l\neq 1$: $c_{kl}=0$} \page{91}}
 
 \begin{align*}
-	\abs{c_{kl^\prime}}^2&\overset{\eqc{2.A.3}}{=}\abs{\sum\limits_{l}c_{kl}^\star \innerproduct{\Psi_l^\prime}{\Psi_{l^\prime}^\prime}}^2=\abs{\innerproduct{\Upsilon_k^\prime}{\Psi_{l^\prime}^\prime}}^2\\
-	&\overset{\eqc{2.A.1}}{=}\abs{\innerproduct{\Upsilon_k}{\Psi_{l^\prime}}}^2=\begin{cases}
+	\abs{c_{kl^\prime}}^2&\overset{\eqc{2.A.3}}{=}\abs{\sum\limits_{l}c_{kl}^\star \braket{\Psi_l^\prime}{\Psi_{l^\prime}^\prime}}^2=\abs{\braket{\Upsilon_k^\prime}{\Psi_{l^\prime}^\prime}}^2\\
+	&\overset{\eqc{2.A.1}}{=}\abs{\braket{\Upsilon_k}{\Psi_{l^\prime}}}^2=\begin{cases}
 		\frac{1}{2} &\text{for } l^\prime=1,k\\
 		0&\text{for } l^\prime\neq1,k\end{cases}
 \end{align*}
@@ -912,11 +916,11 @@ And further rewriting yields
 
 \subsubsection{\enquote{Then the invariance of transition probabilities requires that $\abs{\sum\limits_{k}B_k^\star A_k}^2=\abs{\sum\limits_{k}B_k A_k}^2$} \page{93}}\label{sususec:2_A_p93_1}
 \begin{align*} 
-	\abs{\sum\limits_{k}B_k^\star A_k}^2\overset{\eq{2.A.2}}{=}&\abs{\sum\limits_{k l}B_k^\star A_l \innerproduct{\Psi_k}{\Psi_l}}^2\\
-	=&\abs{\innerproduct{\sum\limits_{k}B_k \Psi_k}{\sum\limits_{l}A_l \Psi_l}}^2\\
-	\overset{\eq{2.A.1}}{=}&\abs{\innerproduct{U\left(\sum\limits_{k}B_k \Psi_k\right)}{U\left(\sum\limits_{l}A_l \Psi_l\right)}}^2\\
-	=&\abs{\innerproduct{\sum\limits_{k}B_k^\star U\Psi_k}{\sum\limits_{l}A_l U\Psi_l}}^2\\
-	=&\abs{\sum\limits_{k l}B_k A_l \innerproduct{U\Psi_k}{U\Psi_l}}^2\\
+	\abs{\sum\limits_{k}B_k^\star A_k}^2\overset{\eq{2.A.2}}{=}&\abs{\sum\limits_{k l}B_k^\star A_l \braket{\Psi_k}{\Psi_l}}^2\\
+	=&\abs{\braket{\sum\limits_{k}B_k \Psi_k}{\sum\limits_{l}A_l \Psi_l}}^2\\
+	\overset{\eq{2.A.1}}{=}&\abs{\braket{U\left(\sum\limits_{k}B_k \Psi_k\right)}{U\left(\sum\limits_{l}A_l \Psi_l\right)}}^2\\
+	=&\abs{\braket{\sum\limits_{k}B_k^\star U\Psi_k}{\sum\limits_{l}A_l U\Psi_l}}^2\\
+	=&\abs{\sum\limits_{k l}B_k A_l \braket{U\Psi_k}{U\Psi_l}}^2\\
 	\overset{\eq{2.A.3}}{=}&\abs{\sum\limits_{k}B_k A_k}^2
 \end{align*}
 
@@ -1104,10 +1108,10 @@ Using basic orthonormality properties we see
 
 \begin{align*}
 	&\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})\delta_{ni}\\
-	&\overset{\eqc{2.5.19}}{=}\innerproduct{\Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\Psi_{\tvec{p},\sigma,i}}^\star\\
-	&=\innerproduct{\timereversal \Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\timereversal\Psi_{\tvec{p},\sigma,i}}\\
-	&\overset{\eqc{2.C.1}}{=}\innerproduct{(-1)^{j^\prime-\sigma^\prime}\sum\limits_{m}\timereversalmatrix_{mn}\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{(-1)^{j-\sigma}\sum\limits_{l}\timereversalmatrix_{li}\Psi_{-\tvec{p},-\sigma,l}}\\
-	&=(-1)^{j^\prime+j-\sigma^\prime-\sigma}\sum\limits_{m,l}\timereversalmatrix_{mn}^\star\timereversalmatrix_{li}\innerproduct{\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{\Psi_{-\tvec{p},-\sigma,l}}\\
+	&\overset{\eqc{2.5.19}}{=}\braket{\Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\Psi_{\tvec{p},\sigma,i}}^\star\\
+	&=\braket{\timereversal \Psi_{\tvec{p}^\prime,\sigma^\prime,n}}{\timereversal\Psi_{\tvec{p},\sigma,i}}\\
+	&\overset{\eqc{2.C.1}}{=}\braket{(-1)^{j^\prime-\sigma^\prime}\sum\limits_{m}\timereversalmatrix_{mn}\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{(-1)^{j-\sigma}\sum\limits_{l}\timereversalmatrix_{li}\Psi_{-\tvec{p},-\sigma,l}}\\
+	&=(-1)^{j^\prime+j-\sigma^\prime-\sigma}\sum\limits_{m,l}\timereversalmatrix_{mn}^\star\timereversalmatrix_{li}\braket{\Psi_{-\tvec{p}^\prime,-\sigma^\prime,m}}{\Psi_{-\tvec{p},-\sigma,l}}\\
 	&\overset{\eqc{2.5.19}}{=}(-1)^{2(j-\sigma)}\sum\limits_{m}\timereversalmatrix_{mn}^\star\timereversalmatrix_{mi}\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})\\
 	&=\delta_{\sigma^\prime \sigma} \delta^{(3)}(\tvec{p}^\prime-\tvec{p})
 	\sum\limits_{m}\left(\timereversalmatrix^\dagger\right)_{nm}\timereversalmatrix_{mi}
@@ -1433,7 +1437,9 @@ We work in case a) of Table 2.1, s.t.:
 			0&  0&  0& 1
 		\end{array}\right)
 	\end{align*} 
-	This explicit calculation can also be checked (see \todo ):
+	This explicit calculation can also be checked 
+	(see \todo %Link to corresponding Jupyter notebook
+	):
 	\begin{align*}
 		\dfrac{w\gamma_w\sqrt{\gamma_k^2-1}}{\gamma_w \gamma_k+1}&=\dfrac{w \gamma_w \frac{k}{m}(\gamma_w\gamma_k-1)}{\gamma_w^2\gamma_k^2-1}
 		=\dfrac{w \gamma_w \frac{k}{m}(\frac{\gamma_k}{\gamma_w}-\frac{1}{\gamma_w^2})}{\gamma_k^2-\frac{1}{\gamma_w^2}}

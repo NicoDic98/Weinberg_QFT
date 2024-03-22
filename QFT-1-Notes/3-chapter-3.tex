@@ -81,33 +81,33 @@ integration would only cover the positive reals and in such a case residue integ
 
 \subsection{The S-Matrix}\label{susec:3_2}
 
-\subsubsection{\enquote{$\int\dd{\beta}S_{\beta\gamma}^\star S_{\beta\alpha}=\dots=\innerproduct{\Psi_\gamma^+}{\Psi_\alpha^+}$} \page{114}}
+\subsubsection{\enquote{$\int\dd{\beta}S_{\beta\gamma}^\star S_{\beta\alpha}=\dots=\braket{\Psi_\gamma^+}{\Psi_\alpha^+}$} \page{114}}
 
 Note, that according to the previous discussion we can apply \eq{3.1.5} in the following sense to $\Psi_\gamma^+$:
-\[\Psi_\gamma^+=\int\dd{\beta}\Psi_\beta^-\innerproduct{\Psi_\beta^-}{\Psi_\gamma^+}\]
+\[\Psi_\gamma^+=\int\dd{\beta}\Psi_\beta^-\braket{\Psi_\beta^-}{\Psi_\gamma^+}\]
 \begin{align*}
-	\innerproduct{\Psi_\gamma^+}{\Psi_\alpha^+}&=
-	\int\dd{\beta}\innerproduct{\Psi_\beta^-}{\Psi_\gamma^+}^\star \innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	\braket{\Psi_\gamma^+}{\Psi_\alpha^+}&=
+	\int\dd{\beta}\braket{\Psi_\beta^-}{\Psi_\gamma^+}^\star \braket{\Psi_\beta^-}{\Psi_\alpha^+}\\
 	&=\int\dd{\beta} S_{\beta\gamma}^\star S_{\beta\alpha}
 \end{align*}
 
 In the same way we have:
-\[\Psi_\gamma^-=\int\dd{\beta}\Psi_\beta^+\innerproduct{\Psi_\beta^+}{\Psi_\gamma^-}\]
+\[\Psi_\gamma^-=\int\dd{\beta}\Psi_\beta^+\braket{\Psi_\beta^+}{\Psi_\gamma^-}\]
 
 \begin{align*}
-	\innerproduct{\Psi_\gamma^-}{\Psi_\alpha^-}&=
-	\int\dd{\beta}\innerproduct{\Psi_\beta^+}{\Psi_\gamma^-}^\star \innerproduct{\Psi_\beta^+}{\Psi_\alpha^-}\\
-	&=\int\dd{\beta}\innerproduct{\Psi_\gamma^-}{\Psi_\beta^+} \innerproduct{\Psi_\alpha^-}{\Psi_\beta^+}^\star\\
+	\braket{\Psi_\gamma^-}{\Psi_\alpha^-}&=
+	\int\dd{\beta}\braket{\Psi_\beta^+}{\Psi_\gamma^-}^\star \braket{\Psi_\beta^+}{\Psi_\alpha^-}\\
+	&=\int\dd{\beta}\braket{\Psi_\gamma^-}{\Psi_\beta^+} \braket{\Psi_\alpha^-}{\Psi_\beta^+}^\star\\
 	&=\int\dd{\beta} S_{\gamma\beta} S_{\alpha\beta}^\star
 \end{align*}
 
 
 \subsubsection{\eq{3.2.5} \page{114}}
 \begin{align*}
-	S_{\beta\alpha}&\overset{\eqc{3.2.1}}{=}\innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
-	&\overset{\eqc{3.1.13}}{=}\innerproduct{\Omega(+\infty)\Phi_\beta}{\Omega(-\infty)\Phi_\alpha}\\
-	&=\innerproduct{\Phi_\beta}{\Omega(+\infty)^\dagger\Omega(-\infty)\Phi_\alpha}\\
-	&\overset{\eqc{3.2.4}}{=}\innerproduct{\Phi_\beta}{S\Phi_\alpha}
+	S_{\beta\alpha}&\overset{\eqc{3.2.1}}{=}\braket{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	&\overset{\eqc{3.1.13}}{=}\braket{\Omega(+\infty)\Phi_\beta}{\Omega(-\infty)\Phi_\alpha}\\
+	&=\braket{\Phi_\beta}{\Omega(+\infty)^\dagger\Omega(-\infty)\Phi_\alpha}\\
+	&\overset{\eqc{3.2.4}}{=}\braket{\Phi_\beta}{S\Phi_\alpha}
 \end{align*}
 
 
@@ -133,7 +133,7 @@ in the limit $t\rightarrow+\infty$ we thus have
 From \eq{3.1.19} we get:
 \begin{align*}
 	\Psi^+_g(t)&=\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \Psi_\alpha^+\\
-	&\overset{\eqc{3.1.5}}{=}\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \int\dd{\beta} \Psi_\beta^- \innerproduct{\Psi_\beta^-}{\Psi_\alpha^+}\\
+	&\overset{\eqc{3.1.5}}{=}\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \int\dd{\beta} \Psi_\beta^- \braket{\Psi_\beta^-}{\Psi_\alpha^+}\\
 	&=\int \dd{\alpha} \exp(-iE_\alpha t) g(\alpha) \int\dd{\beta} \Psi_\beta^- \underbrace{S_{\beta\alpha}}_{\propto \delta(E_\alpha-E_\beta)}\\
 	&=\int \dd{\beta} \exp(-iE_\beta t)\Psi_\beta^-  \underbrace{\int\dd{\alpha} g(\alpha) S_{\beta\alpha}}_{\eqqcolon D(\beta)}\\
 	&=\int \dd{\beta} \exp(-iE_\beta t)\Psi_\beta^-  D(\beta)
@@ -151,8 +151,8 @@ This follows from the previous result because it held for arbitrary $g$.
 
 \subsubsection{\eq{3.2.8} \page{115}}
 \begin{align*}
-	T_{\beta\alpha}^+&\overset{\eqc{3.1.18}}{=} \innerproduct{\Phi_\beta}{V\Psi_\alpha^+}\\
-	&\overset{\eqc{3.1.16/17}}{\approx}\innerproduct{\Phi_\beta}{V\Phi_\alpha}
+	T_{\beta\alpha}^+&\overset{\eqc{3.1.18}}{=} \braket{\Phi_\beta}{V\Psi_\alpha^+}\\
+	&\overset{\eqc{3.1.16/17}}{\approx}\braket{\Phi_\beta}{V\Phi_\alpha}
 \end{align*}
 Where the last approximation is for small $V$.
 
@@ -163,32 +163,32 @@ The orthonormality was previously shown in \eq{3.1.15} by making use of results 
 
 The unitarity of the $S$-matrix was previously shown in \eqs{3.2.2/3}.
 
-\eq{3.2.7} was derived from results in the limit $\tau\rightarrow\infty$.
+\eq{3.2.7} was derived from results in the limit $t\rightarrow\infty$.
 
 
-\subsubsection{\enquote{$\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}+\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}$} \page{116}}
+\subsubsection{\enquote{$\braket{\Psi_\beta^\pm}{V\Phi_\alpha}+\braket{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}=\braket{\Phi_\beta}{V\Psi_\alpha^\pm}+\braket{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}$} \page{116}}\label{sususec:3_2_p116_2}
 \begin{align*}
-	&\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}+\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
-	&=\innerproduct{\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
-	&=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{(E_\beta-H_0\pm i \varepsilon)^{-1}V\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
-	&=\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}+\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
+	&\braket{\Psi_\beta^\pm}{V\Phi_\alpha}+\braket{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
+	&=\braket{\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
+	&=\braket{\Phi_\beta}{V\Psi_\alpha^\pm}+\braket{(E_\beta-H_0\pm i \varepsilon)^{-1}V\Psi_\beta^\pm}{V\Psi_\alpha^\pm}\\
+	&=\braket{\Phi_\beta}{V\Psi_\alpha^\pm}+\braket{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
 \end{align*}
 
 
-\subsubsection{\eq{3.2.9} \page{116}}
+\subsubsection{\eq{3.2.9} \page{116}}\label{sususec:3_2_p116_3}
 From the previous result we get:
 \begin{widetext}
 	\begin{align*}
 		&\left(T_{\alpha\beta}^\pm\right)^\star-T_{\beta\alpha}^\pm\\
-		&=\innerproduct{\Phi_\alpha}{V\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
-		=\innerproduct{V\Phi_\alpha}{\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
-		=\innerproduct{\Psi_\beta^\pm}{V\Phi_\alpha}-\innerproduct{\Phi_\beta}{V\Psi_\alpha^\pm}\\
-		&=\innerproduct{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
-		-\innerproduct{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
-		&=\innerproduct{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]V\Psi_\alpha^\pm}\\
-		&=\int\dd{\gamma}\innerproduct{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]\Phi_\gamma}
-		\innerproduct{\Phi_\gamma}{V\Psi_\alpha^\pm}\\
-		&=\int\dd{\gamma}\innerproduct{\Psi_\beta^\pm}{V\Phi_\gamma}\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]
+		&=\braket{\Phi_\alpha}{V\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
+		=\braket{V\Phi_\alpha}{\Psi_\beta^\pm}^\star-T_{\beta\alpha}^\pm
+		=\braket{\Psi_\beta^\pm}{V\Phi_\alpha}-\braket{\Phi_\beta}{V\Psi_\alpha^\pm}\\
+		&=\braket{\Psi_\beta^\pm}{V(E_\beta-H_0\mp i \varepsilon)^{-1}V\Psi_\alpha^\pm}
+		-\braket{\Psi_\beta^\pm}{V(E_\alpha-H_0\pm i \varepsilon)^{-1}V\Psi_\alpha^\pm}\\
+		&=\braket{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]V\Psi_\alpha^\pm}\\
+		&=\int\dd{\gamma}\braket{\Psi_\beta^\pm}{V\left[(E_\beta-H_0\mp i \varepsilon)^{-1}-(E_\alpha-H_0\pm i \varepsilon)^{-1}\right]\Phi_\gamma}
+		\braket{\Phi_\gamma}{V\Psi_\alpha^\pm}\\
+		&=\int\dd{\gamma}\braket{\Psi_\beta^\pm}{V\Phi_\gamma}\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]
 		T_{\gamma\alpha}^\pm\\
 		&=\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star\left[(E_\beta-E_\gamma\mp i \varepsilon)^{-1}-(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}\right]
 		T_{\gamma\alpha}^\pm
@@ -215,8 +215,9 @@ From the previous result we get:
 \end{widetext}
 
 \subsubsection{\enquote{We see the that $\delta(\beta-\alpha)+T_{\beta\alpha}^\pm/(E_\alpha-E_\beta\pm i \varepsilon)$ is \emph{unitary}. With \eq{3.1.17}, this is just the statement that the $\Psi_\alpha^\pm$ form two \emph{orthonormal} sets of state vectors.} \page{116}}
+
 First define \[A_{\beta\alpha}^\pm=\delta(\beta-\alpha)+\dfrac{T_{\beta\alpha}^\pm}{E_\alpha-E_\beta\pm i \varepsilon}.\]
-With this we get
+With this we get:
 \begin{align*}
 	&\int\dd{\gamma} \left(A_{\gamma\beta}^\pm\right)^\star A_{\gamma\alpha}^\pm\\
 	&=\int\dd{\gamma}\left(\delta(\gamma-\beta)+\dfrac{T_{\gamma\beta}^\pm}{E_\beta-E_\gamma\pm i \varepsilon}\right)^\star\\
@@ -224,28 +225,148 @@ With this we get
 	&\overset{\ref{sususec:3_2_p116_1}}{=}\int\dd{\gamma}\delta(\gamma-\beta)\delta(\gamma-\alpha)\\
 	&=\delta(\beta-\alpha)
 \end{align*}
-and
+Further, \eq{3.1.17} can be written as
+\[\Psi_\alpha^\pm=\int\dd{\beta}A_{\beta\alpha}^\pm\Phi_\beta.\]
+Such that we can already show the orthonormality of the states:
+\begin{align}
+	\braket{\Psi_\gamma^\pm}{\Psi_\alpha^\pm}&=\int\dd{\delta}\int\dd{\beta} \left(A_{\delta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\underbrace{\braket{\Phi_\delta}{\Phi_\beta}}_{=\delta(\delta-\beta)}\nonumber\\
+	&=\int\dd{\beta} \left(A_{\beta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\nonumber\\
+	&=\delta(\gamma-\alpha)\label{eq_3_B_4}
+\end{align}
+
+Showing the full statement includes proving that $A^\pm$ is unitary, i.e. we still have to show:
+\[\int\dd{\gamma} A_{\beta\gamma}^\pm \left(A_{\alpha\gamma}^\pm\right)^\star\overset{!}{=}\delta(\beta-\alpha)\]
+
+For this consider an analog inner-product to the one considered in \ref{sususec:3_2_p116_2} and \ref{sususec:3_2_p116_3} (such that all the indices will be swapped in the end):
+\begin{align*}
+	&\left(T_{\alpha\beta}^\pm\right)^\star+\int\dd{\gamma}\dfrac{\left(T_{\alpha\gamma}^\pm\right)^\star T_{\beta\gamma}^\pm}{E_\gamma-E_\beta\pm i \varepsilon}\\
+	&=\int\dd{\gamma}\left(\braket{\Phi_\beta}{\Phi_\gamma}+\braket{\Phi_\beta}{(E_\gamma-H_0\pm i \varepsilon)^{-1}V\Psi_\gamma^\pm}\right)\left(T_{\alpha\gamma}^\pm\right)^\star\\
+	&=\int\dd{\gamma}\braket{\Phi_\beta}{\Psi_\gamma^\pm}\braket{\Psi_\gamma^\pm}{V\Phi_\alpha}\\
+	&=\braket{\Phi_\beta}{V\Phi_\alpha}\\
+	&=\int\dd{\gamma}\braket{\Phi_\beta}{V\Psi_\gamma^\pm}\braket{\Psi_\gamma^\pm}{\Phi_\alpha}\\
+	&=\int\dd{\gamma} T_{\beta\gamma}^\pm\left(\braket{\Phi_\gamma}{\Phi_\alpha}+\braket{(E_\gamma-H_0\pm i \varepsilon)^{-1}V\Psi_\gamma^\pm}{\Phi_\alpha}\right)\\
+	&=T_{\beta\alpha}^\pm+\int\dd{\gamma}\dfrac{\left(T_{\alpha\gamma}^\pm\right)^\star T_{\beta\gamma}^\pm}{E_\gamma-E_\alpha\mp i \varepsilon}
+\end{align*}
+We are allowed to introduce \[\identity=\int \dd{\gamma} \ketbra{\Psi_\gamma^\pm}{\Psi_\gamma^\pm} \]
+because $\ket{\Psi_\gamma^\pm}$ form a complete set of states and we showed the orthonormality of the $\ket{\Psi_\gamma^\pm}$ in \ref{eq_3_B_4}.
+
+We can continue by rearranging the terms
+\begin{align*}
+	&\left(T_{\alpha\beta}^\pm\right)^\star-T_{\beta\alpha}^\pm\\
+	&=\int\dd{\gamma}\left(T_{\alpha\gamma}^\pm\right)^\star T_{\beta\gamma}^\pm
+	\left(\dfrac{1}{E_\gamma-E_\alpha\mp i \varepsilon}-\dfrac{1}{E_\gamma-E_\beta\pm i \varepsilon}\right)\\
+	&=-\int\dd{\gamma}\left(T_{\alpha\gamma}^\pm\right)^\star T_{\beta\gamma}^\pm
+	\left(\dfrac{1}{E_\alpha-E_\gamma\pm i \varepsilon}-\dfrac{1}{E_\beta-E_\gamma\mp i \varepsilon}\right)
+\end{align*}
+and by following the same steps as in \ref{sususec:3_2_p116_1}, we obtain the analog relation to \eq{3.2.9}:
+\begin{align}
+	&\left(\dfrac{T_{\alpha\beta}^\pm}{E_\beta-E_\alpha\pm 2i\varepsilon}\right)^\star
+	+\dfrac{T_{\beta\alpha}^\pm}{E_\alpha-E_\beta\pm 2i\varepsilon}\nonumber\\
+	&=-\int\dd{\gamma}\left(T_{\alpha\gamma}^\pm\right)^\star T_{\beta\gamma}^\pm \dfrac{1}{(E_\beta-E_\gamma\mp i \varepsilon)(E_\alpha-E_\gamma\pm i \varepsilon)}\nonumber\\
+	&=-\int\dd{\gamma}\left(-\dfrac{T_{\alpha\gamma}^\pm}{E_\gamma-E_\alpha\pm i \varepsilon}\right)^\star
+	\left(-\dfrac{T_{\beta\gamma}^\pm}{E_\gamma-E_\beta\pm i \varepsilon}\right)\nonumber\\
+	&=-\int\dd{\gamma}\left(\dfrac{T_{\alpha\gamma}^\pm}{E_\gamma-E_\alpha\pm i \varepsilon}\right)^\star
+	\dfrac{T_{\beta\gamma}^\pm}{E_\gamma-E_\beta\pm i \varepsilon}\label{eq_3_B_5}
+\end{align}
+
+With this we can finally show the second part of $A^\pm$ being unitary:
 \begin{align*}
 	&\int\dd{\gamma} A_{\beta\gamma}^\pm \left(A_{\alpha\gamma}^\pm\right)^\star\\
 	&=\int\dd{\gamma}\left(\delta(\beta-\gamma)+\dfrac{T_{\beta\gamma}^\pm}{E_\gamma-E_\beta\pm i \varepsilon}\right)\\
 	&\cdot\left(\delta(\alpha-\gamma)+\dfrac{T_{\alpha\gamma}^\pm}{E_\gamma-E_\alpha\pm i \varepsilon}\right)^\star\\
-	&\overset{\ref{asdasd}}{=}\int\dd{\gamma}\delta(\beta-\gamma)\delta(\alpha-\gamma)\\
+	&\overset{\ref{eq_3_B_5}}{=}\int\dd{\gamma}\delta(\beta-\gamma)\delta(\alpha-\gamma)\\
 	&=\delta(\beta-\alpha).
 \end{align*}
-Where in the second to last step we used \todo
 
 
-Such that \eq{3.1.17} can be written as
-\[\Psi_\alpha^\pm=\int\dd{\beta}A_{\beta\alpha}^\pm\Phi_\beta.\]
-Which finally yields the orthonormality of the states:
-\begin{align*}
-	\innerproduct{\Psi_\gamma^\pm}{\Psi_\alpha^\pm}&=\int\dd{\delta}\int\dd{\beta} \left(A_{\delta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\underbrace{\innerproduct{\Phi_\delta}{\Phi_\beta}}_{=\delta(\delta-\beta)}\\
-	&=\int\dd{\beta} \left(A_{\beta\gamma}^\pm\right)^\star A_{\beta\alpha}^\pm\\
-	&=\delta(\gamma-\alpha)
-\end{align*}
+
+
 
 \subsubsection{\enquote{The unitarity of the S-matrix can be proved in a similar fashion by multiplying \eq{3.2.9} with $\delta\left(E_\beta-E_\alpha\right)$ \dots} \page{116}}
-\todo
+We first start of by proving \eq{3.2.7} without using results in the $t\rightarrow\pm\infty$ limit. For this consider a similar inner-product to the one considered in \ref{sususec:3_2_p116_2}:
+\begin{align*}
+	&\braket{\Psi_\beta^-}{V\Phi_\alpha}+\braket{\Psi_\beta^-}{V(E_\alpha-H_0+ i \varepsilon)^{-1}V\Psi_\alpha^+}\\
+	&=\braket{\Psi_\beta^-}{V\Psi_\alpha^+}\\
+	&=\braket{\Phi_\beta}{V\Psi_\alpha^+}+\braket{(E_\beta-H_0- i \varepsilon)^{-1}V\Psi_\beta^-}{V\Psi_\alpha^+}\\
+	&=\braket{\Phi_\beta}{V\Psi_\alpha^+}+\braket{\Psi_\beta^-}{V(E_\beta-H_0+ i \varepsilon)^{-1}V\Psi_\alpha^+}
+\end{align*}
+
+\begin{widetext}
+	And follow similar steps to \ref{sususec:3_2_p116_3} afterwards:
+	\begin{align}
+		&\left(T_{\alpha\beta}^-\right)^\star-T_{\beta\alpha}^+\nonumber\\
+		&=\braket{\Phi_\alpha}{V\Psi_\beta^-}^\star-T_{\beta+}^\pm
+		=\braket{V\Phi_\alpha}{\Psi_\beta^-}^\star-T_{\beta\alpha}^+
+		=\braket{\Psi_\beta^-}{V\Phi_\alpha}-\braket{\Phi_\beta}{V\Psi_\alpha^+}\nonumber\\
+		&=\braket{\Psi_\beta^-}{V(E_\beta-H_0+ i \varepsilon)^{-1}V\Psi_\alpha^+}
+		-\braket{\Psi_\beta^-}{V(E_\alpha-H_0+ i \varepsilon)^{-1}V\Psi_\alpha^+}\nonumber\\
+		&=\braket{\Psi_\beta^-}{V\left[(E_\beta-H_0+ i \varepsilon)^{-1}-(E_\alpha-H_0+ i \varepsilon)^{-1}\right]V\Psi_\alpha^+}\nonumber\\
+		&=\int\dd{\gamma}\braket{\Psi_\beta^-}{V\left[(E_\beta-H_0+ i \varepsilon)^{-1}-(E_\alpha-H_0+ i \varepsilon)^{-1}\right]\Phi_\gamma}
+		\braket{\Phi_\gamma}{V\Psi_\alpha^+}\nonumber\\
+		&=\int\dd{\gamma}\braket{\Psi_\beta^-}{V\Phi_\gamma}\left[(E_\beta-E_\gamma+ i \varepsilon)^{-1}-(E_\alpha-E_\gamma+ i \varepsilon)^{-1}\right]
+		T_{\gamma\alpha}^+\nonumber\\
+		&=\int\dd{\gamma}\left(T_{\gamma\beta}^-\right)^\star\left[(E_\beta-E_\gamma+ i \varepsilon)^{-1}-(E_\alpha-E_\gamma+ i \varepsilon)^{-1}\right]
+		T_{\gamma\alpha}^+ \label{eq_3_B_1}
+	\end{align}
+	With this we can now show \eq{3.2.7}:
+	\begin{align}
+		S_{\beta\alpha}&\overset{\eq{3.2.1}}{=}\braket{\Psi_\beta^-}{\Psi_\alpha^+}\nonumber\\
+		&=\braket{\Phi_\beta+(E_\beta-H_0- i \varepsilon)^{-1}V\Psi_\beta^-}{\Phi_\alpha+(E_\alpha-H_0+i \varepsilon)^{-1}V\Psi_\alpha^+}\nonumber\\
+		&=\delta(\beta-\alpha) + (E_\alpha-E_\beta+i \varepsilon)^{-1} \braket{\Phi_\beta}{V\Psi_\alpha^+}
+		+ (E_\beta-E_\alpha+i \varepsilon)^{-1} \braket{V\Psi_\beta^-}{\Phi_\alpha}\nonumber\\
+		&+\braket{(E_\beta-H_0- i \varepsilon)^{-1}V\Psi_\beta^-}{(E_\alpha-H_0+i \varepsilon)^{-1}V\Psi_\alpha^+}\nonumber\\
+		&=\delta(\beta-\alpha) + \dfrac{T_{\beta\alpha}^+}{E_\alpha-E_\beta+i \varepsilon} + \dfrac{\left(T_{\alpha\beta}^-\right)^\star}{E_\beta-E_\alpha+i \varepsilon}\nonumber\\
+		&+\int\dd{\gamma}\braket{V\Psi_\beta^-}{\Phi_\gamma}\dfrac{1}{E_\beta-E_\gamma+ i \varepsilon}\dfrac{1}{E_\alpha-E_\gamma+i \varepsilon}
+		\braket{\Phi_\gamma}{V\Psi_\alpha^+}\nonumber\\
+		&\overset{\ref{eq_3_B_1}}{=}
+		\delta(\beta-\alpha)+ T_{\beta\alpha}^+ \left(\dfrac{1}{E_\alpha-E_\beta+i \varepsilon}+\dfrac{1}{E_\beta-E_\alpha+i \varepsilon}\right)\nonumber\\
+		&+\int\dd{\gamma}\left(T_{\gamma\beta}^-\right)^\star T_{\gamma\alpha}^+ \left[\dfrac{1}{E_\beta-E_\gamma+ i \varepsilon}\dfrac{1}{E_\alpha-E_\gamma+i \varepsilon}+\dfrac{1}{E_\beta-E_\alpha+i \varepsilon}
+		\left(\dfrac{1}{E_\beta-E_\gamma+ i \varepsilon}-\dfrac{1}{E_\alpha-E_\gamma+ i \varepsilon}\right)\right]\nonumber\\
+		&=\delta(\beta-\alpha)+ T_{\beta\alpha}^+ \dfrac{E_\alpha-E_\beta-i \varepsilon-(E_\alpha-E_\beta+i \varepsilon)}{(E_\alpha-E_\beta)^2+\varepsilon^2}\nonumber\\
+		&+\int\dd{\gamma}\left(T_{\gamma\beta}^-\right)^\star T_{\gamma\alpha}^+ \left[\dfrac{1}{E_\beta-E_\gamma+ i \varepsilon}\dfrac{1}{E_\alpha-E_\gamma+i \varepsilon}+\dfrac{1}{E_\beta-E_\alpha+i \varepsilon}
+		\left(
+		\dfrac{E_\alpha-E_\gamma+ i \varepsilon-(E_\beta-E_\gamma+ i \varepsilon)}{(E_\beta-E_\gamma+ i \varepsilon)(E_\alpha-E_\gamma+ i \varepsilon)}
+		\right)
+		\right]\nonumber\\
+		&=\delta(\beta-\alpha)+ T_{\beta\alpha}^+ \dfrac{(-2i \varepsilon)}{(E_\alpha-E_\beta)^2+\varepsilon^2}\nonumber\\
+		&+\int\dd{\gamma}\left(T_{\gamma\beta}^-\right)^\star T_{\gamma\alpha}^+ \left[\dfrac{1}{E_\beta-E_\gamma+ i \varepsilon}\dfrac{1}{E_\alpha-E_\gamma+i \varepsilon}+\dfrac{1}{E_\beta-E_\alpha+i \varepsilon}
+		\left(
+		\dfrac{E_\alpha-E_\beta}{(E_\beta-E_\gamma+ i \varepsilon)(E_\alpha-E_\gamma+ i \varepsilon)}
+		\right)
+		\right]\nonumber\\
+		&\overset{\eq{3.1.24}}{=}\delta(\beta-\alpha)-2\pi i \delta(E_\alpha-E_\beta)T_{\beta\alpha}^++\int\dd{\gamma}\left(T_{\gamma\beta}^-\right)^\star T_{\gamma\alpha}^+\cdot0\nonumber\\
+		&=\delta(\beta-\alpha)-2\pi i \delta(E_\alpha-E_\beta)T_{\beta\alpha}^+ \label{eq_3_B_2}
+	\end{align}
+	To prove the unitarity of the S-matrix we start of by multiplying \eq{3.2.9} with $\delta\left(E_\beta-E_\alpha\right)$:
+	\begin{align}
+		&\delta\left(E_\beta-E_\alpha\right)\left(\left(T_{\alpha\beta}^\pm\right)^\star-T_{\beta\alpha}^\pm\right)\nonumber\\
+		&\overset{\eq{3.2.9}}{=}-\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star\left[(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}-(E_\beta-E_\gamma\mp i \varepsilon)^{-1}\right]
+		T_{\gamma\alpha}^\pm \delta\left(E_\beta-E_\alpha\right)\nonumber\\
+		&=-\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm \delta\left(E_\beta-E_\alpha\right)
+		\left[(E_\alpha-E_\gamma\pm i \varepsilon)^{-1}-(E_\alpha-E_\gamma\mp i \varepsilon)^{-1}\right]\nonumber\\
+		&=-\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm \delta\left(E_\beta-E_\alpha\right)
+		\left[\dfrac{E_\alpha-E_\gamma\mp i \varepsilon-(E_\alpha-E_\gamma\pm i \varepsilon)}{(E_\alpha-E_\gamma\pm i \varepsilon)(E_\alpha-E_\gamma\mp i \varepsilon)}\right]\nonumber\\
+		&=-\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm \delta\left(E_\beta-E_\alpha\right)
+		\dfrac{\mp 2i\varepsilon}{(E_\alpha-E_\gamma)^2+\varepsilon^2}\nonumber\\
+		&\overset{\eq{3.1.24}}{=}\pm 2\pi i\int\dd{\gamma}\left(T_{\gamma\beta}^\pm\right)^\star T_{\gamma\alpha}^\pm \delta\left(E_\beta-E_\alpha\right) \delta\left(E_\alpha-E_\gamma\right)
+		\label{eq_3_B_3}
+	\end{align}
+	With this we get:
+	\begin{align*}
+		&\int\dd{\gamma}\left(S_{\gamma\beta}\right)^\star S_{\gamma\alpha}\\
+		&\overset{\ref{eq_3_B_2}}{=}\int\dd{\gamma}\left(\delta(\gamma-\beta)+2 \pi i \delta(E_\beta-E_\gamma)\left(T_{\gamma\beta}^+\right)^\star\right)
+		\left(\delta(\gamma-\alpha)-2 \pi i \delta(E_\alpha-E_\gamma)T_{\gamma\alpha}^+\right)\\
+		&=\delta(\beta-\alpha)-2 \pi i \delta(E_\alpha-E_\beta)T_{\beta\alpha}^+
+		+2 \pi i \delta(E_\beta-E_\alpha)\left(T_{\alpha\beta}^+\right)^\star\\
+		&-(2\pi i)^2 \int\dd{\gamma} \left(T_{\gamma\beta}^+\right)^\star T_{\gamma\alpha}^+ \delta(E_\beta-E_\alpha)\delta(E_\alpha-E_\gamma)\\
+		&\overset{\ref{eq_3_B_3}}{=}\delta(\beta-\alpha)-2 \pi i \delta(E_\alpha-E_\beta)T_{\beta\alpha}^+
+		+2 \pi i \delta(E_\beta-E_\alpha)\left(T_{\alpha\beta}^+\right)^\star\\
+		&-2\pi i \delta\left(E_\beta-E_\alpha\right)\left(\left(T_{\alpha\beta}^+\right)^\star-T_{\beta\alpha}^+\right)\\
+		&=\delta(\beta-\alpha)\\
+		&\int\dd{\gamma}S_{\beta\gamma}\left(S_{\alpha\gamma}\right)^\star 
+	\end{align*}
+\end{widetext}
+
 
 \subsection{Symmetries of the S-Matrix}\label{susec:3_3}
 

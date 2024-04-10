@@ -370,6 +370,63 @@ We first start of by proving \eq{3.2.7} without using results in the $t\rightarr
 
 \subsection{Symmetries of the S-Matrix}\label{susec:3_3}
 
+\subsubsection{\eq{3.3.1} \page{117}}
+
+One inserts \eq{3.1.1} for both $\Psi_\beta^-$ and $\Psi_\alpha^+$, keeping in mind that the coefficients of  $\Psi_\beta^-$ have to be complex conjugated when pulled out of the inner-product.\newline\newline
+\fbox{\parbox{\linewidth}{{\color{red}Note:} This assumes that there exists a unitary operator that acts as in \eq{3.1.1} on \emph{both} \enquote{in} and \enquote{out} states. Which in turn places conditions on the possible Hamiltonians.
+}}
+
+\subsubsection{\enquote{\eq{3.3.1} will thus hold if this unitary operator commutes with the S-operator\dots}\page{118}}\label{sususec:3_3_p118_1}
+First define a shorthand notation for the transformation behavior in \eq{3.1.1}:
+\[U(\Lambda, a )\Psi_{p_i,\sigma_i,n_i}=D_{\sigma_i^\prime,\sigma_i}(\Lambda,a,p_i,n_i)\Psi_{\Lambda p_i,\sigma_i^\prime,n_i}\]
+
+\begin{widetext}
+	With this the action of $U_0$ on $\Phi$ is given by
+	\begin{equation}
+		U_0(\Lambda,a)\Phi_{p_i,\sigma_i,n_i}=D_{\sigma_i^\prime,\sigma_i}(\Lambda,a,p_i,n_i)\Phi_{\Lambda p_i,\sigma_i^\prime,n_i}\label{eq_3_C_1}
+	\end{equation}
+	and \eq{3.3.1} can be written as:
+	\begin{align}
+		S_{p_i^\prime,\sigma_i^\prime,n_i^\prime;p_i,\sigma_i,n_i}
+		&=D_{\bar{\sigma}_i,\sigma_i}(\Lambda,a,p_i,n_i)
+		D_{\bar{\sigma}_i^\prime,\sigma_i^\prime}^\star(\Lambda,a,p_i^\prime,n_i^\prime)
+		S_{\Lambda p_i^\prime,\bar{\sigma}_i^\prime,n_i^\prime;\Lambda p_i,\bar{\sigma}_i,n_i}\nonumber\\
+		&\overset{\eq{3.2.4}}{=}D_{\bar{\sigma}_i,\sigma_i}(\Lambda,a,p_i,n_i)
+		D_{\bar{\sigma}_i^\prime,\sigma_i^\prime}^\star(\Lambda,a,p_i^\prime,n_i^\prime)
+		\braket{\Phi_{\Lambda p_i^\prime,\bar{\sigma}_i^\prime,n_i^\prime}}{S\Phi_{\Lambda p_i,\bar{\sigma}_i,n_i}}\nonumber\\
+		&=\braket{D_{\bar{\sigma}_i^\prime,\sigma_i^\prime}(\Lambda,a,p_i^\prime,n_i^\prime)\Phi_{\Lambda p_i^\prime,\bar{\sigma}_i^\prime,n_i^\prime}}
+		{S D_{\bar{\sigma}_i,\sigma_i}(\Lambda,a,p_i,n_i)\Phi_{\Lambda p_i,\bar{\sigma}_i,n_i}}\nonumber\\
+		&\overset{\ref{eq_3_C_1}}{=}
+		\braket{U_0(\Lambda,a)\Phi_{p_i^\prime,\sigma_i^\prime,n_i^\prime}}{S U_0(\Lambda, a) \Phi_{p_i,\sigma_i,n_i}}\label{eq_3_C_2}
+	\end{align}
+	From \eq{3.2.4} we further know:
+	\begin{align}
+		S_{p_i^\prime,\sigma_i^\prime,n_i^\prime;p_i,\sigma_i,n_i}
+		&=\braket{\Phi_{p_i^\prime,\sigma_i^\prime,n_i^\prime}}{S  \Phi_{p_i,\sigma_i,n_i}}\nonumber\\
+		&=\braket{U_0(\Lambda,a)\Phi_{p_i^\prime,\sigma_i^\prime,n_i^\prime}}{ U_0(\Lambda, a) S\Phi_{p_i,\sigma_i,n_i}}\label{eq_3_C_3}
+	\end{align}
+	From this we see
+	\[U_0(\Lambda, a)S=S U_0(\Lambda, a) \Rightarrow \eq{3.3.1}.\]
+	And given \eq{3.3.1} holds then \ref{eq_3_C_2} and \ref{eq_3_C_3} hold for arbitrary free particle states such that
+	\[\eq{3.3.1}\Rightarrow U_0(\Lambda, a)S=S U_0(\Lambda, a).\]
+	In total:
+	\[\eq{3.3.1}\Leftrightarrow U_0(\Lambda, a)S=S U_0(\Lambda, a)\]
+\end{widetext}
+
+\subsubsection{\enquote{\eq{3.3.1} is equivalent to the statement that\dots the S-operator commutes with these generators\dots}\page{118}}\,\newline
+\fbox{\parbox{\linewidth}{{\color{red}Note:} The free particle states $\Phi_\alpha$ furnish a representation of the inhomogeneous Lorentz group. Which is a group of symmetry transformation in the sense of \sect{2.2}. For which we can therefore always define the unitary operator $U_0$ (See \ref{susec:2_A}). Such that it has to satisfy the considerations of \sect{2.4}.
+}}
+The equivalence \[\eq{3.3.1}\Leftrightarrow U_0(\Lambda, a)S=S U_0(\Lambda, a)\]
+was already shown in \ref{sususec:3_3_p118_1}. Further applying the considerations of \sect{2.4} to the operator $U_0(\Lambda, a)$ we know
+\[\commutator{U_0}{S}=0\Leftrightarrow \commutator{H_0}{S}=\commutator{\textbf{P}_0}{S}=\commutator{\textbf{J}_0}{S}=\commutator{\textbf{K}_0}{S}=0,\]
+such that
+\[\eq{3.3.1}\Leftrightarrow \commutator{H_0}{S}=\commutator{\textbf{P}_0}{S}=\commutator{\textbf{J}_0}{S}=\commutator{\textbf{K}_0}{S}=0.\]
+
+\subsubsection{\enquote{Because the operators $H_0,\textbf{P}_0, \textbf{J}_0$ and $\textbf{K}_0$ generate infinitesimal inhomogeneous Lorentz transformations on the $\Phi_\alpha$, they automatically satisfy the commutation relations\dots}\page{118}}
+This follows from the considerations in \sect{2.4} and the way we \emph{defined} $U_0$ to act on the $\Phi_\alpha$'s.
+
+
+
 
 \subsection{Rates and Cross-Sections}\label{susec:3_4}
 
